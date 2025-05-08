@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class Pathfinder : MonoBehaviour
 {
-    [SerializeField] private PathWeights _pathWeights;
+    [SerializeField] private RoadManager _roadManager;
 
-    public List<LaneComponent> FindPath(LaneComponent start, LaneComponent target)
+    public List<SectionRoadStrip> FindPath(SectionRoadStrip start, SectionRoadStrip target)
     {
         if (start == null || target == null)
-            return new List<LaneComponent>();
+            return new List<SectionRoadStrip>();
 
         if (start == target)
-            return new List<LaneComponent> { start };
+            return new List<SectionRoadStrip> { start };
 
         PriorityQueue<PathNode> openSet = new();
-        Dictionary<LaneComponent, LaneComponent> cameFrom = new();
-        Dictionary<LaneComponent, float> gScore = new();
+        Dictionary<SectionRoadStrip, SectionRoadStrip> cameFrom = new();
+        Dictionary<SectionRoadStrip, float> gScore = new();
 
-        openSet.Enqueue(new PathNode(start, NavigationUtils.CalculateHeuristic(start, target)));
+        openSet.Enqueue(new PathNode(start, NavigationUtils.CalculateDistance(start, target)));
         gScore[start] = 0f;
 
         while (openSet.Count > 0)
@@ -28,12 +28,9 @@ public class Pathfinder : MonoBehaviour
             if (current.Lane == target)
                 return ReconstructPath(cameFrom, current.Lane);
 
-            foreach (LaneComponent neighbor in current.Lane.ConnectedLanes)
+            foreach (SectionRoadStrip neighbor in current.Lane.ConnectedLanes)
             {
-                if (neighbor.Type == LaneType.Opposite)
-                    continue;
-
-                float tentativeGScore = gScore[current.Lane] + _pathWeights.GetWeight(neighbor.Type);
+                float tentativeGScore = gScore[current.Lane];
 
                 if (gScore.ContainsKey(neighbor) == false)
                     gScore[neighbor] = Mathf.Infinity;
@@ -42,7 +39,7 @@ public class Pathfinder : MonoBehaviour
                 {
                     cameFrom[neighbor] = current.Lane;
                     gScore[neighbor] = tentativeGScore;
-                    float fScore = tentativeGScore + NavigationUtils.CalculateHeuristic(neighbor, target);
+                    float fScore = tentativeGScore + NavigationUtils.CalculateDistance(neighbor, target);
 
                     if (openSet.Contains(node => node.Lane == neighbor) == false)
                         openSet.Enqueue(new PathNode(neighbor, fScore));
@@ -50,12 +47,12 @@ public class Pathfinder : MonoBehaviour
             }
         }
 
-        return new List<LaneComponent>();
+        return new List<SectionRoadStrip>();
     }
 
-    private List<LaneComponent> ReconstructPath(Dictionary<LaneComponent, LaneComponent> cameFrom, LaneComponent current)
+    private List<SectionRoadStrip> ReconstructPath(Dictionary<SectionRoadStrip, SectionRoadStrip> cameFrom, SectionRoadStrip current)
     {
-        List<LaneComponent> path = new() { current };
+        List<SectionRoadStrip> path = new() { current };
 
         while (cameFrom.ContainsKey(current))
         {
@@ -68,10 +65,11 @@ public class Pathfinder : MonoBehaviour
 
     private class PathNode : IComparable<PathNode>
     {
-        public LaneComponent Lane { get; }
+        public SectionRoadStrip Lane { get; }
+
         public float FScore { get; }
 
-        public PathNode(LaneComponent lane, float fScore)
+        public PathNode(SectionRoadStrip lane, float fScore)
         {
             Lane = lane;
             FScore = fScore;

@@ -2,26 +2,22 @@
 using System.Linq;
 using UnityEngine;
 
-public class LaneComponent : MonoBehaviour
+public class SectionRoadStrip : MonoBehaviour
 {
     [SerializeField] private List<Transform> _points = new();
-    [SerializeField] private LaneType _type = LaneType.Main;
-    [SerializeField][Range(0, 120)] private float _speedLimit = 60f;
-    [SerializeField] private List<LaneComponent> _connectedLanes = new();
-    [SerializeField] private bool _isOneWay = false;
+    [SerializeField] private List<SectionRoadStrip> _connectedLanes = new();
 
     [Header("Gizmos Settings")]
     [SerializeField] private Color _connectionColor = Color.yellow;
-    [SerializeField] private bool _showGizmos = true;
+    [SerializeField] private Color _sectionColor = Color.blue;
+    [SerializeField] private bool _isShowGizmos = true;
     [SerializeField] private float _sphereRadius = 0.5f;
     [SerializeField] private float _connectionSphereSize = 0.4f;
     [SerializeField] private float _autoConnectDistance = 10f;
 
     public IReadOnlyList<Transform> Points => _points;
-    public LaneType Type => _type;
-    public IReadOnlyList<LaneComponent> ConnectedLanes => _connectedLanes;
-    public float SpeedLimit => _speedLimit;
-    public bool IsOneWay => _isOneWay;
+
+    public IReadOnlyList<SectionRoadStrip> ConnectedLanes => _connectedLanes;
 
     private void OnDrawGizmos()
     {
@@ -29,17 +25,53 @@ public class LaneComponent : MonoBehaviour
         DrawConnections();
     }
 
-    private Color GetGizmoColorByType() => _type switch
+    public Vector3 GetClosestPointOnLane(Vector3 targetPos)
     {
-        LaneType.Main => Color.blue,
-        LaneType.LeftTurn => Color.green,
-        LaneType.RightTurn => Color.red,
-        LaneType.Bus => Color.yellow,
-        LaneType.Emergency => Color.magenta,
-        LaneType.Opposite => new Color(1, 0.5f, 0), // оранжевый
-        LaneType.Transition => Color.cyan,
-        _ => Color.white
-    };
+        Vector3 closestPoint = Vector3.zero;
+        float minDistance = Mathf.Infinity;
+
+        // Ищем ближайший сегмент
+        for (int i = 0; i < _points.Count - 1; i++)
+        {
+            Vector3 a = _points[i].position;
+            Vector3 b = _points[i + 1].position;
+
+            Vector3 projected = ProjectPointOnLineSegment(a, b, targetPos);
+            float distance = Vector3.Distance(targetPos, projected);
+
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                closestPoint = projected;
+            }
+        }
+
+        return closestPoint;
+    }
+
+    private Vector3 ProjectPointOnLineSegment(Vector3 a, Vector3 b, Vector3 point)
+    {
+        Vector3 direction = b - a;
+        float length = direction.magnitude;
+        direction.Normalize();
+
+        float t = Vector3.Dot(point - a, direction);
+        t = Mathf.Clamp(t, 0f, length);
+
+        return a + direction * t;
+    }
+
+    public List<Vector3> GetPointsWorldPositions()
+    {
+        List<Vector3> positions = new();
+
+        foreach (Transform point in _points)
+        {
+            positions.Add(point.position);
+        }
+
+        return positions;
+    }
 
     public Transform GetClosestPoint(Vector3 position)
     {
@@ -79,7 +111,7 @@ public class LaneComponent : MonoBehaviour
 
         Vector3 endPoint = _points[^1].position;
 
-        foreach (LaneComponent otherLane in FindObjectsByType<LaneComponent>(FindObjectsSortMode.None))
+        foreach (SectionRoadStrip otherLane in FindObjectsByType<SectionRoadStrip>(FindObjectsSortMode.None))
         {
             if (otherLane == this) continue;
             if (otherLane.Points == null || otherLane.Points.Count == 0) continue;
@@ -100,10 +132,10 @@ public class LaneComponent : MonoBehaviour
 
     private void DrawLanePath()
     {
-        if (!_showGizmos || _points == null || _points.Count < 2)
+        if (!_isShowGizmos || _points == null || _points.Count < 2)
             return;
 
-        Gizmos.color = GetGizmoColorByType();
+        Gizmos.color = _sectionColor;
 
         // Рисуем линии между точками
         for (int i = 0; i < _points.Count - 1; i++)
@@ -127,7 +159,7 @@ public class LaneComponent : MonoBehaviour
 
         Gizmos.color = _connectionColor;
 
-        foreach (LaneComponent connectedLane in _connectedLanes)
+        foreach (SectionRoadStrip connectedLane in _connectedLanes)
         {
             if (connectedLane == null) continue;
             if (this.Points.Count == 0 || connectedLane.Points.Count == 0) continue;

@@ -44,17 +44,13 @@ public class PriorityQueue<T> where T : IComparable<T>
             int rightChildIndex = leftChildIndex + 1;
             int minIndex = leftChildIndex;
 
-            if (rightChildIndex < _elements.Count &&
-                _elements[rightChildIndex].CompareTo(_elements[leftChildIndex]) < 0)
-            {
+            if (rightChildIndex < _elements.Count && _elements[rightChildIndex].CompareTo(_elements[leftChildIndex]) < 0)
                 minIndex = rightChildIndex;
-            }
 
             if (_elements[parentIndex].CompareTo(_elements[minIndex]) <= 0)
                 break;
 
-            (_elements[parentIndex], _elements[minIndex]) =
-                (_elements[minIndex], _elements[parentIndex]);
+            (_elements[parentIndex], _elements[minIndex]) = (_elements[minIndex], _elements[parentIndex]);
 
             parentIndex = minIndex;
         }
@@ -69,6 +65,7 @@ public class PriorityQueue<T> where T : IComparable<T>
             if (predicate(element))
                 return true;
         }
+
         return false;
     }
 }

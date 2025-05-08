@@ -1,71 +1,61 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class VehicleController : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private float _rotationSpeed;
+    [SerializeField] private float _reachThreshold = 1f;
 
     private List<Vector3> _currentPath;
-    private int _currentWaypointIndex;
-    private bool _isMoving;
-
-    public event Action PathCompleted;
-
-    private void Update()
-    {
-        if (_currentPath == null || _currentPath.Count == 0)
-            return;
-
-        Vector3 targetPosition = _currentPath[_currentWaypointIndex];
-        MoveTowards(targetPosition);
-
-        if (Vector3.Distance(transform.position, targetPosition) < Constants.MinDistanceToWaypoint)
-        {
-            _currentWaypointIndex++;
-
-            if (_currentWaypointIndex >= _currentPath.Count)
-                CompletePath();
-        }
-    }
+    private int _currentTargetIndex;
 
     public void SetPath(List<Vector3> path)
     {
-        if (path == null || path.Count == 0)
-        {
-            Debug.LogError("Получен пустой путь");
-            return;
-        }
-
         _currentPath = path;
-        _currentWaypointIndex = 0;
-        _isMoving = true;
-
-        Debug.Log($"Назначен новый путь с {path.Count} точками");
+        _currentTargetIndex = 0;
     }
 
-    public bool CheckIsMoving() => _isMoving;
+    private void Update()
+    {
+        if (_currentPath == null || _currentTargetIndex >= _currentPath.Count)
+            return;
+
+        Vector3 target = _currentPath[_currentTargetIndex];
+        MoveTowards(target);
+
+        if (Vector3.Distance(transform.position, target) < _reachThreshold)
+        {
+            _currentTargetIndex++;
+        }
+    }
 
     private void MoveTowards(Vector3 target)
     {
         Vector3 direction = (target - transform.position).normalized;
-        Quaternion rotation = Quaternion.LookRotation(direction);
+        Quaternion targetRotation = Quaternion.LookRotation(direction);
 
         transform.rotation = Quaternion.Slerp(
             transform.rotation,
-            rotation,
+            targetRotation,
             Time.deltaTime * _rotationSpeed
         );
 
         transform.position += _speed * Time.deltaTime * transform.forward;
     }
 
-    private void CompletePath()
+    private void OnDrawGizmos()
     {
-        _currentPath = null;
-        _currentWaypointIndex = 0;
-        _isMoving = false;
-        PathCompleted?.Invoke();
+        if (_currentPath == null) return;
+
+        Gizmos.color = Color.cyan;
+        for (int i = 0; i < _currentPath.Count - 1; i++)
+        {
+            Gizmos.DrawLine(_currentPath[i], _currentPath[i + 1]);
+            Gizmos.DrawSphere(_currentPath[i], 0.3f);
+        }
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(_currentPath[^1], 0.5f);
     }
 }

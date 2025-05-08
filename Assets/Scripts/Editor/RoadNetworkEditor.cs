@@ -7,9 +7,9 @@ public class RoadNetworkEditor : Editor
     [MenuItem("Roads/Connect All Lanes")]
     static void ConnectAllLanes()
     {
-        LaneComponent[] allLanes = FindObjectsByType<LaneComponent>(FindObjectsSortMode.None);
+        SectionRoadStrip[] allLanes = FindObjectsByType<SectionRoadStrip>(FindObjectsSortMode.None);
 
-        foreach (LaneComponent lane in allLanes)
+        foreach (SectionRoadStrip lane in allLanes)
         {
             lane.AutoConnectLanes();
             EditorUtility.SetDirty(lane);

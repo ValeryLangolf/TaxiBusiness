@@ -49,13 +49,13 @@ public class VehicleSpawner : MonoBehaviour
         vehicle.SetPath(path);
     }
 
-    private (LaneComponent, Transform) GetNearestLaneAndPoint(Vector3 position)
+    private (SectionRoadStrip, Transform) GetNearestLaneAndPoint(Vector3 position)
     {
-        LaneComponent nearestLane = null;
+        SectionRoadStrip nearestLane = null;
         Transform nearestPoint = null;
         float minDistance = Mathf.Infinity;
 
-        foreach (LaneComponent lane in _roadManager.GetAllLanes())
+        foreach (SectionRoadStrip lane in _roadManager.GetAllLanes())
         {
             Transform point = lane.GetClosestPoint(position);
             float distance = Vector3.Distance(position, point.position);
@@ -72,33 +72,26 @@ public class VehicleSpawner : MonoBehaviour
     }
 
     private List<Vector3> GetPathBetweenPoints(
-        LaneComponent startLane,
+        SectionRoadStrip startLane,
         Transform startPoint,
-        LaneComponent endLane,
+        SectionRoadStrip endLane,
         Transform endPoint)
     {
-        List<LaneComponent> lanePath = _pathfinder.FindPath(startLane, endLane);
+        List<SectionRoadStrip> lanePath = _pathfinder.FindPath(startLane, endLane);
         List<Vector3> path = new();
 
-        // Добавляем точки от стартовой позиции
         int startIndex = startLane.GetPointIndex(startPoint);
+
         for (int i = startIndex; i < startLane.Points.Count; i++)
-        {
             path.Add(startLane.Points[i].position);
-        }
 
-        // Добавляем промежуточные полосы
         for (int i = 1; i < lanePath.Count - 1; i++)
-        {
             path.AddRange(lanePath[i].Points.Select(p => p.position));
-        }
 
-        // Добавляем точки до конечной позиции
         int endIndex = endLane.GetPointIndex(endPoint);
+
         for (int i = 0; i <= endIndex; i++)
-        {
             path.Add(endLane.Points[i].position);
-        }
 
         return path;
     }

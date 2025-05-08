@@ -1,13 +1,15 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
-public class EconomyManager : MonoBehaviour
+public class Wallet : MonoBehaviour
 {
     [SerializeField] private int _initialBalance = 5000;
 
     private static int _balance;
-    public static int Balance => _balance;
 
-    public static event System.Action<int> OnBalanceChanged;
+    public static event Action<int> BalanceChanged;
+
+    public static int Balance => _balance;
 
     private void Awake()
     {
@@ -28,9 +30,10 @@ public class EconomyManager : MonoBehaviour
 
         _balance -= amount;
         UpdateBalanceDisplay();
+
         return true;
     }
 
     private static void UpdateBalanceDisplay() =>
-        OnBalanceChanged?.Invoke(_balance);
+        BalanceChanged?.Invoke(_balance);
 }
