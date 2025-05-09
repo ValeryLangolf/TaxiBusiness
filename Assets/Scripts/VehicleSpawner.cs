@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class VehicleSpawner : MonoBehaviour
 {
-    [SerializeField] private RoadManager _roadManager;
+    [SerializeField] private RoadNetwork _roadManager;
     [SerializeField] private Pathfinder _pathfinder;
     [SerializeField] private VehicleController _vehiclePrefab;
 
@@ -55,7 +55,7 @@ public class VehicleSpawner : MonoBehaviour
         Transform nearestPoint = null;
         float minDistance = Mathf.Infinity;
 
-        foreach (SectionRoadStrip lane in _roadManager.GetAllLanes())
+        foreach (SectionRoadStrip lane in _roadManager.Sections)
         {
             Transform point = lane.GetClosestPoint(position);
             float distance = Vector3.Distance(position, point.position);

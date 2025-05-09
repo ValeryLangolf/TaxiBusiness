@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Pathfinder : MonoBehaviour
 {
-    [SerializeField] private RoadManager _roadManager;
+    [SerializeField] private RoadNetwork _roadManager;
 
     public List<SectionRoadStrip> FindPath(SectionRoadStrip start, SectionRoadStrip target)
     {
@@ -75,6 +75,7 @@ public class Pathfinder : MonoBehaviour
             FScore = fScore;
         }
 
-        public int CompareTo(PathNode other) => FScore.CompareTo(other.FScore);
+        public int CompareTo(PathNode other) => 
+            FScore.CompareTo(other.FScore);
     }
 }
