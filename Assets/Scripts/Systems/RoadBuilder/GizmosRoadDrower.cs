@@ -12,21 +12,22 @@ public class GizmosRoadDrower
     private float _connectionSphereRadius;
     private List<SectionRoadStrip> _sections = new();
 
-    public void SetParams(List<SectionRoadStrip> sections, Color sectionColor, Color connectionColor, float waypointSphereRadius, float connectionSphereRadius)
+    public void SetParams(Color sectionColor, Color connectionColor, float waypointSphereRadius, float connectionSphereRadius)
     {
         _sectionColor = sectionColor;
         _connectionColor = connectionColor;
         _waypointSphereRadius = waypointSphereRadius;
         _connectionSphereRadius = connectionSphereRadius;
-        _sections = sections;
 
         if (_waypointSphereRadius < 0.05f)
             Debug.LogWarning($"Диаметр рисуемых сфер ({_waypointSphereRadius}м) подозрительно мал");
     }
 
-    public void Drow()
+    public void Drow(List<SectionRoadStrip> sections)
     {
-        if(_sections == null || _sections.Count == 0)
+        _sections = new(sections);
+
+        if (_sections == null || _sections.Count == 0)
         {
             Debug.LogWarning($"Нет доступных секций для отрисовки");
             return;

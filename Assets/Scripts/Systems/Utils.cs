@@ -13,8 +13,8 @@ public static class Utils
         if (list1 == null || list2 == null) return false;
         if (list1.Count != list2.Count) return false;
 
-        var sortedList1 = list1.OrderBy(item => item.GetInstanceID()).ToList();
-        var sortedList2 = list2.OrderBy(item => item.GetInstanceID()).ToList();
+        var sortedList1 = list1.OrderBy(item => item.name).ToList();
+        var sortedList2 = list2.OrderBy(item => item.name).ToList();
 
         return sortedList1.SequenceEqual(sortedList2);
     }

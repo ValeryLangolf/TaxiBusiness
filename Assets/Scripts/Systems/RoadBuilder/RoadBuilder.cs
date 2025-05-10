@@ -29,7 +29,7 @@ public class RoadBuilder : MonoBehaviour
     {
         if (_isShowGizmos)
         {
-            _drower.SetParams(_roadNetwork.Sections, _sectionColor, _connectionColor, _waypointSphereRadius, _connectionSphereRadius);
+            _drower.SetParams(_sectionColor, _connectionColor, _waypointSphereRadius, _connectionSphereRadius);
             SceneView.duringSceneGui += OnSceneGUI;
         }
 
@@ -48,13 +48,15 @@ public class RoadBuilder : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        if (_isShowGizmos == false || _roadNetwork.Sections.Count == 0)
+        List<SectionRoadStrip> sections = _roadNetwork.Sections;
+
+        if (_isShowGizmos == false || sections.Count == 0)
             return;
 
-        _drower.Drow();
+        _drower.Drow(sections);
         _clickableSpheres.Clear();
 
-        foreach (SectionRoadStrip section in _roadNetwork.Sections)
+        foreach (SectionRoadStrip section in sections)
             SetClickable(section);
     }
 
