@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class VehicleSelector : MonoBehaviour
@@ -6,6 +7,10 @@ public class VehicleSelector : MonoBehaviour
     [SerializeField] private Vector3 _offset;
 
     private VehicleController _selectedVehicle;
+
+    public event Action<VehicleController> VehicleSelectChanged;
+
+    public VehicleController Vehicle => _selectedVehicle;
 
     private void Awake() =>
         _pointer.gameObject.SetActive(false);
@@ -23,13 +28,11 @@ public class VehicleSelector : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        
-
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
             Debug.Log(hit.collider.name);
 
-            if(hit.collider.TryGetComponent(out VehicleCollider vehicleCollider))
+            if (hit.collider.TryGetComponent(out VehicleCollider vehicleCollider))
             {
                 _pointer.gameObject.SetActive(true);
                 _selectedVehicle = vehicleCollider.VehicleController;
@@ -40,7 +43,7 @@ public class VehicleSelector : MonoBehaviour
                 _selectedVehicle = null;
             }
 
-            
+            VehicleSelectChanged?.Invoke(_selectedVehicle);
         }
     }
 
