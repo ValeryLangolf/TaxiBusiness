@@ -46,7 +46,7 @@ public class SectionRoadBuilder : MonoBehaviour
             transforms.RemoveAt(transforms.Count - 1);
         }
 
-        for (int i = transforms.Count + 1; i < localCount; i++)
+        for (int i = transforms.Count + 1; i < localCount + rightShift; i++)
         {
             GameObject newWaypoint = new($"{Waypoint}{i}");
             newWaypoint.transform.SetParent(transform);
@@ -58,14 +58,14 @@ public class SectionRoadBuilder : MonoBehaviour
             transforms[i - 1].position = Vector3.Lerp(
                 firstPoint.position,
                 lastPoint.position,
-                (float)i / (transforms.Count));
+                (float)i / (transforms.Count + rightShift));
         }
 
         SortChildren();
     }
 
     private List<Transform> OrderByName(List<Transform> transforms) =>
-        transforms.OrderBy(t => t.name).ToList();
+        transforms.OrderBy(t => ExtractName(t.name)).ToList();
 
     private void SortChildren()
     {
