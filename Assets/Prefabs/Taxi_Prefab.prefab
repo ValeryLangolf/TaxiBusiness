@@ -26,12 +26,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 119518810998315831}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 1.47, z: -0.000000005285155}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 513993319248877829}
+  m_Father: {fileID: 2431240341084012022}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1343165016765039031
 MeshFilter:
@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 2535222042804448764}
   - component: {fileID: 9204251012365960358}
   m_Layer: 0
-  m_Name: Taxi_Prefab 1
+  m_Name: Taxi_Prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 4267173131331840181}
   - component: {fileID: 959729255244197437}
   - component: {fileID: 4681721404446223866}
+  - component: {fileID: 4140875592909744957}
   m_Layer: 0
   m_Name: Object006
   m_TagString: Untagged
@@ -199,10 +200,11 @@ Transform:
   m_GameObject: {fileID: 5053064067289825103}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 1.42, z: -0.000000005285155}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4030760726391159679}
   m_Father: {fileID: 513993319248877829}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4267173131331840181
@@ -280,6 +282,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2639241166356525208, guid: 9fe57149d70ea1343939732be0299e25, type: 3}
+--- !u!114 &4140875592909744957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5053064067289825103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a56ecff6ecad2b6418e58d01dda06ca2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _vehicle: {fileID: 9204251012365960358}
 --- !u!1 &6609288201692317852
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,10 +321,9 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.15}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2431240341084012022}
-  - {fileID: 4030760726391159679}
   m_Father: {fileID: 1583163695828862467}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

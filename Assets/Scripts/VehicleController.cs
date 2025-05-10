@@ -49,6 +49,7 @@ public class VehicleController : MonoBehaviour
         if (_currentPath == null) return;
 
         Gizmos.color = Color.cyan;
+
         for (int i = 0; i < _currentPath.Count - 1; i++)
         {
             Gizmos.DrawLine(_currentPath[i], _currentPath[i + 1]);
@@ -56,6 +57,6 @@ public class VehicleController : MonoBehaviour
         }
 
         Gizmos.color = Color.red;
-        Gizmos.DrawSphere(_currentPath[^1], 0.5f);
+        //Gizmos.DrawSphere(_currentPath[^1], 0.5f);
     }
 }

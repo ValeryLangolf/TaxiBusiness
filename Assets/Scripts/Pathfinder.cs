@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Pathfinder : MonoBehaviour
 {
-    [SerializeField] private RoadNetwork _roadManager;
-
     public List<SectionRoadStrip> FindPath(SectionRoadStrip start, SectionRoadStrip target)
     {
         if (start == null || target == null)
@@ -18,7 +16,7 @@ public class Pathfinder : MonoBehaviour
         Dictionary<SectionRoadStrip, SectionRoadStrip> cameFrom = new();
         Dictionary<SectionRoadStrip, float> gScore = new();
 
-        openSet.Enqueue(new PathNode(start, NavigationUtils.CalculateDistance(start, target)));
+        openSet.Enqueue(new PathNode(start, Utils.CalculateDistance(start, target)));
         gScore[start] = 0f;
 
         while (openSet.Count > 0)
@@ -39,7 +37,7 @@ public class Pathfinder : MonoBehaviour
                 {
                     cameFrom[neighbor] = current.Lane;
                     gScore[neighbor] = tentativeGScore;
-                    float fScore = tentativeGScore + NavigationUtils.CalculateDistance(neighbor, target);
+                    float fScore = tentativeGScore + Utils.CalculateDistance(neighbor, target);
 
                     if (openSet.Contains(node => node.Lane == neighbor) == false)
                         openSet.Enqueue(new PathNode(neighbor, fScore));
