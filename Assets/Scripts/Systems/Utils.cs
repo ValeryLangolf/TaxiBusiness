@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 public static class Utils
@@ -64,5 +65,14 @@ public static class Utils
             path.Add(endLane.Points[i].position);
 
         return path;
+    }
+
+    public static (string, int) ExtractName(string name)
+    {
+        Match match = Regex.Match(name, @"(\D+)(\d*)");
+        string textPart = match.Groups[1].Value;
+        int numberPart = match.Groups[2].Success ? int.Parse(match.Groups[2].Value) : 0;
+
+        return (textPart, numberPart);
     }
 }

@@ -1,92 +1,128 @@
 #if UNITY_EDITOR
-
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
+using System.Net;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class SectionRoadBuilder : MonoBehaviour
 {
     private const string Waypoint = nameof(Waypoint);
+    private const int MinWaypointsCount = 2;
 
-    [SerializeField, Range(2, 20)] private int _count = 2;
+    [Header("Создаёт конкретное количество точек")]
+    [SerializeField, Range(MinWaypointsCount, 100)] private int _count = 2;
+
+    [Header("Если количество точек зависит от расстояния:")]
+    [SerializeField] private bool _isDistanceDependency;
+    [SerializeField, Range(0.05f, 100)] private float _distance = 1f;
+
+    [Header("Изгиб линии:")]
+    [SerializeField] private Vector3 _arcValue = new();
+    //[SerializeField, Range(0f, 5f)] private float _curvatureFactor = 1.0f;
+
+    private void OnValidate()
+    {
+        List<Transform> transforms = new();
+
+        if (_isDistanceDependency || _arcValue != Vector3.zero)
+        {
+            transforms = GetChildren();
+            transforms = GetSortedByName(transforms);
+        }
+
+        if (_isDistanceDependency)
+        {
+            _count = (int)(Vector3.Distance(transforms.First().position, transforms.Last().position) / _distance);
+
+            if (_count < MinWaypointsCount)
+                _count = MinWaypointsCount;
+        }
+
+        if(_arcValue != Vector3.zero)
+        {
+            EqualizeDistanceBetweenPoints(transforms);
+        }
+    }
 
     public void UpdateCount()
     {
-        List<Transform> transforms = GetComponentsInChildren<Transform>(true).Where(t => t != transform).ToList();
-        transforms = OrderByName(transforms);
+        List<Transform> transforms = GetChildren();
+        transforms = GetSortedByName(transforms);
 
-        if (transforms.Count < 2)
+        if (transforms.Count < MinWaypointsCount)
         {
-            Debug.LogWarning("Должно быть как минимум 2 точки для обновления");
+            RenameChildren(transforms);
+            SortChildren(transforms);
+            Debug.LogWarning("Должно заранее существовать как минимум 2 точки");
+
             return;
         }
 
-        Debug.Log($"{transforms.Count}");
-
-        Transform firstPoint = transforms.First();
-        transforms.Remove(firstPoint);
-        firstPoint.gameObject.name = $"{Waypoint}0";
-
-        Transform lastPoint = transforms.Last();
-        transforms.Remove(lastPoint);
-        lastPoint.gameObject.name = $"{Waypoint}{_count - 1}";
-
-        Debug.Log($"{transforms.Count}");
-
-        int localCount = _count - 2;
-        int rightShift = 1;
-
-        for (int i = 0; i < transforms.Count; i++)
-            transforms[i].name = $"{Waypoint}{i + rightShift}";
-
-        while (transforms.Count > localCount)
+        while (transforms.Count > _count)
         {
-            DestroyImmediate(transforms[^1].gameObject);
-            transforms.RemoveAt(transforms.Count - 1);
+            Transform secondLastElement = transforms[^2];
+            DestroyImmediate(secondLastElement.gameObject);
+            transforms.Remove(secondLastElement);
         }
 
-        for (int i = transforms.Count + 1; i < localCount + rightShift; i++)
+        while (transforms.Count < _count)
         {
-            GameObject newWaypoint = new($"{Waypoint}{i}");
-            newWaypoint.transform.SetParent(transform);
-            transforms.Add(newWaypoint.transform);
+            GameObject newElement = new($"{Waypoint}");
+            newElement.transform.SetParent(transform);
+            int secondLastIndex = transforms.Count - 1;
+            transforms.Insert(secondLastIndex, newElement.transform);
         }
 
-        for (int i = 1; i < transforms.Count + 1; i++)
-        {
-            transforms[i - 1].position = Vector3.Lerp(
-                firstPoint.position,
-                lastPoint.position,
-                (float)i / (transforms.Count + rightShift));
-        }
-
-        SortChildren();
+        RenameChildren(transforms);
+        SortChildren(transforms);
+        EqualizeDistanceBetweenPoints(transforms);
     }
 
-    private List<Transform> OrderByName(List<Transform> transforms) =>
-        transforms.OrderBy(t => ExtractName(t.name)).ToList();
-
-    private void SortChildren()
+    private List<Transform> GetChildren()
     {
-        var children = GetComponentsInChildren<Transform>(true)
+        return GetComponentsInChildren<Transform>(true)
             .Where(t => t != transform)
             .ToList();
-
-        var sortedChildren = children.OrderBy(t => ExtractName(t.name)).ToList();
-
-        for (int i = 0; i < sortedChildren.Count; i++)
-            sortedChildren[i].SetSiblingIndex(i);
     }
 
-    private (string, int) ExtractName(string name)
+    private void RenameChildren(List<Transform> transforms)
     {
-        var match = Regex.Match(name, @"(\D+)(\d*)");
-        string textPart = match.Groups[1].Value;
-        int numberPart = match.Groups[2].Success ? int.Parse(match.Groups[2].Value) : 0;
+        for (int i = 0; i < transforms.Count; i++)
+            transforms[i].name = $"{Waypoint}{i}";
+    }
 
-        return (textPart, numberPart);
+    private List<Transform> GetSortedByName(List<Transform> transforms) =>
+        transforms.OrderBy(t => Utils.ExtractName(t.name)).ToList();
+
+    private void SortChildren(List<Transform> transforms)
+    {
+        for (int i = 0; i < transforms.Count; i++)
+            transforms[i].SetSiblingIndex(i);
+    }
+
+    private void EqualizeDistanceBetweenPoints(List<Transform> transforms)
+    {
+        if (transforms.Count <= MinWaypointsCount)
+            return;
+
+        Vector3 firstPosition = transforms.First().position;
+        Vector3 lastPosition = transforms.Last().position;
+
+        float totalDistance = Vector3.Distance(firstPosition, lastPosition);
+        float smoothFactor = Mathf.Clamp(totalDistance * 0.05f, 0.5f, 2.5f);
+        Vector3 scaledArc = _arcValue * smoothFactor;
+
+        for (int i = 1; i < transforms.Count - 1; i++)
+        {
+            float t = (float)i / (transforms.Count - 1);
+            Vector3 pointOnLine = Vector3.Lerp(firstPosition, lastPosition, t);
+
+            float curveFactor = Mathf.Sin(t * Mathf.PI);
+            Vector3 arcOffset = scaledArc * curveFactor;
+
+            transforms[i].position = pointOnLine + arcOffset;
+        }
     }
 }
-
 #endif

@@ -121,7 +121,7 @@ public class RoadBuilder : MonoBehaviour
         {
             List<Transform> points = section.GetComponentsInChildren<Transform>()
                 .Where(child => child != section.transform)
-                .OrderBy(child => child.name)
+                .OrderBy(child => Utils.ExtractName(child.name))
                 .ToList();
 
             if (section.Points.SequenceEqual(points))
