@@ -5,6 +5,9 @@ using UnityEngine;
 
 public static class Utils
 {
+    public static float CalculateDistance(Vector3 pointA, Vector3 pointB) =>
+        Vector3.Distance(pointA, pointB);
+
     public static float CalculateDistance(SectionRoadStrip laneA, SectionRoadStrip laneB) =>
         Vector3.Distance(laneA.Points.Last().position, laneB.Points.Last().position);
 
@@ -20,49 +23,45 @@ public static class Utils
         return sortedList1.SequenceEqual(sortedList2);
     }
 
-    public static (SectionRoadStrip, Transform) GetNearestSectionAndPoint(Vector3 position, List<SectionRoadStrip> sections)
+    public static PointInRoadSection GetNearestSectionAndPoint(Vector3 position, List<SectionRoadStrip> sections)
     {
-        SectionRoadStrip nearestLane = null;
-        Transform nearestPoint = null;
+        PointInRoadSection pointInsideSection = null;
         float minDistance = Mathf.Infinity;
 
-        foreach (SectionRoadStrip lane in sections)
+        foreach (SectionRoadStrip section in sections)
         {
-            Transform point = lane.GetClosestPoint(position);
+            Transform point = section.GetClosestPoint(position);
             float distance = Vector3.Distance(position, point.position);
 
             if (distance < minDistance)
             {
                 minDistance = distance;
-                nearestLane = lane;
-                nearestPoint = point;
+                pointInsideSection = new(section, point);
             }
         }
 
-        return (nearestLane, nearestPoint);
+        return pointInsideSection;
     }
 
     public static List<Vector3> GetPathBetweenPoints(
         List<SectionRoadStrip> lanePath,
-        SectionRoadStrip startLane,
-        Transform startPoint,
-        SectionRoadStrip endLane,
-        Transform endPoint)
+        PointInRoadSection start,
+        PointInRoadSection end)
     {
         List<Vector3> path = new();
 
-        int startIndex = startLane.GetPointIndex(startPoint);
+        int startIndex = start.Section.GetPointIndex(start.Point);
 
-        for (int i = startIndex; i < startLane.Points.Count; i++)
-            path.Add(startLane.Points[i].position);
+        for (int i = startIndex; i < start.Section.Points.Count; i++)
+            path.Add(start.Section.Points[i].position);
 
         for (int i = 1; i < lanePath.Count - 1; i++)
             path.AddRange(lanePath[i].Points.Select(p => p.position));
 
-        int endIndex = endLane.GetPointIndex(endPoint);
+        int endIndex = end.Section.GetPointIndex(end.Point);
 
         for (int i = 0; i <= endIndex; i++)
-            path.Add(endLane.Points[i].position);
+            path.Add(end.Section.Points[i].position);
 
         return path;
     }

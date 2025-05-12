@@ -25,6 +25,8 @@ public class RoadBuilder : MonoBehaviour
     private readonly GizmosRoadDrower _drower = new();
     private readonly RoadConnector _connector = new();
 
+    public List<SectionRoadStrip> Sections => new(_roadNetwork.Sections);
+
     private void OnValidate()
     {
         if (_isShowGizmos)

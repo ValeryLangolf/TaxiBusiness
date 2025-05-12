@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 
 public class DestinationSender : MonoBehaviour
@@ -58,17 +59,16 @@ public class DestinationSender : MonoBehaviour
 
     private void SendToDestination(VehicleController vehicle, Vector3 destination)
     {
-        var (startLane, startPoint) = Utils.GetNearestSectionAndPoint(vehicle.transform.position, _roadNetwork.Sections);
-        var (endLane, endPoint) = Utils.GetNearestSectionAndPoint(destination, _roadNetwork.Sections);
+        PointInRoadSection start = Utils.GetNearestSectionAndPoint(vehicle.transform.position, _roadNetwork.Sections);
+        PointInRoadSection end = Utils.GetNearestSectionAndPoint(destination, _roadNetwork.Sections);
 
-        if (startLane == null)
+        if (start == null)
             Debug.LogWarning("Не удалось получить стартовую позицию транспортного средства в пределах дорожной сети");
         
-        if (endLane == null)
+        if (end == null)
             Debug.LogWarning("Не удалось получить пункт назначения транспортного средства в пределах дорожной сети");
 
-        List<SectionRoadStrip> lanePath = _pathfinder.FindPath(startLane, endLane);
-        List<Vector3> path = Utils.GetPathBetweenPoints(lanePath, startLane, startPoint, endLane, endPoint);
+        List<Transform> path = _pathfinder.FindPath(start, end);
 
         if (path.Count == 0)
             Debug.LogWarning("Не удалось найти путь");

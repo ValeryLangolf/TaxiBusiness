@@ -89,5 +89,4 @@ public class RoadNetworkEditor : Editor
     private static RoadBuilder[] FindRoadBuilders() =>
         FindObjectsByType<RoadBuilder>(UnityEngine.FindObjectsSortMode.None);
 }
-
 #endif

@@ -7,10 +7,10 @@ public class VehicleController : MonoBehaviour
     [SerializeField] private float _rotationSpeed;
     [SerializeField] private float _reachThreshold = 1f;
 
-    private List<Vector3> _currentPath;
+    private List<Transform> _currentPath;
     private int _currentTargetIndex;
 
-    public void SetPath(List<Vector3> path)
+    public void SetPath(List<Transform> path)
     {
         _currentPath = path;
         _currentTargetIndex = 0;
@@ -21,13 +21,11 @@ public class VehicleController : MonoBehaviour
         if (_currentPath == null || _currentTargetIndex >= _currentPath.Count)
             return;
 
-        Vector3 target = _currentPath[_currentTargetIndex];
+        Vector3 target = _currentPath[_currentTargetIndex].position;
         MoveTowards(target);
 
         if (Vector3.Distance(transform.position, target) < _reachThreshold)
-        {
             _currentTargetIndex++;
-        }
     }
 
     private void MoveTowards(Vector3 target)
@@ -42,21 +40,5 @@ public class VehicleController : MonoBehaviour
         );
 
         transform.position += _speed * Time.deltaTime * transform.forward;
-    }
-
-    private void OnDrawGizmos()
-    {
-        if (_currentPath == null) return;
-
-        Gizmos.color = Color.cyan;
-
-        for (int i = 0; i < _currentPath.Count - 1; i++)
-        {
-            Gizmos.DrawLine(_currentPath[i], _currentPath[i + 1]);
-            Gizmos.DrawSphere(_currentPath[i], 0.3f);
-        }
-
-        Gizmos.color = Color.red;
-        //Gizmos.DrawSphere(_currentPath[^1], 0.5f);
     }
 }
