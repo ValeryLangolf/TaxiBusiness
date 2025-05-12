@@ -103,7 +103,7 @@ public class GizmosRoadDrower
 
     private void DrowLineConnection(SectionRoadStrip section)
     {
-        IReadOnlyList<SectionRoadStrip> connectedLanes = section.ConnectedLanes;
+        IReadOnlyList<SectionRoadStrip> connectedLanes = section.ConnectedSections;
 
         if (connectedLanes == null || connectedLanes.Count == 0)
             return;
@@ -138,7 +138,7 @@ public class GizmosRoadDrower
 
     private void DrowSphereConnection(SectionRoadStrip section)
     {
-        IReadOnlyList<SectionRoadStrip> connectedLanes = section.ConnectedLanes;
+        IReadOnlyList<SectionRoadStrip> connectedLanes = section.ConnectedSections;
 
         if (connectedLanes == null || connectedLanes.Count == 0)
             return;

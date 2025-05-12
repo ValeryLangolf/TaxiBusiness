@@ -48,7 +48,7 @@ public class RoadConnector
                 connectedSections.Add(otherSection);
         }
 
-        if(Utils.AreListsEqual(section.ConnectedLanes, connectedSections))
+        if(Utils.AreListsEqual(section.ConnectedSections, connectedSections))
             return;
 
         section.SetConnectedSections(connectedSections);

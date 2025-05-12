@@ -17,9 +17,11 @@ public class PointInRoadSection
 
     public Vector3 Position => _point.position;
 
+    public int Index => _section.Points.IndexOf(_point);
+
     public void SetSection(SectionRoadStrip section) =>
         _section = section;
 
     public void SetPoint(Transform point) =>
-        _point = point;
+        _point = point;    
 }

@@ -9,7 +9,10 @@ public class SectionRoadStrip : MonoBehaviour
 
     public List<Transform> Points => new(_points);
 
-    public List<SectionRoadStrip> ConnectedLanes => new(_connectedSections);
+    public List<SectionRoadStrip> ConnectedSections => new(_connectedSections);
+
+    public float LenghtInMeter => CalculateLenght();
+
 
     public void SetPoints(List<Transform> points) =>
         _points = new(points);
@@ -37,5 +40,15 @@ public class SectionRoadStrip : MonoBehaviour
         }
 
         return closest;
+    }
+
+    private float CalculateLenght()
+    {
+        float distance = 0;
+
+        for (int i = 1; i < _points.Count; i++)
+            distance = Vector3.Distance(_points[i - 1].position, _points[i].position);
+
+        return distance;
     }
 }

@@ -4,78 +4,71 @@ using UnityEngine;
 
 public class Pathfinder : MonoBehaviour
 {
-    public List<Transform> FindPath(PointInRoadSection startPoint, PointInRoadSection targetPoint)
+    public List<SectionRoadStrip> FindPath(PointInRoadSection startPoint, PointInRoadSection targetPoint) =>
+        FindShortestPathByLength(startPoint.Section, targetPoint.Section);
+
+    private List<SectionRoadStrip> FindShortestPathByLength(SectionRoadStrip startSection, SectionRoadStrip targetSection)
     {
-        if (startPoint.Section == targetPoint.Section && startPoint.Position == targetPoint.Position)
-            return new List<Transform> { startPoint.Point };
-
-        PriorityQueue<PathNode> openSet = new();
+        PriorityQueue<PathNode> frontier = new();
         Dictionary<SectionRoadStrip, SectionRoadStrip> cameFrom = new();
-        Dictionary<SectionRoadStrip, float> gScore = new();
+        Dictionary<SectionRoadStrip, float> costSoFar = new();
 
-        openSet.Enqueue(new PathNode(startPoint.Section, Utils.CalculateDistance(startPoint.Position, targetPoint.Position)));
-        gScore[startPoint.Section] = 0f;
+        frontier.Enqueue(new PathNode(startSection, 0f));
+        costSoFar[startSection] = 0f;
 
-        while (openSet.Count > 0)
+        while (frontier.Count > 0)
         {
-            PathNode current = openSet.Dequeue();
+            PathNode current = frontier.Dequeue();
 
-            if (current.Lane == targetPoint.Section)
-                return ReconstructPath(cameFrom, current.Lane, startPoint, targetPoint);
+            if (current.Section == targetSection)
+                return BuildPathFromCameFrom(cameFrom, current.Section);
 
-            foreach (SectionRoadStrip neighbor in current.Lane.ConnectedLanes)
+            foreach (SectionRoadStrip neighbor in current.Section.ConnectedSections)
             {
-                float tentativeGScore = gScore[current.Lane];
+                float newCost = costSoFar[current.Section] + current.Section.LenghtInMeter;
 
-                if (!gScore.ContainsKey(neighbor))
-                    gScore[neighbor] = Mathf.Infinity;
-
-                if (tentativeGScore < gScore[neighbor])
+                if (costSoFar.ContainsKey(neighbor) == false || newCost < costSoFar[neighbor])
                 {
-                    cameFrom[neighbor] = current.Lane;
-                    gScore[neighbor] = tentativeGScore;
-                    float fScore = tentativeGScore + Utils.CalculateDistance(neighbor, targetPoint.Section);
-
-                    if (!openSet.Contains(node => node.Lane == neighbor))
-                        openSet.Enqueue(new PathNode(neighbor, fScore));
+                    costSoFar[neighbor] = newCost;
+                    float priority = newCost + EstimateRemainingCost(neighbor, targetSection);
+                    frontier.Enqueue(new PathNode(neighbor, priority));
+                    cameFrom[neighbor] = current.Section;
                 }
             }
         }
 
-        return new List<Transform>();
+        return new List<SectionRoadStrip>();
     }
 
-    private List<Transform> ReconstructPath(Dictionary<SectionRoadStrip, SectionRoadStrip> cameFrom, SectionRoadStrip current, PointInRoadSection startPoint, PointInRoadSection targetPoint)
+    private float EstimateRemainingCost(SectionRoadStrip _, SectionRoadStrip __) =>
+        0f;
+
+    private List<SectionRoadStrip> BuildPathFromCameFrom(Dictionary<SectionRoadStrip, SectionRoadStrip> cameFrom, SectionRoadStrip endNode)
     {
-        List<Transform> totalPath = new() { targetPoint.Point }; // Начинаем с целевой точки
+        List<SectionRoadStrip> path = new();
+        SectionRoadStrip current = endNode;
 
         while (cameFrom.ContainsKey(current))
         {
+            path.Insert(0, current);
             current = cameFrom[current];
-            totalPath.Add(GetPointOnSection(current)); // Получите точку на секции
         }
 
-        totalPath.Reverse();
-        totalPath.Insert(0, startPoint.Point); // Добавьте начальную точку в начало списка
-        return totalPath;
+        path.Insert(0, current);
+        return path;
     }
+}
 
-    private Transform GetPointOnSection(SectionRoadStrip section) =>
-        section.Points[section.Points.Count / 2];
+public class PathNode : IComparable<PathNode>
+{
+    public SectionRoadStrip Section { get; }
+    public float Priority { get; }
 
-    private class PathNode : IComparable<PathNode>
+    public PathNode(SectionRoadStrip section, float priority)
     {
-        public SectionRoadStrip Lane { get; }
-
-        public float FScore { get; }
-
-        public PathNode(SectionRoadStrip lane, float fScore)
-        {
-            Lane = lane;
-            FScore = fScore;
-        }
-
-        public int CompareTo(PathNode other) => 
-            FScore.CompareTo(other.FScore);
+        Section = section;
+        Priority = priority;
     }
+
+    public int CompareTo(PathNode other) => Priority.CompareTo(other.Priority);
 }

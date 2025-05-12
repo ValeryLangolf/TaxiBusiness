@@ -30,8 +30,6 @@ public class VehicleSelector : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
-            Debug.Log(hit.collider.name);
-
             if (hit.collider.TryGetComponent(out VehicleCollider vehicleCollider))
             {
                 _pointer.gameObject.SetActive(true);

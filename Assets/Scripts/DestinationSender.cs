@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using System.Drawing;
 using UnityEngine;
+using static UnityEngine.Rendering.CoreUtils;
 
 public class DestinationSender : MonoBehaviour
 {
@@ -8,6 +8,8 @@ public class DestinationSender : MonoBehaviour
     [SerializeField] private Pathfinder _pathfinder;
     [SerializeField] private DestinationMarker _marker;
     [SerializeField] private VehicleSelector _selector;
+    [SerializeField] private IconFollower _iconStart;
+    [SerializeField] private IconFollower _iconFinish;
 
     private bool _isRouteAssigned;
 
@@ -36,8 +38,8 @@ public class DestinationSender : MonoBehaviour
 
     private void HandleClick()
     {
-        VehicleController vehicle = _selector.Vehicle; 
-        
+        VehicleController vehicle = _selector.Vehicle;
+
         if (vehicle == null)
             return;
 
@@ -45,13 +47,10 @@ public class DestinationSender : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit))
         {
-            Debug.Log(hit.collider.name);
-
             if (hit.collider.TryGetComponent(out Plane _))
             {
                 _marker.SetPosition(hit.point);
                 _marker.gameObject.SetActive(true);
-
                 SendToDestination(vehicle, hit.point);
             }
         }
@@ -64,11 +63,24 @@ public class DestinationSender : MonoBehaviour
 
         if (start == null)
             Debug.LogWarning("Не удалось получить стартовую позицию транспортного средства в пределах дорожной сети");
-        
+
         if (end == null)
             Debug.LogWarning("Не удалось получить пункт назначения транспортного средства в пределах дорожной сети");
 
-        List<Transform> path = _pathfinder.FindPath(start, end);
+        _iconStart.Follow(start.Point);
+        _iconFinish.Follow(end.Point);
+
+        Debug.Log($"{start.Section.name} - {start.Point.name}; {end.Section.name} - {end.Point.name}");
+
+        Debug.Log("List<Transform> path");
+
+        List<SectionRoadStrip> sections = _pathfinder.FindPath(start, end);
+        sections.RemoveAt(0);
+        sections.RemoveAt(sections.Count - 1);
+
+        List<Transform> path = AddPathFistSection(start);
+        path.AddRange(GetPointPath(sections));
+        path.AddRange(AddPathLastSection(end));
 
         if (path.Count == 0)
             Debug.LogWarning("Не удалось найти путь");
@@ -76,5 +88,40 @@ public class DestinationSender : MonoBehaviour
         _isRouteAssigned = true;
         vehicle.SetPath(path);
         Debug.Log("Тачка выехала");
+    }
+
+    private List<Transform> GetPointPath(List<SectionRoadStrip> sections)
+    {
+        Debug.Log($"sections.Count = {sections.Count}");
+
+        List<Transform> path = new();
+
+        foreach (SectionRoadStrip section in sections)
+            foreach (Transform point in section.Points)
+                path.Add(point);
+
+        Debug.Log($"Точек: {path.Count}");
+        Debug.Log($"Первая: {path[0].name}, секция: {sections[0].name}");
+        return path;
+    }
+
+    private List<Transform> AddPathFistSection(PointInRoadSection start)
+    {
+        List<Transform> path = new(start.Section.Points);
+
+        while (start.Point != path[0])
+            path.RemoveAt(0);
+
+        return path;
+    }
+
+    private List<Transform> AddPathLastSection(PointInRoadSection last)
+    {
+        List<Transform> path = new(last.Section.Points);
+
+        while (last.Point != path[^1])
+            path.RemoveAt(path.Count - 1);
+
+        return path;
     }
 }
