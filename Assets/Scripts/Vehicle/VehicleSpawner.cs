@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class VehicleSpawner : MonoBehaviour
 {
-    [SerializeField] private VehicleController _vehiclePrefab;
+    [SerializeField] private Vehicle _vehiclePrefab;
     [SerializeField] private Transform _startPosition;
 
     private void Awake()

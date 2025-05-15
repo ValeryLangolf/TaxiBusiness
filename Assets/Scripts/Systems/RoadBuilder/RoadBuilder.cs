@@ -8,8 +8,7 @@ using UnityEditor;
 [ExecuteAlways]
 public class RoadBuilder : MonoBehaviour
 {
-    [SerializeField] private RoadNetwork _roadNetwork;
-
+    [SerializeField] private RoadNetwork _roadNet;
     [SerializeField] private Color _sectionColor;
     [SerializeField] private Color _connectionColor;
     [SerializeField] private float _waypointSphereRadius;
@@ -25,7 +24,7 @@ public class RoadBuilder : MonoBehaviour
     private readonly GizmosRoadDrower _drower = new();
     private readonly RoadConnector _connector = new();
 
-    public List<SectionRoadStrip> Sections => new(_roadNetwork.Sections);
+    public List<SectionRoadStrip> Sections => new(_roadNet.Sections);
 
     private void OnValidate()
     {
@@ -45,12 +44,12 @@ public class RoadBuilder : MonoBehaviour
             Find();
 
         if (_isAutoConnect)
-            _connector.Connect(_roadNetwork.Sections);
+            _connector.Connect(_roadNet.Sections);
     }
 
     private void OnDrawGizmos()
     {
-        List<SectionRoadStrip> sections = _roadNetwork.Sections;
+        List<SectionRoadStrip> sections = _roadNet.Sections;
 
         if (_isShowGizmos == false || sections.Count == 0)
             return;
@@ -79,7 +78,7 @@ public class RoadBuilder : MonoBehaviour
             return;
         }
 
-        IReadOnlyList<Transform> points = section.Points;
+        IReadOnlyList<Waypoint> points = section.Points;
 
         if (points == null || points.Count == 0)
             return;
@@ -89,15 +88,15 @@ public class RoadBuilder : MonoBehaviour
             if (section.Points[i] == null)
                 continue;
 
-            _clickableSpheres.Add((points[i].position, _waypointSphereRadius, points[i].gameObject));
+            _clickableSpheres.Add((points[i].Position, _waypointSphereRadius, points[i].gameObject));
         }
     }
 
     public void ConnectAllLanes()
     {
         Find();
-        _connector.Connect(_roadNetwork.Sections);
-        Debug.Log($"ОБЪЕДИНЕНИЕ СЕКЦИЙ В ЕДИНУЮ ДОРОЖНУЮ СЕТЬ. Количество секций: {_roadNetwork.Sections.Count}");
+        _connector.Connect(RoadNetwork.Instance.Sections);
+        Debug.Log($"ОБЪЕДИНЕНИЕ СЕКЦИЙ В ЕДИНУЮ ДОРОЖНУЮ СЕТЬ. Количество секций: {RoadNetwork.Instance.Sections.Count}");
     }
 
     private void Find()
@@ -110,18 +109,18 @@ public class RoadBuilder : MonoBehaviour
     {
         List<SectionRoadStrip> sections = GetComponentsInChildren<SectionRoadStrip>(true).ToList();
 
-        if (Utils.AreListsEqual(_roadNetwork.Sections, sections))
+        if (Utils.AreListsEqual(_roadNet.Sections, sections))
             return;
 
-        _roadNetwork.SetSections(sections);
-        EditorUtility.SetDirty(_roadNetwork);
+        _roadNet.SetSections(sections);
+        EditorUtility.SetDirty(_roadNet);
     }
 
     private void FindPointsInSections()
     {
-        foreach (SectionRoadStrip section in _roadNetwork.Sections)
+        foreach (SectionRoadStrip section in _roadNet.Sections)
         {
-            List<Transform> points = section.GetComponentsInChildren<Transform>()
+            List<Waypoint> points = section.GetComponentsInChildren<Waypoint>()
                 .Where(child => child != section.transform)
                 .OrderBy(child => Utils.ExtractName(child.name))
                 .ToList();

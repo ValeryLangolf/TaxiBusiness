@@ -50,6 +50,7 @@ public class SectionRoadBuilder : MonoBehaviour
         while (transforms.Count < _count)
         {
             GameObject newElement = new($"{Waypoint}");
+            newElement.AddComponent<Waypoint>();
             newElement.transform.SetParent(transform);
             int secondLastIndex = transforms.Count - 1;
             transforms.Insert(secondLastIndex, newElement.transform);

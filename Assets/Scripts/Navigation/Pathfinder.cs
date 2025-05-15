@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
 
-public class Pathfinder : MonoBehaviour
+public static class Pathfinder
 {
-    public List<SectionRoadStrip> FindPath(PointInRoadSection startPoint, PointInRoadSection targetPoint) =>
+    public static List<SectionRoadStrip> FindPath(Waypoint startPoint, Waypoint targetPoint) =>
         FindShortestPathByLength(startPoint.Section, targetPoint.Section);
 
-    private List<SectionRoadStrip> FindShortestPathByLength(SectionRoadStrip startSection, SectionRoadStrip targetSection)
+    private static List<SectionRoadStrip> FindShortestPathByLength(SectionRoadStrip startSection, SectionRoadStrip targetSection)
     {
         PriorityQueue<PathNode> frontier = new();
         Dictionary<SectionRoadStrip, SectionRoadStrip> cameFrom = new();
@@ -40,10 +39,10 @@ public class Pathfinder : MonoBehaviour
         return new List<SectionRoadStrip>();
     }
 
-    private float EstimateRemainingCost(SectionRoadStrip _, SectionRoadStrip __) =>
+    private static float EstimateRemainingCost(SectionRoadStrip _, SectionRoadStrip __) =>
         0f;
 
-    private List<SectionRoadStrip> BuildPathFromCameFrom(Dictionary<SectionRoadStrip, SectionRoadStrip> cameFrom, SectionRoadStrip endNode)
+    private static List<SectionRoadStrip> BuildPathFromCameFrom(Dictionary<SectionRoadStrip, SectionRoadStrip> cameFrom, SectionRoadStrip endNode)
     {
         List<SectionRoadStrip> path = new();
         SectionRoadStrip current = endNode;

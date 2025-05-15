@@ -16,7 +16,7 @@ public class MenuWaypointAutoEqualizerEditor : Editor
     }
 
     [MenuItem(MenuName, false, Priority)]
-    private static void ToggleAutoDistance()
+    private static void ToggleAutoEqualize()
     {
         _isAutoEqualize = !_isAutoEqualize;
         EditorPrefs.SetBool(Key, _isAutoEqualize);

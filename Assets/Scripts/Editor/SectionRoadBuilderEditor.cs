@@ -11,8 +11,6 @@ public class SectionRoadBuilderEditor : Editor
         SectionRoadBuilder builder = (SectionRoadBuilder)target;
 
         if (GUILayout.Button("Применить"))
-        {
             builder.UpdateCount();
-        }
     }
 }

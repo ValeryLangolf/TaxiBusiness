@@ -9,7 +9,7 @@ public static class Utils
         Vector3.Distance(pointA, pointB);
 
     public static float CalculateDistance(SectionRoadStrip laneA, SectionRoadStrip laneB) =>
-        Vector3.Distance(laneA.Points.Last().position, laneB.Points.Last().position);
+        Vector3.Distance(laneA.Points.Last().Position, laneB.Points.Last().Position);
 
     public static bool AreListsEqual<T>(List<T> list1, List<T> list2) where T : Component
     {
@@ -23,47 +23,24 @@ public static class Utils
         return sortedList1.SequenceEqual(sortedList2);
     }
 
-    public static PointInRoadSection GetNearestSectionAndPoint(Vector3 position, List<SectionRoadStrip> sections)
+    public static Waypoint GetNearestSectionAndPoint(Vector3 position, List<SectionRoadStrip> sections)
     {
-        PointInRoadSection pointInsideSection = null;
+        Waypoint waypoint = null;
         float minDistance = Mathf.Infinity;
 
         foreach (SectionRoadStrip section in sections)
         {
-            Transform point = section.GetClosestPoint(position);
-            float distance = Vector3.Distance(position, point.position);
+            Waypoint point = section.GetClosestPoint(position);
+            float distance = Vector3.Distance(position, point.Position);
 
             if (distance < minDistance)
             {
                 minDistance = distance;
-                pointInsideSection = new(section, point);
+                waypoint = point;
             }
         }
 
-        return pointInsideSection;
-    }
-
-    public static List<Vector3> GetPathBetweenPoints(
-        List<SectionRoadStrip> lanePath,
-        PointInRoadSection start,
-        PointInRoadSection end)
-    {
-        List<Vector3> path = new();
-
-        int startIndex = start.Section.GetPointIndex(start.Point);
-
-        for (int i = startIndex; i < start.Section.Points.Count; i++)
-            path.Add(start.Section.Points[i].position);
-
-        for (int i = 1; i < lanePath.Count - 1; i++)
-            path.AddRange(lanePath[i].Points.Select(p => p.position));
-
-        int endIndex = end.Section.GetPointIndex(end.Point);
-
-        for (int i = 0; i <= endIndex; i++)
-            path.Add(end.Section.Points[i].position);
-
-        return path;
+        return waypoint;
     }
 
     public static (string, int) ExtractName(string name)

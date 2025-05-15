@@ -52,14 +52,14 @@ public class GizmosRoadDrower
         if (section.Points == null || section.Points.Count < 2)
             return;
 
-        IReadOnlyList<Transform> points = section.Points;
+        IReadOnlyList<Waypoint> points = section.Points;
 
         for (int i = 0; i < points.Count - 1; i++)
         {
             if (section.Points[i] == null || points[i + 1] == null)
                 continue;
 
-            Gizmos.DrawLine(points[i].position, points[i + 1].position);
+            Gizmos.DrawLine(points[i].Position, points[i + 1].Position);
         }
     }
 
@@ -79,7 +79,7 @@ public class GizmosRoadDrower
             return;
         }
 
-        IReadOnlyList<Transform> points = section.Points;
+        IReadOnlyList<Waypoint> points = section.Points;
 
         if (points == null || points.Count == 0)
             return;
@@ -89,7 +89,7 @@ public class GizmosRoadDrower
             if (points[i] == null)
                 continue;
 
-            Gizmos.DrawSphere(points[i].position, _waypointSphereRadius);
+            Gizmos.DrawSphere(points[i].Position, _waypointSphereRadius);
         }
     }
 
@@ -108,7 +108,7 @@ public class GizmosRoadDrower
         if (connectedLanes == null || connectedLanes.Count == 0)
             return;
 
-        IReadOnlyList<Transform> points = section.Points;
+        IReadOnlyList<Waypoint> points = section.Points;
 
         if (points.Count == 0)
             return;
@@ -121,10 +121,10 @@ public class GizmosRoadDrower
             if (connectedLane.Points.Count == 0)
                 continue;
 
-            Transform startPoint = points.Last();
-            Transform endPoint = connectedLane.Points.First();
+            Waypoint startPoint = points.Last();
+            Waypoint endPoint = connectedLane.Points.First();
 
-            Gizmos.DrawLine(startPoint.position, endPoint.position);
+            Gizmos.DrawLine(startPoint.Position, endPoint.Position);
         }
     }
 
@@ -151,11 +151,11 @@ public class GizmosRoadDrower
             if (section.Points.Count == 0 || connectedLane.Points.Count == 0)
                 continue;
 
-            Transform startPoint = section.Points.Last();
-            Transform endPoint = connectedLane.Points.First();
+            Waypoint startPoint = section.Points.Last();
+            Waypoint endPoint = connectedLane.Points.First();
 
-            Gizmos.DrawSphere(startPoint.position, _connectionSphereRadius);
-            Gizmos.DrawSphere(endPoint.position, _connectionSphereRadius);
+            Gizmos.DrawSphere(startPoint.Position, _connectionSphereRadius);
+            Gizmos.DrawSphere(endPoint.Position, _connectionSphereRadius);
         }
     }
 }

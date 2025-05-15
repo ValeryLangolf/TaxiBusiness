@@ -3,7 +3,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-using static UnityEngine.Rendering.CoreUtils;
 
 public class RoadConnector
 {
@@ -21,7 +20,7 @@ public class RoadConnector
     private void ConnectSection(SectionRoadStrip section, List<SectionRoadStrip> sections)
     {
         List<SectionRoadStrip> connectedSections = new();
-        IReadOnlyList<Transform> points = section.Points;
+        IReadOnlyList<Waypoint> points = section.Points;
 
         if (points == null || points.Count == 0)
         {
@@ -29,19 +28,19 @@ public class RoadConnector
             return;
         }
 
-        Vector3 endPoint = points[^1].position;
+        Vector3 endPoint = points[^1].Position;
 
         foreach (SectionRoadStrip otherSection in sections)
         {
             if (otherSection == section)
                 continue;
 
-            IReadOnlyList<Transform> otherSectionPoints = otherSection.Points;
+            IReadOnlyList<Waypoint> otherSectionPoints = otherSection.Points;
 
             if (otherSectionPoints == null || otherSectionPoints.Count == 0)
                 continue;
 
-            Vector3 otherStart = otherSectionPoints[0].position;
+            Vector3 otherStart = otherSectionPoints[0].Position;
             float distance = Vector3.Distance(endPoint, otherStart);
 
             if (distance <= _connectDistance)
