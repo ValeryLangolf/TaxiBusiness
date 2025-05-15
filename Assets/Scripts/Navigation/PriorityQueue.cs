@@ -19,8 +19,7 @@ public class PriorityQueue<T> where T : IComparable<T>
             if (_elements[childIndex].CompareTo(_elements[parentIndex]) >= 0)
                 break;
 
-            (_elements[childIndex], _elements[parentIndex]) =
-                (_elements[parentIndex], _elements[childIndex]);
+            (_elements[childIndex], _elements[parentIndex]) = (_elements[parentIndex], _elements[childIndex]);
 
             childIndex = parentIndex;
         }
@@ -56,16 +55,5 @@ public class PriorityQueue<T> where T : IComparable<T>
         }
 
         return frontItem;
-    }
-
-    public bool Contains(Func<T, bool> predicate)
-    {
-        foreach (T element in _elements)
-        {
-            if (predicate(element))
-                return true;
-        }
-
-        return false;
     }
 }

@@ -20,6 +20,8 @@ public class Vehicle : MonoBehaviour
 
     public Waypoint EndPoint => _pathKeeper.EndPoint;
 
+    public Vector3 Position => transform.position;
+
     private void Awake()
     {
         _mover = new(transform, _speed);

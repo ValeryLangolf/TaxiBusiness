@@ -5,12 +5,6 @@ using UnityEngine;
 
 public static class Utils
 {
-    public static float CalculateDistance(Vector3 pointA, Vector3 pointB) =>
-        Vector3.Distance(pointA, pointB);
-
-    public static float CalculateDistance(SectionRoadStrip laneA, SectionRoadStrip laneB) =>
-        Vector3.Distance(laneA.Points.Last().Position, laneB.Points.Last().Position);
-
     public static bool AreListsEqual<T>(List<T> list1, List<T> list2) where T : Component
     {
         if (list1 == null && list2 == null) return true;
@@ -23,24 +17,23 @@ public static class Utils
         return sortedList1.SequenceEqual(sortedList2);
     }
 
-    public static Waypoint GetNearestSectionAndPoint(Vector3 position, List<SectionRoadStrip> sections)
+    public static Waypoint GetNearestSectionAndPoint(Vector3 position, List<Waypoint> waypoints)
     {
-        Waypoint waypoint = null;
+        Waypoint closestPoint = null;
         float minDistance = Mathf.Infinity;
 
-        foreach (SectionRoadStrip section in sections)
+        foreach (Waypoint waypoint in waypoints)
         {
-            Waypoint point = section.GetClosestPoint(position);
-            float distance = Vector3.Distance(position, point.Position);
+            float distance = Vector3.Distance(position, waypoint.Position);
 
-            if (distance < minDistance)
-            {
-                minDistance = distance;
-                waypoint = point;
-            }
+            if (distance >= minDistance)
+                continue;
+
+            minDistance = distance;
+            closestPoint = waypoint;
         }
 
-        return waypoint;
+        return closestPoint;
     }
 
     public static (string, int) ExtractName(string name)

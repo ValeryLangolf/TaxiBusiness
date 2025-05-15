@@ -17,8 +17,7 @@ public class Rotator
         {
             Debug.Log("Цель равна текущей позиции");
             return;
-        }
-            
+        }            
 
         Vector3 direction = (target - _vehicle.position).normalized;
         Quaternion targetRotation = Quaternion.LookRotation(direction);

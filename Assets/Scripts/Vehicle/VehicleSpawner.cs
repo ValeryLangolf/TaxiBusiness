@@ -9,7 +9,7 @@ public class VehicleSpawner : MonoBehaviour
     private void Awake()
     {
         if (_vehiclePrefab == null)
-            throw new NullReferenceException("_vehiclePrefab отсутствует ссылка на компонент");
+            throw new NullReferenceException("_отсутствует ссылка на префаб транспортного средства");
     }
 
     private void Start() =>

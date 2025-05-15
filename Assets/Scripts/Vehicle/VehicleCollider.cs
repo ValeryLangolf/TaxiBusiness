@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class VehicleCollider : MonoBehaviour
 {
-    [SerializeField] private Vehicle _vehicle;
+    private Vehicle _vehicle;
+
+    private void Awake() =>
+        _vehicle = GetComponentInParent<Vehicle>();
 
     public Vehicle Vehicle => _vehicle;
 }

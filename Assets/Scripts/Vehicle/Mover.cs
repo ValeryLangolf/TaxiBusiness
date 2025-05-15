@@ -14,7 +14,6 @@ public class Mover
     public void Move(Vector3 target)
     {
         target.y = _vehicle.position.y;
-
         _vehicle.position = Vector3.MoveTowards(_vehicle.position, target, _speed * Time.deltaTime);
     }
 }

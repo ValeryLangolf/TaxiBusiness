@@ -3,14 +3,13 @@ using System.Collections.Generic;
 
 public static class Pathfinder
 {
-    public static List<SectionRoadStrip> FindPath(Waypoint startPoint, Waypoint targetPoint) =>
-        FindShortestPathByLength(startPoint.Section, targetPoint.Section);
+    public const float DefaultEstimateCost = 0f;
 
-    private static List<SectionRoadStrip> FindShortestPathByLength(SectionRoadStrip startSection, SectionRoadStrip targetSection)
+    public static List<Waypoint> FindPath(Waypoint startSection, Waypoint targetSection)
     {
         PriorityQueue<PathNode> frontier = new();
-        Dictionary<SectionRoadStrip, SectionRoadStrip> cameFrom = new();
-        Dictionary<SectionRoadStrip, float> costSoFar = new();
+        Dictionary<Waypoint, Waypoint> cameFrom = new();
+        Dictionary<Waypoint, float> costSoFar = new();
 
         frontier.Enqueue(new PathNode(startSection, 0f));
         costSoFar[startSection] = 0f;
@@ -19,33 +18,33 @@ public static class Pathfinder
         {
             PathNode current = frontier.Dequeue();
 
-            if (current.Section == targetSection)
-                return BuildPathFromCameFrom(cameFrom, current.Section);
+            if (current.Waypoint == targetSection)
+                return BuildPathFromCameFrom(cameFrom, current.Waypoint);
 
-            foreach (SectionRoadStrip neighbor in current.Section.ConnectedSections)
+            foreach (Waypoint neighbor in current.Waypoint.ConnectedPoints)
             {
-                float newCost = costSoFar[current.Section] + current.Section.LenghtInMeter;
+                float newCost = costSoFar[current.Waypoint] + current.Waypoint.LenghtInMeter;
 
                 if (costSoFar.ContainsKey(neighbor) == false || newCost < costSoFar[neighbor])
                 {
                     costSoFar[neighbor] = newCost;
                     float priority = newCost + EstimateRemainingCost(neighbor, targetSection);
                     frontier.Enqueue(new PathNode(neighbor, priority));
-                    cameFrom[neighbor] = current.Section;
+                    cameFrom[neighbor] = current.Waypoint;
                 }
             }
         }
 
-        return new List<SectionRoadStrip>();
+        return new List<Waypoint>();
     }
 
-    private static float EstimateRemainingCost(SectionRoadStrip _, SectionRoadStrip __) =>
-        0f;
+    private static float EstimateRemainingCost(Waypoint _, Waypoint __) =>
+        DefaultEstimateCost;
 
-    private static List<SectionRoadStrip> BuildPathFromCameFrom(Dictionary<SectionRoadStrip, SectionRoadStrip> cameFrom, SectionRoadStrip endNode)
+    private static List<Waypoint> BuildPathFromCameFrom(Dictionary<Waypoint, Waypoint> cameFrom, Waypoint endNode)
     {
-        List<SectionRoadStrip> path = new();
-        SectionRoadStrip current = endNode;
+        List<Waypoint> path = new();
+        Waypoint current = endNode;
 
         while (cameFrom.ContainsKey(current))
         {
@@ -54,20 +53,23 @@ public static class Pathfinder
         }
 
         path.Insert(0, current);
+
         return path;
     }
 }
 
 public class PathNode : IComparable<PathNode>
 {
-    public SectionRoadStrip Section { get; }
+    public Waypoint Waypoint { get; }
+
     public float Priority { get; }
 
-    public PathNode(SectionRoadStrip section, float priority)
+    public PathNode(Waypoint section, float priority)
     {
-        Section = section;
+        Waypoint = section;
         Priority = priority;
     }
 
-    public int CompareTo(PathNode other) => Priority.CompareTo(other.Priority);
+    public int CompareTo(PathNode other) => 
+        Priority.CompareTo(other.Priority);
 }

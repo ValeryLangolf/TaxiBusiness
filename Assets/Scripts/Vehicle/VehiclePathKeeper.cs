@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class VehiclePathKeeper
 {
-    private const float ReachThreshold = 0.2f;
+    private const float ReachThreshold = 0.15f;
 
     private readonly Transform _vehicle;
     private readonly Action _pathCompleted;
