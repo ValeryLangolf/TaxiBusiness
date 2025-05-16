@@ -1,11 +1,8 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
-[RequireComponent(typeof(Image))]
 [RequireComponent(typeof(RectTransform))]
 public class UiFollower : MonoBehaviour
 {
-    private Image _image;
     private Transform _target;
     private RectTransform _self;
     private RectTransform _parent;
@@ -14,7 +11,6 @@ public class UiFollower : MonoBehaviour
 
     private void Awake()
     {
-        _image = GetComponent<Image>();
         _self = transform as RectTransform;
         _parent = _self.parent as RectTransform;
         _canvas = GetComponentsInParent<Canvas>()[0];
@@ -29,7 +25,7 @@ public class UiFollower : MonoBehaviour
         Vector3 screenPosition = _camera.WorldToScreenPoint(_target.position);
 
         bool isBehindCamera = screenPosition.z < 0;
-        _image.enabled = isBehindCamera == false;
+        gameObject.SetActive(isBehindCamera == false);
 
         if (isBehindCamera)
             return;

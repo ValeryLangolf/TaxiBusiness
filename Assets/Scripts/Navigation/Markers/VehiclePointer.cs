@@ -19,8 +19,11 @@ public class VehiclePointer : MonoBehaviour
         _target = target.transform;
     }
 
-    public void OnDeselected() =>
+    public void OnDeselected(Vehicle _)
+    {
         gameObject.SetActive(false);
+        _target = null;
+    }
 
     private void LateUpdate()
     {

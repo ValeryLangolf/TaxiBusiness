@@ -170,7 +170,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 15
   _rotationSpeed: 70
-  _reachThreshold: 0.1
 --- !u!1 &5053064067289825103
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,7 +271,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a56ecff6ecad2b6418e58d01dda06ca2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _vehicle: {fileID: 9204251012365960358}
 --- !u!65 &1458085129144582473
 BoxCollider:
   m_ObjectHideFlags: 0

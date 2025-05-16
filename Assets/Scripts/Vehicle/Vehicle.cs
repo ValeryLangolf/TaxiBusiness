@@ -11,14 +11,16 @@ public class Vehicle : MonoBehaviour
     private Rotator _rotator;
     private VehiclePathKeeper _pathKeeper;
 
-    public event Action PathDestinated;
-    public event Action PathCompleted;
+    public event Action<Vehicle> PathDestinated;
+    public event Action<Vehicle> PathCompleted;
 
     public bool IsActivePath => _pathKeeper.IsActivePath;
 
     public Waypoint StartPoint => _pathKeeper.StartPoint;
 
     public Waypoint EndPoint => _pathKeeper.EndPoint;
+
+    public List<Waypoint> RemainingPath => new(_pathKeeper.RemainingPath);
 
     public Vector3 Position => transform.position;
 
@@ -44,9 +46,9 @@ public class Vehicle : MonoBehaviour
     public void SetPath(List<Waypoint> path)
     {
         _pathKeeper.SetPath(path);
-        PathDestinated?.Invoke();
+        PathDestinated?.Invoke(this);
     }
 
     private void OnPathCompleted() =>
-        PathCompleted?.Invoke();
+        PathCompleted?.Invoke(this);
 }

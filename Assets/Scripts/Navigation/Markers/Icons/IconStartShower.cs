@@ -1,7 +1,7 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 [RequireComponent(typeof(UiFollower))]
-public class IconEndShower : MonoBehaviour
+public class IconStartShower : MonoBehaviour
 {
     private Vehicle _vehicle;
     private UiFollower _follower;
@@ -37,7 +37,7 @@ public class IconEndShower : MonoBehaviour
 
         _vehicle = null;
         vehicle.PathDestinated -= HandlePathDestinated;
-        vehicle.PathCompleted -= HandlePathCompleted;
+        vehicle.PathCompleted -= HandlePathCompleted;        
     }
 
     private void HandleVehicleSelected(Vehicle vehicle)
@@ -59,21 +59,21 @@ public class IconEndShower : MonoBehaviour
     private void UpdateIconState()
     {
         if (_vehicle.IsActivePath)
-            HandlePathDestinated();
+            HandlePathDestinated(_vehicle);
     }
 
-    private void HandleDeselected()
+    private void HandleDeselected(Vehicle vehicle)
     {
-        UnsubscribeVehicle(_vehicle);
+        UnsubscribeVehicle(vehicle);
         gameObject.SetActive(false);
     }
 
-    private void HandlePathDestinated()
+    private void HandlePathDestinated(Vehicle vehicle)
     {
         gameObject.SetActive(true);
-        _follower.Follow(_vehicle.EndPoint.transform);
+        _follower.Follow(vehicle.StartPoint.transform);
     }
 
-    private void HandlePathCompleted() =>
+    private void HandlePathCompleted(Vehicle _) =>
         gameObject.SetActive(false);
 }

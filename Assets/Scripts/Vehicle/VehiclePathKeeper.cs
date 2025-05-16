@@ -9,7 +9,8 @@ public class VehiclePathKeeper
     private readonly Transform _vehicle;
     private readonly Action _pathCompleted;
 
-    private List<Waypoint> _currentPath;
+    private List<Waypoint> _currentPath = new();
+    private List<Waypoint> _remainingPath = new();
     private int _currentTargetIndex;
 
     public VehiclePathKeeper(Transform vehicle, Action pathCompleted)
@@ -26,6 +27,8 @@ public class VehiclePathKeeper
 
     public Waypoint EndPoint => _currentPath[^1];
 
+    public List<Waypoint> RemainingPath => new(_remainingPath);
+
     public void SetPath(List<Waypoint> path)
     {
         if (path == null)
@@ -36,7 +39,8 @@ public class VehiclePathKeeper
         }
 
         _currentTargetIndex = 0;
-        _currentPath = path;
+        _currentPath = new(path);
+        _remainingPath = new(path);
     }
 
     public void UpdatePath()
@@ -46,11 +50,14 @@ public class VehiclePathKeeper
             ResetPath();
 
             return;
-        }        
+        }
 
         while ((Vector3.Distance(_vehicle.position, GetTarget()) < ReachThreshold) && IsActivePath)
         {
             _currentTargetIndex++;
+
+            if (_remainingPath.Count > 0)
+                _remainingPath.RemoveAt(0);
 
             if (_currentTargetIndex >= _currentPath.Count)
                 _pathCompleted?.Invoke();

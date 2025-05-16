@@ -6,7 +6,7 @@ public class VehicleSelector : MonoBehaviour
     private static Vehicle s_selectedVehicle;
 
     public static event Action<Vehicle> Selected;
-    public static event Action Deselected;
+    public static event Action<Vehicle> Deselected;
 
     public static Vehicle Vehicle => s_selectedVehicle;
 
@@ -28,18 +28,23 @@ public class VehicleSelector : MonoBehaviour
             Select(vehicleCollider);
     }
 
-    private void HandleRightClick(Collider _, Vector3 __) =>
-        Deselect();
+    private void HandleRightClick(Collider _, Vector3 __)
+    {
+        Deselect(s_selectedVehicle);
+        s_selectedVehicle = null;
+    }
 
     private void Select(VehicleCollider collider)
     {
-        s_selectedVehicle = collider.Vehicle;
+        Vehicle vehicle = collider.Vehicle;
+
+        if(s_selectedVehicle != null && s_selectedVehicle != vehicle)
+            Deselect(s_selectedVehicle);
+
+        s_selectedVehicle = vehicle;
         Selected?.Invoke(collider.Vehicle);
     }
 
-    private void Deselect()
-    {
-        s_selectedVehicle = null;
-        Deselected?.Invoke();
-    }
+    private void Deselect(Vehicle vehicle) =>
+        Deselected?.Invoke(vehicle);
 }
