@@ -148,6 +148,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &9350756
 Transform:
   m_ObjectHideFlags: 0
@@ -207,6 +215,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &25087621
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,6 +267,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &35421924
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,6 +319,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &43077267
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,6 +371,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &51871951
 GameObject:
   m_ObjectHideFlags: 0
@@ -383,6 +423,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &62256180
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,6 +475,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &65852021
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,6 +598,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &74744514
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,6 +635,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &74744516
 Transform:
   m_ObjectHideFlags: 0
@@ -630,6 +702,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &92355674
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,6 +866,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &107655113
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,6 +918,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &107706944
 GameObject:
   m_ObjectHideFlags: 0
@@ -859,6 +955,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &107706946
 Transform:
   m_ObjectHideFlags: 0
@@ -918,6 +1022,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &110268077
 GameObject:
   m_ObjectHideFlags: 0
@@ -962,6 +1074,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &112625373
 GameObject:
   m_ObjectHideFlags: 0
@@ -1006,6 +1126,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &114203860
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,6 +1178,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &116659876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,6 +1215,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &116659878
 Transform:
   m_ObjectHideFlags: 0
@@ -1138,6 +1282,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &124593311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,6 +1334,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &132241818
 GameObject:
   m_ObjectHideFlags: 0
@@ -1226,6 +1386,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &137869600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1255,6 +1423,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &137869602
 Transform:
   m_ObjectHideFlags: 0
@@ -1314,6 +1490,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &141265876
 GameObject:
   m_ObjectHideFlags: 0
@@ -1358,6 +1542,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &143114714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,6 +1594,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &143636258
 GameObject:
   m_ObjectHideFlags: 0
@@ -1446,6 +1646,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &146982790
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,6 +1698,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &147391103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1609,6 +1825,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &159383227
 GameObject:
   m_ObjectHideFlags: 0
@@ -1729,6 +1953,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &164750256
 GameObject:
   m_ObjectHideFlags: 0
@@ -1861,6 +2093,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &185168168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1987,6 +2227,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &191587562
 GameObject:
   m_ObjectHideFlags: 0
@@ -2016,6 +2264,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &191587564
 Transform:
   m_ObjectHideFlags: 0
@@ -2060,6 +2316,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &192257598
 Transform:
   m_ObjectHideFlags: 0
@@ -2119,6 +2383,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &205362053
 GameObject:
   m_ObjectHideFlags: 0
@@ -2163,6 +2435,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &206422388
 GameObject:
   m_ObjectHideFlags: 0
@@ -2207,6 +2487,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &210277888
 GameObject:
   m_ObjectHideFlags: 0
@@ -2411,6 +2699,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &210915426
 GameObject:
   m_ObjectHideFlags: 0
@@ -2440,6 +2736,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &210915428
 Transform:
   m_ObjectHideFlags: 0
@@ -2499,6 +2803,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &214498736
 GameObject:
   m_ObjectHideFlags: 0
@@ -2543,6 +2855,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &229458916
 GameObject:
   m_ObjectHideFlags: 0
@@ -2587,6 +2907,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &229493213
 GameObject:
   m_ObjectHideFlags: 0
@@ -2631,6 +2959,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &239604641
 GameObject:
   m_ObjectHideFlags: 0
@@ -2675,6 +3011,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &248095467
 GameObject:
   m_ObjectHideFlags: 0
@@ -2719,6 +3063,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &249324432
 GameObject:
   m_ObjectHideFlags: 0
@@ -2748,6 +3100,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &249324434
 Transform:
   m_ObjectHideFlags: 0
@@ -2807,6 +3167,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &253978815
 GameObject:
   m_ObjectHideFlags: 0
@@ -2851,6 +3219,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &255972640
 GameObject:
   m_ObjectHideFlags: 0
@@ -2895,6 +3271,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &261112437
 GameObject:
   m_ObjectHideFlags: 0
@@ -2924,6 +3308,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &261112439
 Transform:
   m_ObjectHideFlags: 0
@@ -2968,6 +3360,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &262849000
 Transform:
   m_ObjectHideFlags: 0
@@ -3012,6 +3412,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &282607979
 Transform:
   m_ObjectHideFlags: 0
@@ -3071,6 +3479,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &285476153
 GameObject:
   m_ObjectHideFlags: 0
@@ -3189,6 +3605,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &290051426
 GameObject:
   m_ObjectHideFlags: 0
@@ -3233,6 +3657,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &313513772
 GameObject:
   m_ObjectHideFlags: 0
@@ -3277,6 +3709,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &315745460
 GameObject:
   m_ObjectHideFlags: 0
@@ -3321,6 +3761,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &318779152
 GameObject:
   m_ObjectHideFlags: 0
@@ -3365,6 +3813,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &319990224
 GameObject:
   m_ObjectHideFlags: 0
@@ -3394,6 +3850,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &319990226
 Transform:
   m_ObjectHideFlags: 0
@@ -3453,6 +3917,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &324978999
 GameObject:
   m_ObjectHideFlags: 0
@@ -3497,6 +3969,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &327830615
 GameObject:
   m_ObjectHideFlags: 0
@@ -3541,6 +4021,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -3766,6 +4254,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &352962548
 GameObject:
   m_ObjectHideFlags: 0
@@ -3885,6 +4381,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &362629858
 Transform:
   m_ObjectHideFlags: 0
@@ -3944,6 +4448,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &372590416
 GameObject:
   m_ObjectHideFlags: 0
@@ -3973,6 +4485,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &372590418
 Transform:
   m_ObjectHideFlags: 0
@@ -4182,6 +4702,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &380852936
 GameObject:
   m_ObjectHideFlags: 0
@@ -4226,6 +4754,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &383932084
 GameObject:
   m_ObjectHideFlags: 0
@@ -4270,6 +4806,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &398633612
 GameObject:
   m_ObjectHideFlags: 0
@@ -4299,6 +4843,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &398633614
 Transform:
   m_ObjectHideFlags: 0
@@ -4464,6 +5016,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &410736474
 Transform:
   m_ObjectHideFlags: 0
@@ -4643,6 +5203,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &417844067
 GameObject:
   m_ObjectHideFlags: 0
@@ -4769,6 +5337,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &426461244
 GameObject:
   m_ObjectHideFlags: 0
@@ -4813,6 +5389,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &428383114
 GameObject:
   m_ObjectHideFlags: 0
@@ -4857,6 +5441,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &430327030
 GameObject:
   m_ObjectHideFlags: 0
@@ -4977,6 +5569,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &434132324
 GameObject:
   m_ObjectHideFlags: 0
@@ -5101,6 +5701,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &451874216
 GameObject:
   m_ObjectHideFlags: 0
@@ -5145,6 +5753,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &453528857
 GameObject:
   m_ObjectHideFlags: 0
@@ -5189,6 +5805,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &457466042
 GameObject:
   m_ObjectHideFlags: 0
@@ -5233,6 +5857,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &469912102
 GameObject:
   m_ObjectHideFlags: 0
@@ -5262,6 +5894,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &469912104
 Transform:
   m_ObjectHideFlags: 0
@@ -5321,6 +5961,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &474070915
 GameObject:
   m_ObjectHideFlags: 0
@@ -5424,6 +6072,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &474576501
 Transform:
   m_ObjectHideFlags: 0
@@ -5483,6 +6139,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &486042753
 GameObject:
   m_ObjectHideFlags: 0
@@ -5527,6 +6191,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &495252295
 GameObject:
   m_ObjectHideFlags: 0
@@ -5705,6 +6377,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &505852340
 Transform:
   m_ObjectHideFlags: 0
@@ -5764,6 +6444,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &508335209
 GameObject:
   m_ObjectHideFlags: 0
@@ -5808,6 +6496,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &508535200
 GameObject:
   m_ObjectHideFlags: 0
@@ -5957,6 +6653,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &519754969
 GameObject:
   m_ObjectHideFlags: 0
@@ -6001,6 +6705,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &521162470
 GameObject:
   m_ObjectHideFlags: 0
@@ -6045,6 +6757,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &526516984
 GameObject:
   m_ObjectHideFlags: 0
@@ -6089,6 +6809,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &537664799
 GameObject:
   m_ObjectHideFlags: 0
@@ -6289,6 +7017,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &558227747
 GameObject:
   m_ObjectHideFlags: 0
@@ -6318,6 +7054,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &558227749
 Transform:
   m_ObjectHideFlags: 0
@@ -6377,6 +7121,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &574883600
 GameObject:
   m_ObjectHideFlags: 0
@@ -6421,6 +7173,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &580358434
 GameObject:
   m_ObjectHideFlags: 0
@@ -6465,6 +7225,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &581302997
 GameObject:
   m_ObjectHideFlags: 0
@@ -6509,6 +7277,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &583573552
 GameObject:
   m_ObjectHideFlags: 0
@@ -6553,6 +7329,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &588832138
 GameObject:
   m_ObjectHideFlags: 0
@@ -6597,6 +7381,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &589258447
 GameObject:
   m_ObjectHideFlags: 0
@@ -6641,6 +7433,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &596684557
 GameObject:
   m_ObjectHideFlags: 0
@@ -6685,6 +7485,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &598142968
 GameObject:
   m_ObjectHideFlags: 0
@@ -6729,6 +7537,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &599511801
 GameObject:
   m_ObjectHideFlags: 0
@@ -6773,6 +7589,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &602635135
 GameObject:
   m_ObjectHideFlags: 0
@@ -6817,6 +7641,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &617586480
 GameObject:
   m_ObjectHideFlags: 0
@@ -6926,6 +7758,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &624609881
 Transform:
   m_ObjectHideFlags: 0
@@ -6985,6 +7825,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &627135554
 GameObject:
   m_ObjectHideFlags: 0
@@ -7029,6 +7877,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &628664439
 GameObject:
   m_ObjectHideFlags: 0
@@ -7058,6 +7914,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &628664441
 Transform:
   m_ObjectHideFlags: 0
@@ -7117,6 +7981,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &640195001
 GameObject:
   m_ObjectHideFlags: 0
@@ -7161,6 +8033,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &641247418
 GameObject:
   m_ObjectHideFlags: 0
@@ -7205,6 +8085,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &648124905
 GameObject:
   m_ObjectHideFlags: 0
@@ -7249,6 +8137,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &648641344
 GameObject:
   m_ObjectHideFlags: 0
@@ -7293,6 +8189,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &650143774
 GameObject:
   m_ObjectHideFlags: 0
@@ -7337,6 +8241,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &656380146
 GameObject:
   m_ObjectHideFlags: 0
@@ -7366,6 +8278,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &656380148
 Transform:
   m_ObjectHideFlags: 0
@@ -7425,6 +8345,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &662057151
 GameObject:
   m_ObjectHideFlags: 0
@@ -7469,6 +8397,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &662109927
 GameObject:
   m_ObjectHideFlags: 0
@@ -7513,6 +8449,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &665807262
 GameObject:
   m_ObjectHideFlags: 0
@@ -7542,6 +8486,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &665807264
 Transform:
   m_ObjectHideFlags: 0
@@ -7601,6 +8553,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &682369592
 GameObject:
   m_ObjectHideFlags: 0
@@ -7630,6 +8590,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &682369594
 Transform:
   m_ObjectHideFlags: 0
@@ -7689,6 +8657,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &694017263
 GameObject:
   m_ObjectHideFlags: 0
@@ -7733,6 +8709,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &694343546
 GameObject:
   m_ObjectHideFlags: 0
@@ -7777,6 +8761,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &696268978
 GameObject:
   m_ObjectHideFlags: 0
@@ -7806,6 +8798,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &696268980
 Transform:
   m_ObjectHideFlags: 0
@@ -7865,6 +8865,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &704616457
 GameObject:
   m_ObjectHideFlags: 0
@@ -7894,6 +8902,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &704616459
 Transform:
   m_ObjectHideFlags: 0
@@ -7953,6 +8969,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &707185069
 GameObject:
   m_ObjectHideFlags: 0
@@ -7997,6 +9021,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &707606340
 GameObject:
   m_ObjectHideFlags: 0
@@ -8041,6 +9073,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &708021098
 GameObject:
   m_ObjectHideFlags: 0
@@ -8085,6 +9125,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &709508919
 GameObject:
   m_ObjectHideFlags: 0
@@ -8129,6 +9177,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &709894468
 GameObject:
   m_ObjectHideFlags: 0
@@ -8173,6 +9229,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &714109501
 GameObject:
   m_ObjectHideFlags: 0
@@ -8217,6 +9281,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &718754934
 GameObject:
   m_ObjectHideFlags: 0
@@ -8261,6 +9333,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &719291941
 GameObject:
   m_ObjectHideFlags: 0
@@ -8305,6 +9385,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &742893475
 GameObject:
   m_ObjectHideFlags: 0
@@ -8349,6 +9437,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &744478118
 GameObject:
   m_ObjectHideFlags: 0
@@ -8393,6 +9489,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &745869745
 GameObject:
   m_ObjectHideFlags: 0
@@ -8437,6 +9541,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &746814194
 GameObject:
   m_ObjectHideFlags: 0
@@ -8481,6 +9593,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &750161706
 GameObject:
   m_ObjectHideFlags: 0
@@ -8525,6 +9645,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &756838794
 GameObject:
   m_ObjectHideFlags: 0
@@ -8569,6 +9697,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &758438434
 GameObject:
   m_ObjectHideFlags: 0
@@ -8613,6 +9749,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &771857265
 GameObject:
   m_ObjectHideFlags: 0
@@ -8657,6 +9801,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &773492454
 GameObject:
   m_ObjectHideFlags: 0
@@ -8701,6 +9853,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &778685334
 GameObject:
   m_ObjectHideFlags: 0
@@ -8745,6 +9905,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &780910059
 GameObject:
   m_ObjectHideFlags: 0
@@ -8789,6 +9957,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &785763460
 GameObject:
   m_ObjectHideFlags: 0
@@ -8911,6 +10087,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &788325694
 GameObject:
   m_ObjectHideFlags: 0
@@ -8955,6 +10139,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &788587395
 GameObject:
   m_ObjectHideFlags: 0
@@ -8999,6 +10191,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &789268402
 GameObject:
   m_ObjectHideFlags: 0
@@ -9043,6 +10243,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &795424462
 GameObject:
   m_ObjectHideFlags: 0
@@ -9087,6 +10295,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &800374899
 GameObject:
   m_ObjectHideFlags: 0
@@ -9131,6 +10347,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &802129363
 GameObject:
   m_ObjectHideFlags: 0
@@ -9175,6 +10399,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &804478295
 GameObject:
   m_ObjectHideFlags: 0
@@ -9303,6 +10535,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &814717127
 GameObject:
   m_ObjectHideFlags: 0
@@ -9347,6 +10587,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &815042665
 GameObject:
   m_ObjectHideFlags: 0
@@ -9391,6 +10639,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &816424937
 GameObject:
   m_ObjectHideFlags: 0
@@ -9435,6 +10691,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &816909336
 GameObject:
   m_ObjectHideFlags: 0
@@ -9479,6 +10743,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &821005470
 GameObject:
   m_ObjectHideFlags: 0
@@ -9523,6 +10795,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &827157982
 GameObject:
   m_ObjectHideFlags: 0
@@ -9567,6 +10847,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &828348391
 GameObject:
   m_ObjectHideFlags: 0
@@ -9611,6 +10899,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &828524637
 GameObject:
   m_ObjectHideFlags: 0
@@ -9655,6 +10951,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &831135798
 GameObject:
   m_ObjectHideFlags: 0
@@ -9699,6 +11003,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &831647333
 GameObject:
   m_ObjectHideFlags: 0
@@ -9743,6 +11055,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -9836,6 +11156,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &840134564
 GameObject:
   m_ObjectHideFlags: 0
@@ -9880,6 +11208,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &850673500
 GameObject:
   m_ObjectHideFlags: 0
@@ -10106,6 +11442,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &880246925
 GameObject:
   m_ObjectHideFlags: 0
@@ -10150,6 +11494,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &891174870
 GameObject:
   m_ObjectHideFlags: 0
@@ -10194,6 +11546,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &904836413
 GameObject:
   m_ObjectHideFlags: 0
@@ -10238,6 +11598,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &907387347
 GameObject:
   m_ObjectHideFlags: 0
@@ -10282,6 +11650,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &907565282
 GameObject:
   m_ObjectHideFlags: 0
@@ -10311,6 +11687,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &907565284
 Transform:
   m_ObjectHideFlags: 0
@@ -10370,6 +11754,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &916129923
 GameObject:
   m_ObjectHideFlags: 0
@@ -10414,6 +11806,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &917027136
 GameObject:
   m_ObjectHideFlags: 0
@@ -10458,6 +11858,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &920995091
 GameObject:
   m_ObjectHideFlags: 0
@@ -10502,6 +11910,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &923032428
 GameObject:
   m_ObjectHideFlags: 0
@@ -10546,6 +11962,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &925206873
 GameObject:
   m_ObjectHideFlags: 0
@@ -10590,6 +12014,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &944072374
 GameObject:
   m_ObjectHideFlags: 0
@@ -10619,6 +12051,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &944072376
 Transform:
   m_ObjectHideFlags: 0
@@ -10678,6 +12118,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &947273006
 GameObject:
   m_ObjectHideFlags: 0
@@ -10722,6 +12170,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &949109489
 GameObject:
   m_ObjectHideFlags: 0
@@ -10751,6 +12207,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &949109491
 Transform:
   m_ObjectHideFlags: 0
@@ -10810,6 +12274,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &951341433
 GameObject:
   m_ObjectHideFlags: 0
@@ -10854,6 +12326,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &954194696
 GameObject:
   m_ObjectHideFlags: 0
@@ -10898,6 +12378,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &979534119
 GameObject:
   m_ObjectHideFlags: 0
@@ -10942,6 +12430,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &982745451
 GameObject:
   m_ObjectHideFlags: 0
@@ -11092,6 +12588,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &995809155
 Transform:
   m_ObjectHideFlags: 0
@@ -11151,6 +12655,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &998006082
 GameObject:
   m_ObjectHideFlags: 0
@@ -11195,6 +12707,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1002616063
 GameObject:
   m_ObjectHideFlags: 0
@@ -11239,6 +12759,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1005341878
 GameObject:
   m_ObjectHideFlags: 0
@@ -11283,6 +12811,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1006250103
 GameObject:
   m_ObjectHideFlags: 0
@@ -11327,6 +12863,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1009725176
 GameObject:
   m_ObjectHideFlags: 0
@@ -11371,6 +12915,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1010160235
 GameObject:
   m_ObjectHideFlags: 0
@@ -11415,6 +12967,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1015005559
 GameObject:
   m_ObjectHideFlags: 0
@@ -11459,6 +13019,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1021653084
 GameObject:
   m_ObjectHideFlags: 0
@@ -11503,6 +13071,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1021965720
 GameObject:
   m_ObjectHideFlags: 0
@@ -11547,6 +13123,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1027384635
 GameObject:
   m_ObjectHideFlags: 0
@@ -11591,6 +13175,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1031741626
 GameObject:
   m_ObjectHideFlags: 0
@@ -11635,6 +13227,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1036322601
 GameObject:
   m_ObjectHideFlags: 0
@@ -11679,6 +13279,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1036532477
 GameObject:
   m_ObjectHideFlags: 0
@@ -11723,6 +13331,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1037956177
 GameObject:
   m_ObjectHideFlags: 0
@@ -11767,6 +13383,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1038652012
 GameObject:
   m_ObjectHideFlags: 0
@@ -11811,6 +13435,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1039005519
 GameObject:
   m_ObjectHideFlags: 0
@@ -11840,6 +13472,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1039005521
 Transform:
   m_ObjectHideFlags: 0
@@ -11899,6 +13539,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1042228040
 GameObject:
   m_ObjectHideFlags: 0
@@ -11943,6 +13591,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1065801859
 GameObject:
   m_ObjectHideFlags: 0
@@ -12075,6 +13731,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1069742541
 GameObject:
   m_ObjectHideFlags: 0
@@ -12119,6 +13783,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1072201115
 GameObject:
   m_ObjectHideFlags: 0
@@ -12163,6 +13835,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1072905111
 GameObject:
   m_ObjectHideFlags: 0
@@ -12314,6 +13994,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1075776072
 Transform:
   m_ObjectHideFlags: 0
@@ -12373,6 +14061,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1081081577
 GameObject:
   m_ObjectHideFlags: 0
@@ -12402,6 +14098,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1081081579
 Transform:
   m_ObjectHideFlags: 0
@@ -12461,6 +14165,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1097356503
 GameObject:
   m_ObjectHideFlags: 0
@@ -12505,6 +14217,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1101130582
 GameObject:
   m_ObjectHideFlags: 0
@@ -12549,6 +14269,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1113434504
 GameObject:
   m_ObjectHideFlags: 0
@@ -12593,6 +14321,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1114505848
 GameObject:
   m_ObjectHideFlags: 0
@@ -12721,6 +14457,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1122250910
 GameObject:
   m_ObjectHideFlags: 0
@@ -12765,6 +14509,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1122358360
 GameObject:
   m_ObjectHideFlags: 0
@@ -12794,6 +14546,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1122358362
 Transform:
   m_ObjectHideFlags: 0
@@ -12899,6 +14659,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1126725293
 GameObject:
   m_ObjectHideFlags: 0
@@ -12943,6 +14711,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1128310945
 GameObject:
   m_ObjectHideFlags: 0
@@ -12987,6 +14763,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1131896559
 GameObject:
   m_ObjectHideFlags: 0
@@ -13031,6 +14815,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1133583241
 GameObject:
   m_ObjectHideFlags: 0
@@ -13075,6 +14867,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1135653043
 GameObject:
   m_ObjectHideFlags: 0
@@ -13119,6 +14919,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1139233305
 GameObject:
   m_ObjectHideFlags: 0
@@ -13163,6 +14971,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1139444184
 GameObject:
   m_ObjectHideFlags: 0
@@ -13207,6 +15023,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1139930056
 GameObject:
   m_ObjectHideFlags: 0
@@ -13251,6 +15075,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1140586661
 GameObject:
   m_ObjectHideFlags: 0
@@ -13295,6 +15127,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1142234293
 GameObject:
   m_ObjectHideFlags: 0
@@ -13339,6 +15179,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1147698770
 GameObject:
   m_ObjectHideFlags: 0
@@ -13383,6 +15231,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1150730980
 GameObject:
   m_ObjectHideFlags: 0
@@ -13427,6 +15283,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1152322247
 GameObject:
   m_ObjectHideFlags: 0
@@ -13471,6 +15335,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1159996356
 GameObject:
   m_ObjectHideFlags: 0
@@ -13515,6 +15387,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1162531382
 GameObject:
   m_ObjectHideFlags: 0
@@ -13559,6 +15439,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1165954459
 GameObject:
   m_ObjectHideFlags: 0
@@ -13671,6 +15559,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1173191125
 GameObject:
   m_ObjectHideFlags: 0
@@ -13715,6 +15611,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1175772304
 GameObject:
   m_ObjectHideFlags: 0
@@ -13759,6 +15663,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1176213455
 GameObject:
   m_ObjectHideFlags: 0
@@ -13803,6 +15715,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1180977339
 GameObject:
   m_ObjectHideFlags: 0
@@ -13847,6 +15767,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1183670511
 GameObject:
   m_ObjectHideFlags: 0
@@ -13891,6 +15819,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1184685430
 GameObject:
   m_ObjectHideFlags: 0
@@ -13935,6 +15871,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1185230116
 GameObject:
   m_ObjectHideFlags: 0
@@ -13979,6 +15923,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1191560411
 GameObject:
   m_ObjectHideFlags: 0
@@ -14139,6 +16091,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1195582046
 GameObject:
   m_ObjectHideFlags: 0
@@ -14183,6 +16143,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1198062351
 GameObject:
   m_ObjectHideFlags: 0
@@ -14227,6 +16195,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1201987728
 GameObject:
   m_ObjectHideFlags: 0
@@ -14271,6 +16247,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1204159074
 GameObject:
   m_ObjectHideFlags: 0
@@ -14315,6 +16299,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1213799800
 GameObject:
   m_ObjectHideFlags: 0
@@ -14359,6 +16351,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1228279523
 GameObject:
   m_ObjectHideFlags: 0
@@ -14403,6 +16403,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1230520159
 GameObject:
   m_ObjectHideFlags: 0
@@ -14447,6 +16455,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1239322394
 GameObject:
   m_ObjectHideFlags: 0
@@ -14491,6 +16507,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1239594367
 GameObject:
   m_ObjectHideFlags: 0
@@ -14520,6 +16544,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1239594369
 Transform:
   m_ObjectHideFlags: 0
@@ -14579,6 +16611,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0.728
+  _standard: 0.152
+  _comfort: 0.878
+  _business: 0.507
+  _luxury: 0.305
+  _vip: 0.582
+  _petTransport: 0.275
+  _withChildSeat: 1
 --- !u!1 &1248538535
 GameObject:
   m_ObjectHideFlags: 0
@@ -14623,6 +16663,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1257730723
 GameObject:
   m_ObjectHideFlags: 0
@@ -14667,6 +16715,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1258436788
 GameObject:
   m_ObjectHideFlags: 0
@@ -14785,6 +16841,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1263380396
 GameObject:
   m_ObjectHideFlags: 0
@@ -14829,6 +16893,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1266960730
 GameObject:
   m_ObjectHideFlags: 0
@@ -14873,6 +16945,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1270757168
 GameObject:
   m_ObjectHideFlags: 0
@@ -14917,6 +16997,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1273125520
 GameObject:
   m_ObjectHideFlags: 0
@@ -14961,6 +17049,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1273977907
 GameObject:
   m_ObjectHideFlags: 0
@@ -15005,6 +17101,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1279105347
 GameObject:
   m_ObjectHideFlags: 0
@@ -15049,6 +17153,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1280247841
 GameObject:
   m_ObjectHideFlags: 0
@@ -15093,6 +17205,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1286039574
 GameObject:
   m_ObjectHideFlags: 0
@@ -15122,6 +17242,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1286039576
 Transform:
   m_ObjectHideFlags: 0
@@ -15181,6 +17309,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1290885073
 GameObject:
   m_ObjectHideFlags: 0
@@ -15225,6 +17361,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1296057989
 GameObject:
   m_ObjectHideFlags: 0
@@ -15269,6 +17413,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1299432981
 GameObject:
   m_ObjectHideFlags: 0
@@ -15313,6 +17465,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1317735951
 GameObject:
   m_ObjectHideFlags: 0
@@ -15357,6 +17517,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1321124600
 GameObject:
   m_ObjectHideFlags: 0
@@ -15401,6 +17569,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1321810428
 GameObject:
   m_ObjectHideFlags: 0
@@ -15537,6 +17713,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1324526621
 GameObject:
   m_ObjectHideFlags: 0
@@ -15652,6 +17836,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1331646385
 GameObject:
   m_ObjectHideFlags: 0
@@ -15696,6 +17888,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1337997963
 GameObject:
   m_ObjectHideFlags: 0
@@ -15812,6 +18012,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1355235725
 GameObject:
   m_ObjectHideFlags: 0
@@ -15856,6 +18064,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1356356611
 GameObject:
   m_ObjectHideFlags: 0
@@ -15900,6 +18116,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1357827895
 GameObject:
   m_ObjectHideFlags: 0
@@ -15944,6 +18168,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1359586671
 GameObject:
   m_ObjectHideFlags: 0
@@ -15988,6 +18220,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1362560787
 GameObject:
   m_ObjectHideFlags: 0
@@ -16017,6 +18257,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1362560789
 Transform:
   m_ObjectHideFlags: 0
@@ -16076,6 +18324,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1365326594
 GameObject:
   m_ObjectHideFlags: 0
@@ -16120,6 +18376,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1365401493
 GameObject:
   m_ObjectHideFlags: 0
@@ -16164,6 +18428,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1370633298
 GameObject:
   m_ObjectHideFlags: 0
@@ -16208,6 +18480,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1373341681
 GameObject:
   m_ObjectHideFlags: 0
@@ -16252,6 +18532,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1373691720
 GameObject:
   m_ObjectHideFlags: 0
@@ -16296,6 +18584,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1375144650
 GameObject:
   m_ObjectHideFlags: 0
@@ -16340,6 +18636,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1380927940
 GameObject:
   m_ObjectHideFlags: 0
@@ -16473,6 +18777,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1383718718
 GameObject:
   m_ObjectHideFlags: 0
@@ -16595,6 +18907,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1397517092
 GameObject:
   m_ObjectHideFlags: 0
@@ -16639,6 +18959,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1397711600
 GameObject:
   m_ObjectHideFlags: 0
@@ -16668,6 +18996,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1397711602
 Transform:
   m_ObjectHideFlags: 0
@@ -16727,6 +19063,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1401184383
 GameObject:
   m_ObjectHideFlags: 0
@@ -16771,6 +19115,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1401197467
 GameObject:
   m_ObjectHideFlags: 0
@@ -16815,6 +19167,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1401247669
 GameObject:
   m_ObjectHideFlags: 0
@@ -16844,6 +19204,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1401247671
 Transform:
   m_ObjectHideFlags: 0
@@ -16979,6 +19347,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1420049643
 GameObject:
   m_ObjectHideFlags: 0
@@ -17023,6 +19399,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1421155826
 GameObject:
   m_ObjectHideFlags: 0
@@ -17216,6 +19600,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1432615166
 GameObject:
   m_ObjectHideFlags: 0
@@ -17260,6 +19652,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1443978344
 GameObject:
   m_ObjectHideFlags: 0
@@ -17289,6 +19689,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1443978346
 Transform:
   m_ObjectHideFlags: 0
@@ -17453,6 +19861,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1456627647
 Transform:
   m_ObjectHideFlags: 0
@@ -17512,6 +19928,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1459211195
 GameObject:
   m_ObjectHideFlags: 0
@@ -17556,6 +19980,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1461538172
 GameObject:
   m_ObjectHideFlags: 0
@@ -17600,6 +20032,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1461955310
 GameObject:
   m_ObjectHideFlags: 0
@@ -17629,6 +20069,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1461955312
 Transform:
   m_ObjectHideFlags: 0
@@ -17688,6 +20136,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1468482544
 GameObject:
   m_ObjectHideFlags: 0
@@ -17732,6 +20188,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1468589510
 GameObject:
   m_ObjectHideFlags: 0
@@ -17776,6 +20240,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1470042795
 GameObject:
   m_ObjectHideFlags: 0
@@ -17820,6 +20292,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1475233062
 GameObject:
   m_ObjectHideFlags: 0
@@ -17864,6 +20344,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1479835035
 GameObject:
   m_ObjectHideFlags: 0
@@ -18009,6 +20497,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1482194383
 Transform:
   m_ObjectHideFlags: 0
@@ -18068,6 +20564,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1504449926
 GameObject:
   m_ObjectHideFlags: 0
@@ -18097,6 +20601,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1504449928
 Transform:
   m_ObjectHideFlags: 0
@@ -18192,6 +20704,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1509093707
 GameObject:
   m_ObjectHideFlags: 0
@@ -18314,6 +20834,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1523488134
 GameObject:
   m_ObjectHideFlags: 0
@@ -18358,6 +20886,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1523784918
 GameObject:
   m_ObjectHideFlags: 0
@@ -18402,6 +20938,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1526650525
 GameObject:
   m_ObjectHideFlags: 0
@@ -18446,6 +20990,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1534935297
 GameObject:
   m_ObjectHideFlags: 0
@@ -18490,6 +21042,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1537238825
 GameObject:
   m_ObjectHideFlags: 0
@@ -18534,6 +21094,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1539493870
 GameObject:
   m_ObjectHideFlags: 0
@@ -18578,6 +21146,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1549486797
 GameObject:
   m_ObjectHideFlags: 0
@@ -18622,6 +21198,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1552455505
 GameObject:
   m_ObjectHideFlags: 0
@@ -18666,6 +21250,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1555375621
 GameObject:
   m_ObjectHideFlags: 0
@@ -18710,6 +21302,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1555657898
 GameObject:
   m_ObjectHideFlags: 0
@@ -18739,6 +21339,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1555657900
 Transform:
   m_ObjectHideFlags: 0
@@ -18798,6 +21406,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1560907445
 GameObject:
   m_ObjectHideFlags: 0
@@ -18842,6 +21458,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1562247212
 GameObject:
   m_ObjectHideFlags: 0
@@ -18886,6 +21510,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1572391036
 GameObject:
   m_ObjectHideFlags: 0
@@ -18930,6 +21562,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1576539554
 GameObject:
   m_ObjectHideFlags: 0
@@ -19042,6 +21682,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1582332929
 GameObject:
   m_ObjectHideFlags: 0
@@ -19086,6 +21734,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1583448027
 GameObject:
   m_ObjectHideFlags: 0
@@ -19209,6 +21865,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1593106206
 GameObject:
   m_ObjectHideFlags: 0
@@ -19253,6 +21917,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1604139234
 GameObject:
   m_ObjectHideFlags: 0
@@ -19373,6 +22045,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1612392933
 GameObject:
   m_ObjectHideFlags: 0
@@ -19417,6 +22097,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1613567668
 GameObject:
   m_ObjectHideFlags: 0
@@ -19446,6 +22134,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1613567670
 Transform:
   m_ObjectHideFlags: 0
@@ -19505,6 +22201,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1615951593
 GameObject:
   m_ObjectHideFlags: 0
@@ -19549,6 +22253,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1620819389
 GameObject:
   m_ObjectHideFlags: 0
@@ -19593,6 +22305,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1624005050
 GameObject:
   m_ObjectHideFlags: 0
@@ -19637,6 +22357,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1631836957
 GameObject:
   m_ObjectHideFlags: 0
@@ -19681,6 +22409,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1640757341
 GameObject:
   m_ObjectHideFlags: 0
@@ -19725,6 +22461,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1645174737
 GameObject:
   m_ObjectHideFlags: 0
@@ -19754,6 +22498,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1645174739
 Transform:
   m_ObjectHideFlags: 0
@@ -20015,6 +22767,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1675031307
 GameObject:
   m_ObjectHideFlags: 0
@@ -20059,6 +22819,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1676289770
 GameObject:
   m_ObjectHideFlags: 0
@@ -20103,6 +22871,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1677617142
 GameObject:
   m_ObjectHideFlags: 0
@@ -20147,6 +22923,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1678207982
 GameObject:
   m_ObjectHideFlags: 0
@@ -20191,6 +22975,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1686721733
 GameObject:
   m_ObjectHideFlags: 0
@@ -20235,6 +23027,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1686797345
 GameObject:
   m_ObjectHideFlags: 0
@@ -20279,6 +23079,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1689237561
 GameObject:
   m_ObjectHideFlags: 0
@@ -20323,6 +23131,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1696057629
 GameObject:
   m_ObjectHideFlags: 0
@@ -20367,6 +23183,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1696577146
 GameObject:
   m_ObjectHideFlags: 0
@@ -20411,6 +23235,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1696659309
 GameObject:
   m_ObjectHideFlags: 0
@@ -20455,6 +23287,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1697780391
 GameObject:
   m_ObjectHideFlags: 0
@@ -20499,6 +23339,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1705605169
 GameObject:
   m_ObjectHideFlags: 0
@@ -20543,6 +23391,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1706377332
 GameObject:
   m_ObjectHideFlags: 0
@@ -20587,6 +23443,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1706391769
 GameObject:
   m_ObjectHideFlags: 0
@@ -20662,6 +23526,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1706668435
 Transform:
   m_ObjectHideFlags: 0
@@ -20791,6 +23663,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1717909228
 GameObject:
   m_ObjectHideFlags: 0
@@ -20835,6 +23715,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1723234123
 GameObject:
   m_ObjectHideFlags: 0
@@ -20879,6 +23767,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1727976870
 GameObject:
   m_ObjectHideFlags: 0
@@ -20923,6 +23819,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1728612261
 GameObject:
   m_ObjectHideFlags: 0
@@ -20967,6 +23871,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1736371413
 GameObject:
   m_ObjectHideFlags: 0
@@ -21011,6 +23923,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1740830299
 GameObject:
   m_ObjectHideFlags: 0
@@ -21055,6 +23975,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1746110296
 GameObject:
   m_ObjectHideFlags: 0
@@ -21266,6 +24194,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1751714126
 GameObject:
   m_ObjectHideFlags: 0
@@ -21310,6 +24246,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1751748208
 GameObject:
   m_ObjectHideFlags: 0
@@ -21354,6 +24298,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1754072486
 GameObject:
   m_ObjectHideFlags: 0
@@ -21398,6 +24350,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1759699536
 GameObject:
   m_ObjectHideFlags: 0
@@ -21427,6 +24387,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1759699538
 Transform:
   m_ObjectHideFlags: 0
@@ -21471,6 +24439,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1760755553
 Transform:
   m_ObjectHideFlags: 0
@@ -21530,6 +24506,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1767084781
 GameObject:
   m_ObjectHideFlags: 0
@@ -21574,6 +24558,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1770608819
 GameObject:
   m_ObjectHideFlags: 0
@@ -21618,6 +24610,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1777382116
 GameObject:
   m_ObjectHideFlags: 0
@@ -21662,6 +24662,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1777448938
 GameObject:
   m_ObjectHideFlags: 0
@@ -21706,6 +24714,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1786659674
 GameObject:
   m_ObjectHideFlags: 0
@@ -21750,6 +24766,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1788279265
 GameObject:
   m_ObjectHideFlags: 0
@@ -21868,6 +24892,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1790899425
 GameObject:
   m_ObjectHideFlags: 0
@@ -21994,6 +25026,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1794727662
 GameObject:
   m_ObjectHideFlags: 0
@@ -22038,6 +25078,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1796032964
 GameObject:
   m_ObjectHideFlags: 0
@@ -22082,6 +25130,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1801473650
 GameObject:
   m_ObjectHideFlags: 0
@@ -22111,6 +25167,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1801473652
 Transform:
   m_ObjectHideFlags: 0
@@ -22170,6 +25234,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1803663697
 GameObject:
   m_ObjectHideFlags: 0
@@ -22286,6 +25358,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1805594737
 GameObject:
   m_ObjectHideFlags: 0
@@ -22330,6 +25410,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1806060134
 GameObject:
   m_ObjectHideFlags: 0
@@ -22374,6 +25462,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1806802073
 GameObject:
   m_ObjectHideFlags: 0
@@ -22418,6 +25514,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1808948014
 GameObject:
   m_ObjectHideFlags: 0
@@ -22447,6 +25551,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1808948016
 Transform:
   m_ObjectHideFlags: 0
@@ -22506,6 +25618,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1835822762
 GameObject:
   m_ObjectHideFlags: 0
@@ -22550,6 +25670,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1838985939
 GameObject:
   m_ObjectHideFlags: 0
@@ -22594,6 +25722,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1843601500
 GameObject:
   m_ObjectHideFlags: 0
@@ -22638,6 +25774,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1847504970
 GameObject:
   m_ObjectHideFlags: 0
@@ -22682,6 +25826,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1849045868
 GameObject:
   m_ObjectHideFlags: 0
@@ -22726,6 +25878,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1856348594
 GameObject:
   m_ObjectHideFlags: 0
@@ -22770,6 +25930,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1858293600
 GameObject:
   m_ObjectHideFlags: 0
@@ -22814,6 +25982,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1861405235
 GameObject:
   m_ObjectHideFlags: 0
@@ -22858,6 +26034,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1864166139
 GameObject:
   m_ObjectHideFlags: 0
@@ -22902,6 +26086,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1867877414
 GameObject:
   m_ObjectHideFlags: 0
@@ -23024,6 +26216,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1884778001
 GameObject:
   m_ObjectHideFlags: 0
@@ -23068,6 +26268,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1888539583
 GameObject:
   m_ObjectHideFlags: 0
@@ -23112,6 +26320,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1889833648
 GameObject:
   m_ObjectHideFlags: 0
@@ -23156,6 +26372,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1893689845
 GameObject:
   m_ObjectHideFlags: 0
@@ -23200,6 +26424,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1906664560
 GameObject:
   m_ObjectHideFlags: 0
@@ -23229,6 +26461,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1906664562
 Transform:
   m_ObjectHideFlags: 0
@@ -23505,6 +26745,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1914675631
 GameObject:
   m_ObjectHideFlags: 0
@@ -23549,6 +26797,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1916159868
 GameObject:
   m_ObjectHideFlags: 0
@@ -23593,6 +26849,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1924486569
 GameObject:
   m_ObjectHideFlags: 0
@@ -23637,6 +26901,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1932447868
 GameObject:
   m_ObjectHideFlags: 0
@@ -23681,6 +26953,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1938456759
 GameObject:
   m_ObjectHideFlags: 0
@@ -23799,6 +27079,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1944795933
 GameObject:
   m_ObjectHideFlags: 0
@@ -23843,6 +27131,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1945105190
 GameObject:
   m_ObjectHideFlags: 0
@@ -23887,6 +27183,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1951685924
 GameObject:
   m_ObjectHideFlags: 0
@@ -23931,6 +27235,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1955892490
 GameObject:
   m_ObjectHideFlags: 0
@@ -23975,6 +27287,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1956309480
 GameObject:
   m_ObjectHideFlags: 0
@@ -24019,6 +27339,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1968268098
 GameObject:
   m_ObjectHideFlags: 0
@@ -24048,6 +27376,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1968268100
 Transform:
   m_ObjectHideFlags: 0
@@ -24092,6 +27428,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1969542152
 Transform:
   m_ObjectHideFlags: 0
@@ -24151,6 +27495,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1975470621
 GameObject:
   m_ObjectHideFlags: 0
@@ -24245,6 +27597,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1980843127
 GameObject:
   m_ObjectHideFlags: 0
@@ -24289,6 +27649,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1980956806
 GameObject:
   m_ObjectHideFlags: 0
@@ -24368,6 +27736,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &1993932600
 GameObject:
   m_ObjectHideFlags: 0
@@ -24397,6 +27773,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &1993932602
 Transform:
   m_ObjectHideFlags: 0
@@ -24456,6 +27840,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2011140034
 GameObject:
   m_ObjectHideFlags: 0
@@ -24500,6 +27892,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2011392228
 GameObject:
   m_ObjectHideFlags: 0
@@ -24544,6 +27944,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2016209106
 GameObject:
   m_ObjectHideFlags: 0
@@ -24573,6 +27981,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &2016209108
 Transform:
   m_ObjectHideFlags: 0
@@ -24632,6 +28048,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2021627436
 GameObject:
   m_ObjectHideFlags: 0
@@ -24723,6 +28147,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2027893106
 GameObject:
   m_ObjectHideFlags: 0
@@ -24917,6 +28349,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2034536612
 GameObject:
   m_ObjectHideFlags: 0
@@ -24961,6 +28401,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2038860522
 GameObject:
   m_ObjectHideFlags: 0
@@ -25005,6 +28453,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2042745865
 GameObject:
   m_ObjectHideFlags: 0
@@ -25049,6 +28505,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2050406198
 GameObject:
   m_ObjectHideFlags: 0
@@ -25093,6 +28557,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2055927672
 GameObject:
   m_ObjectHideFlags: 0
@@ -25137,6 +28609,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2056655343
 GameObject:
   m_ObjectHideFlags: 0
@@ -25181,6 +28661,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2059099090
 GameObject:
   m_ObjectHideFlags: 0
@@ -25225,6 +28713,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2062587983
 GameObject:
   m_ObjectHideFlags: 0
@@ -25349,6 +28845,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2081171477
 GameObject:
   m_ObjectHideFlags: 0
@@ -25479,6 +28983,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2085647669
 GameObject:
   m_ObjectHideFlags: 0
@@ -25523,6 +29035,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2087955447
 GameObject:
   m_ObjectHideFlags: 0
@@ -25552,6 +29072,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!4 &2087955449
 Transform:
   m_ObjectHideFlags: 0
@@ -25611,6 +29139,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2097895284
 GameObject:
   m_ObjectHideFlags: 0
@@ -25655,6 +29191,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2105032053
 GameObject:
   m_ObjectHideFlags: 0
@@ -25699,6 +29243,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2108415039
 GameObject:
   m_ObjectHideFlags: 0
@@ -25743,6 +29295,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2115533299
 GameObject:
   m_ObjectHideFlags: 0
@@ -25787,6 +29347,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2118135309
 GameObject:
   m_ObjectHideFlags: 0
@@ -25831,6 +29399,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2127557748
 GameObject:
   m_ObjectHideFlags: 0
@@ -25875,6 +29451,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2128431420
 GameObject:
   m_ObjectHideFlags: 0
@@ -25991,6 +29575,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2134483802
 GameObject:
   m_ObjectHideFlags: 0
@@ -26035,6 +29627,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2135653319
 GameObject:
   m_ObjectHideFlags: 0
@@ -26079,6 +29679,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2138907355
 GameObject:
   m_ObjectHideFlags: 0
@@ -26123,6 +29731,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2139728954
 GameObject:
   m_ObjectHideFlags: 0
@@ -26203,6 +29819,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1 &2146330660
 GameObject:
   m_ObjectHideFlags: 0
@@ -26247,6 +29871,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ed161bab8390a4e881588a7f20a044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _economy: 0
+  _standard: 0
+  _comfort: 0
+  _business: 0
+  _luxury: 0
+  _vip: 0
+  _petTransport: 0
+  _withChildSeat: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
