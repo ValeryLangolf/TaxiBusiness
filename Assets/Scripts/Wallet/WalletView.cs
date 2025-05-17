@@ -1,4 +1,4 @@
-using TMPro;
+Ôªøusing TMPro;
 using UnityEngine;
 
 public class WalletView : MonoBehaviour
@@ -18,5 +18,5 @@ public class WalletView : MonoBehaviour
         UpdateBalanceDisplay(newBalance);
 
     private void UpdateBalanceDisplay(int balance) =>
-        _balanceText.text = $"¡‡Î‡ÌÒ: {balance}$";
+        _balanceText.text = $"–ë–∞–ª–∞–Ω—Å: {balance}—Ä.";
 }

@@ -6,6 +6,8 @@ public class VehicleSpawner : MonoBehaviour
     [SerializeField] private Vehicle _vehiclePrefab;
     [SerializeField] private Transform _startPosition;
 
+    public event Action<Vehicle> Spawned;
+
     private void Awake()
     {
         if (_vehiclePrefab == null)
@@ -15,6 +17,9 @@ public class VehicleSpawner : MonoBehaviour
     private void Start() =>
         SpawnVehicle();
 
-    private void SpawnVehicle() =>
-        Instantiate(_vehiclePrefab, _startPosition.position, _startPosition.rotation);
+    private void SpawnVehicle()
+    {
+        Vehicle vehicle = Instantiate(_vehiclePrefab, _startPosition.position, _startPosition.rotation);
+        Spawned?.Invoke(vehicle);
+    }
 }

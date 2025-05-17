@@ -36,6 +36,9 @@ public class UiFollower : MonoBehaviour
     public void Follow(Transform target) =>
         _target = target;
 
+    public void Stop() =>
+        _target = null;
+
     private void UpdateUiPositionFromWorldTarget(Vector3 screenPosition)
     {
         RectTransformUtility.ScreenPointToLocalPointInRectangle(

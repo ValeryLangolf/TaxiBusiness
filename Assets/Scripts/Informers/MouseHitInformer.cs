@@ -1,16 +1,41 @@
 using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class MouseHitInformer : MonoBehaviour
 {
-    public static event Action<Collider, Vector3> LeftHitted;
+    public static event Action<Vector3> PlaneLeftClicked;
     public static event Action<Collider, Vector3> RightHitted;
+    public static event Action<Passenger> PassengerClicked;
+    public static event Action<Vehicle> VehicleClicked;
 
     private void Update()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                GameObject uiObject = EventSystem.current.currentSelectedGameObject;                
+
+                if (uiObject == null)
+                    return;
+
+                if (uiObject.transform.parent.TryGetComponent(out Passenger passenger))
+                    PassengerClicked?.Invoke(passenger);
+            }
+
+            return;
+        }
+
         if (Input.GetMouseButtonDown(0))
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
-                LeftHitted?.Invoke(hit.collider, hit.point);
+            {
+                if (hit.collider.TryGetComponent(out Plane _))
+                    PlaneLeftClicked?.Invoke(hit.point);
+
+                if (hit.collider.TryGetComponent(out VehicleCollider vehicleCollider))
+                    VehicleClicked?.Invoke(vehicleCollider.Vehicle);
+            }
 
         if (Input.GetMouseButtonDown(1))
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))

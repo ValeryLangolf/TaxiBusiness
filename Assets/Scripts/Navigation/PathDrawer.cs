@@ -37,6 +37,9 @@ public class PathDrawer : MonoBehaviour
 
     private void UnsubscribeVehicle(Vehicle vehicle)
     {
+        if (vehicle == null)
+            return;
+
         vehicle.PathDestinated -= OnPathDestinated;
         vehicle.PathCompleted -= OnPathCompleted;
     }
@@ -74,7 +77,10 @@ public class PathDrawer : MonoBehaviour
         if (_vehicle == null || _vehicle.RemainingPath.Count == 0)
             return;
 
-        _view.SetColor(_pathToPassenger);
+        if (_vehicle.IsPassengerInCar)
+            _view.SetColor(_pathFromPassenger);
+        else
+            _view.SetColor(_pathToPassenger);
 
         List<Vector3> path = new()
         {

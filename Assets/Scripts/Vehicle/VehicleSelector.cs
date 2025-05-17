@@ -12,21 +12,18 @@ public class VehicleSelector : MonoBehaviour
 
     private void OnEnable()
     {
-        MouseHitInformer.LeftHitted += HandleLeftClick;
+        MouseHitInformer.VehicleClicked += HandleLeftClick;
         MouseHitInformer.RightHitted += HandleRightClick;
     }
 
     private void OnDisable()
     {
-        MouseHitInformer.LeftHitted -= HandleLeftClick;
+        MouseHitInformer.VehicleClicked -= HandleLeftClick;
         MouseHitInformer.RightHitted -= HandleRightClick;
     }
 
-    private void HandleLeftClick(Collider collider, Vector3 hitPoint)
-    {
-        if (collider.TryGetComponent(out VehicleCollider vehicleCollider))
-            Select(vehicleCollider);
-    }
+    private void HandleLeftClick(Vehicle vehicle) =>
+        Select(vehicle);
 
     private void HandleRightClick(Collider _, Vector3 __)
     {
@@ -34,15 +31,13 @@ public class VehicleSelector : MonoBehaviour
         s_selectedVehicle = null;
     }
 
-    private void Select(VehicleCollider collider)
+    private void Select(Vehicle vehicle)
     {
-        Vehicle vehicle = collider.Vehicle;
-
-        if(s_selectedVehicle != null && s_selectedVehicle != vehicle)
+        if (s_selectedVehicle != null && s_selectedVehicle != vehicle)
             Deselect(s_selectedVehicle);
 
         s_selectedVehicle = vehicle;
-        Selected?.Invoke(collider.Vehicle);
+        Selected?.Invoke(vehicle);
     }
 
     private void Deselect(Vehicle vehicle) =>

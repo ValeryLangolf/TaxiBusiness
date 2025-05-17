@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class Wallet : MonoBehaviour
 {
-    [SerializeField] private int _initialBalance = 5000;
+    [SerializeField] private int _initialBalance = 0;
+    [SerializeField] private VehicleSpawner _spawner;
 
     private static int _balance;
 
@@ -15,6 +16,7 @@ public class Wallet : MonoBehaviour
     {
         _balance = _initialBalance;
         UpdateBalanceDisplay();
+        _spawner.Spawned += SubscribeVehicle;
     }
 
     public static void AddMoney(int amount)
@@ -36,4 +38,15 @@ public class Wallet : MonoBehaviour
 
     private static void UpdateBalanceDisplay() =>
         BalanceChanged?.Invoke(_balance);
+
+    private void SubscribeVehicle(Vehicle vehicle) =>
+        vehicle.PassengerDelivered += OnDelivered;
+
+    private void OnDelivered(Vehicle _)
+    {
+        int revenue = UnityEngine.Random.Range(10, 500);
+        AddMoney(revenue);
+
+        SfxPlayer.Instance.PlayGettingRevenue();
+    }
 }

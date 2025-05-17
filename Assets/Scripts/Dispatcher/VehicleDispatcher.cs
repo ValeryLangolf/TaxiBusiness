@@ -1,58 +1,52 @@
 using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class VehicleDispatcher : MonoBehaviour
 {
-    private List<Waypoint> _points;
-
     public static event Action<Vector3> PlaneClicked;
 
-    private void OnEnable() =>
-        MouseHitInformer.LeftHitted += HandleHitted;
+    private void OnEnable()
+    {
+        MouseHitInformer.PlaneLeftClicked += OnPlaneClicked;
+        MouseHitInformer.PassengerClicked += OnClickPassenger;
+    }
 
-    private void OnDisable() =>
-        MouseHitInformer.LeftHitted -= HandleHitted;
+    private void OnDisable()
+    {
+        MouseHitInformer.PlaneLeftClicked -= OnPlaneClicked;
+        MouseHitInformer.PassengerClicked -= OnClickPassenger;
+    }
 
-    private void Start() =>
-        _points = RoadNetwork.Instance.Points;
-
-    private void HandleHitted(Collider collider, Vector3 hitPoint)
+    private void OnPlaneClicked(Vector3 position)
     {
         Vehicle vehicle = VehicleSelector.Vehicle;
 
         if (vehicle == null)
             return;
 
-        if (collider.TryGetComponent(out Plane _) == false)
+        if (vehicle.IsPassengerInCar)
             return;
 
-        SendToDestination(vehicle, hitPoint);
-        PlaneClicked?.Invoke(hitPoint);
+        vehicle.ResetPassenger();
+
+        vehicle.SetDestination(position);
+        PlaneClicked?.Invoke(position);
     }
 
-    private void SendToDestination(Vehicle vehicle, Vector3 destination)
+    private void OnClickPassenger(Passenger passenger)
     {
-        Waypoint start = Utils.GetNearestSectionAndPoint(vehicle.Position, _points);
-        Waypoint end = Utils.GetNearestSectionAndPoint(destination, _points);
+        Vehicle vehicle = VehicleSelector.Vehicle;
 
-        if (start == end)
+        if (vehicle == null)
             return;
 
-        List<Waypoint> path = Pathfinder.FindPath(start, end);
-
-        if(path == null)
-        {
-            Debug.Log($"Твой путь Null");
+        if (vehicle.IsPassengerInCar)
             return;
-        }
 
-        if (path.Count == 0)
-        {
-            Debug.Log($"Для пути не найдено ни одной точки");
-            return;
-        }
+        vehicle.ResetPassenger();
 
-        vehicle.SetPath(path);
+        vehicle.SetDestination(passenger.Point.position);
+        vehicle.SetWaitingPassenger(passenger);
+        PlaneClicked?.Invoke(passenger.Point.transform.position);
     }
 }

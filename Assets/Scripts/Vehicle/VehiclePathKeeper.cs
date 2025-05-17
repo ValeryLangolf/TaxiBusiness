@@ -43,6 +43,13 @@ public class VehiclePathKeeper
         _remainingPath = new(path);
     }
 
+    public void ResetPath()
+    {
+        _currentPath.Clear();
+        _remainingPath.Clear();
+        _currentTargetIndex = 0;
+    }
+
     public void UpdatePath()
     {
         if (IsActivePath == false)
@@ -73,11 +80,5 @@ public class VehiclePathKeeper
         target.y = _vehicle.position.y;
 
         return target;
-    }
-
-    private void ResetPath()
-    {
-        _currentPath = null;
-        _currentTargetIndex = 0;
     }
 }

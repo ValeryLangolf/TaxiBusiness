@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,15 +27,24 @@ public class PassengerSpawner : MonoBehaviour
 
     private void Spawn()
     {
-        if (_pool.TryGet(out Passenger passenger))
-            passenger.Follow(GetRandomPosition());
+        if (_pool.TryGet(out Passenger passenger) == false)
+            return;
+
+        Waypoint position = GetRandomWaypoint();
+        Waypoint destination = GetRandomWaypoint();
+
+        while(position == destination)
+            destination = GetRandomWaypoint();
+
+        passenger.Follow(position.transform);
+        passenger.SetDestination(destination);
     }
 
-    private Transform GetRandomPosition()
+    private Waypoint GetRandomWaypoint()
     {
         List<Waypoint> points = RoadNetwork.Instance.Points;
         int id = Random.Range(0, points.Count);
 
-        return points[id].transform;
+        return points[id];
     }
 }
