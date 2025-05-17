@@ -19,7 +19,7 @@ public class GizmosRoadDrower
         _waypointSphereRadius = waypointSphereRadius;
         _connectionSphereRadius = connectionSphereRadius;
 
-        if (_waypointSphereRadius < 0.05f)
+        if (_waypointSphereRadius < 0.015f)
             Debug.LogWarning($"Диаметр рисуемых сфер ({_waypointSphereRadius}м) подозрительно мал");
     }
 

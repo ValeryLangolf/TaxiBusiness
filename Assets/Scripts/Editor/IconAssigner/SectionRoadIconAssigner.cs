@@ -10,7 +10,7 @@ public class SectionRoadIconAssigner
     private static readonly Dictionary<string, Type> s_imageParams = new()
     {
         { "road_network", typeof(RoadNetwork) },
-        { "road", typeof(SectionRoadStrip) },
+        { "roadEditor", typeof(SectionRoadStrip) },
     };
 
     private static readonly Dictionary<string, Texture2D> s_icons = new();
