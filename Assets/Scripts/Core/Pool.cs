@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.Rendering.FilterWindow;
 
 public class Pool<T> where T : MonoBehaviour, IDeactivatable<T>
 {
