@@ -534,6 +534,7 @@ MonoBehaviour:
   _count: 3
   _isDistanceDependency: 1
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!114 &65852024
 MonoBehaviour:
@@ -760,6 +761,7 @@ MonoBehaviour:
   _count: 2
   _isDistanceDependency: 1
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!114 &92355677
 MonoBehaviour:
@@ -1887,6 +1889,7 @@ MonoBehaviour:
   _count: 6
   _isDistanceDependency: 0
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: -0.63, y: 0, z: 0.56}
 --- !u!114 &159383230
 MonoBehaviour:
@@ -2048,6 +2051,7 @@ MonoBehaviour:
   _count: 12
   _isDistanceDependency: 0
   _distance: 0.4
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 4.36, y: 0, z: 0}
 --- !u!1 &173349699
 GameObject:
@@ -2158,6 +2162,7 @@ MonoBehaviour:
   _count: 9
   _isDistanceDependency: 0
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: -1.05, y: 0, z: -0.36}
 --- !u!4 &185168171
 Transform:
@@ -3560,6 +3565,7 @@ MonoBehaviour:
   _count: 5
   _isDistanceDependency: 0
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: -0.59, y: 0, z: 0.57}
 --- !u!1 &288251003
 GameObject:
@@ -4598,6 +4604,7 @@ MonoBehaviour:
   _count: 42
   _isDistanceDependency: 1
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!114 &374451048
 MonoBehaviour:
@@ -5114,6 +5121,7 @@ MonoBehaviour:
   _count: 27
   _isDistanceDependency: 1
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!114 &414442975
 MonoBehaviour:
@@ -5292,6 +5300,7 @@ MonoBehaviour:
   _count: 9
   _isDistanceDependency: 0
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: -1.32, y: 0, z: 0.39}
 --- !u!1 &417966334
 GameObject:
@@ -5503,6 +5512,7 @@ MonoBehaviour:
   _count: 6
   _isDistanceDependency: 0
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 1.79, y: 0, z: -0.35}
 --- !u!4 &430327033
 Transform:
@@ -5633,6 +5643,7 @@ MonoBehaviour:
   _count: 8
   _isDistanceDependency: 0
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: -3.01, y: 0, z: -0.15}
 --- !u!114 &434132327
 MonoBehaviour:
@@ -6042,6 +6053,7 @@ MonoBehaviour:
   _count: 5
   _isDistanceDependency: 1
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!1 &474576499
 GameObject:
@@ -6327,6 +6339,7 @@ MonoBehaviour:
   _count: 5
   _isDistanceDependency: 0
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: -0.56, y: 0, z: -0.4}
 --- !u!114 &505630115
 MonoBehaviour:
@@ -6872,6 +6885,7 @@ MonoBehaviour:
   _count: 7
   _isDistanceDependency: 0
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 3.55, y: 0, z: 0.18}
 --- !u!4 &537664802
 Transform:
@@ -6950,6 +6964,7 @@ MonoBehaviour:
   _count: 7
   _isDistanceDependency: 0
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: -0.09, y: 0, z: 1.38}
 --- !u!4 &550899661
 Transform:
@@ -7705,6 +7720,7 @@ MonoBehaviour:
   _count: 8
   _isDistanceDependency: 0
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0.34, y: 0, z: 1.67}
 --- !u!4 &617586483
 Transform:
@@ -10020,6 +10036,7 @@ MonoBehaviour:
   _count: 7
   _isDistanceDependency: 0
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: -0.23, y: 0, z: -1.68}
 --- !u!114 &785763463
 MonoBehaviour:
@@ -10465,6 +10482,7 @@ MonoBehaviour:
   _count: 10
   _isDistanceDependency: 1
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!114 &804478298
 MonoBehaviour:
@@ -11271,6 +11289,7 @@ MonoBehaviour:
   _count: 7
   _isDistanceDependency: 0
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: -1.03, y: 0, z: 4.37}
 --- !u!114 &850673503
 MonoBehaviour:
@@ -13686,6 +13705,7 @@ MonoBehaviour:
   _count: 12
   _isDistanceDependency: 1
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!1 &1066187652
 GameObject:
@@ -14387,6 +14407,7 @@ MonoBehaviour:
   _count: 10
   _isDistanceDependency: 1
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!114 &1114505851
 MonoBehaviour:
@@ -15497,6 +15518,7 @@ MonoBehaviour:
   _count: 2
   _isDistanceDependency: 1
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!114 &1165954462
 MonoBehaviour:
@@ -16046,6 +16068,7 @@ MonoBehaviour:
   _count: 26
   _isDistanceDependency: 1
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!1 &1195444469
 GameObject:
@@ -16776,6 +16799,7 @@ MonoBehaviour:
   _count: 5
   _isDistanceDependency: 0
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!114 &1258436791
 MonoBehaviour:
@@ -17666,8 +17690,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _count: 13
-  _isDistanceDependency: 1
+  _isDistanceDependency: 0
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!1 &1324108655
 GameObject:
@@ -17948,6 +17973,7 @@ MonoBehaviour:
   _count: 4
   _isDistanceDependency: 0
   _distance: 0
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: -0.28, y: 0, z: -0.25}
 --- !u!114 &1337997966
 MonoBehaviour:
@@ -18732,6 +18758,7 @@ MonoBehaviour:
   _count: 12
   _isDistanceDependency: 1
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!1 &1382872824
 GameObject:
@@ -18862,6 +18889,7 @@ MonoBehaviour:
   _count: 7
   _isDistanceDependency: 0
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0.46, y: 0, z: -0.79}
 --- !u!1 &1395086635
 GameObject:
@@ -19281,6 +19309,7 @@ MonoBehaviour:
   _count: 6
   _isDistanceDependency: 0
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0.58, y: 0, z: -0.47}
 --- !u!114 &1404110981
 MonoBehaviour:
@@ -19555,6 +19584,7 @@ MonoBehaviour:
   _count: 42
   _isDistanceDependency: 1
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!1 &1431315253
 GameObject:
@@ -19831,6 +19861,7 @@ MonoBehaviour:
   _count: 28
   _isDistanceDependency: 1
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!1 &1456627645
 GameObject:
@@ -20467,6 +20498,7 @@ MonoBehaviour:
   _count: 25
   _isDistanceDependency: 1
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!1 &1482194381
 GameObject:
@@ -20767,6 +20799,7 @@ MonoBehaviour:
   _count: 7
   _isDistanceDependency: 0
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: -2.64, y: 0, z: 0.18}
 --- !u!4 &1509093710
 Transform:
@@ -21620,6 +21653,7 @@ MonoBehaviour:
   _count: 2
   _isDistanceDependency: 1
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!114 &1576539557
 MonoBehaviour:
@@ -21979,6 +22013,7 @@ MonoBehaviour:
   _count: 6
   _isDistanceDependency: 0
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 1.05, y: 0, z: 0.34}
 --- !u!114 &1604139237
 MonoBehaviour:
@@ -22575,6 +22610,7 @@ MonoBehaviour:
   _count: 6
   _isDistanceDependency: 0
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0.58, y: 0, z: -0.47}
 --- !u!114 &1646332700
 MonoBehaviour:
@@ -22698,6 +22734,7 @@ MonoBehaviour:
   _count: 9
   _isDistanceDependency: 1
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!114 &1652641697
 MonoBehaviour:
@@ -23600,6 +23637,7 @@ MonoBehaviour:
   _count: 3
   _isDistanceDependency: 1
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!4 &1713039058
 Transform:
@@ -24847,6 +24885,7 @@ MonoBehaviour:
   _count: 5
   _isDistanceDependency: 0
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: -0.56, y: 0, z: 0.4}
 --- !u!1 &1789086389
 GameObject:
@@ -24956,6 +24995,7 @@ MonoBehaviour:
   _count: 8
   _isDistanceDependency: 1
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!114 &1790899428
 MonoBehaviour:
@@ -25294,6 +25334,7 @@ MonoBehaviour:
   _count: 4
   _isDistanceDependency: 0
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0.58, y: 0, z: 0.38}
 --- !u!114 &1803663700
 MonoBehaviour:
@@ -26149,6 +26190,7 @@ MonoBehaviour:
   _count: 7
   _isDistanceDependency: 0
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0.82, y: 0, z: 0.59}
 --- !u!114 &1867877417
 MonoBehaviour:
@@ -26553,6 +26595,7 @@ MonoBehaviour:
   _count: 3
   _isDistanceDependency: 1
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!1 &1913201226
 GameObject:
@@ -27014,6 +27057,7 @@ MonoBehaviour:
   _count: 5
   _isDistanceDependency: 0
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: -1.29, y: 0, z: 1.02}
 --- !u!114 &1938456762
 MonoBehaviour:
@@ -28800,6 +28844,7 @@ MonoBehaviour:
   _count: 8
   _isDistanceDependency: 0
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 3.31, y: 0, z: 0.56}
 --- !u!1 &2081154660
 GameObject:
@@ -29511,6 +29556,7 @@ MonoBehaviour:
   _count: 4
   _isDistanceDependency: 0
   _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0.07, y: 0, z: 0.47}
 --- !u!114 &2128431423
 MonoBehaviour:

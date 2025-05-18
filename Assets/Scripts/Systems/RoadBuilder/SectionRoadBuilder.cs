@@ -16,6 +16,7 @@ public class SectionRoadBuilder : MonoBehaviour
     [SerializeField, Range(0.05f, 100)] private float _distance = 1f;
 
     [Header("Изгиб линии:")]
+    [SerializeField] private bool _isAutoEqualizingPoint = true;
     [SerializeField] private Vector3 _arcValue = new();
 
     private readonly PointEqualizer _pointEqualizer = new();
@@ -58,7 +59,9 @@ public class SectionRoadBuilder : MonoBehaviour
 
         RenameChildren(transforms);
         SortChildren(transforms);
-        _pointEqualizer.EqualizeDistanceBetweenPoints(transforms, _arcValue);
+
+        if (_isAutoEqualizingPoint)
+            _pointEqualizer.EqualizeDistanceBetweenPoints(transforms, _arcValue);
     }
 
     private List<Transform> GetChildren()
