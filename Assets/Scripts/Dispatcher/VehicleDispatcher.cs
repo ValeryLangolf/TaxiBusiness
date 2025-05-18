@@ -19,21 +19,17 @@ public class VehicleDispatcher : MonoBehaviour
 
     private void OnPlaneClicked(Vector3 position)
     {
-        Vehicle vehicle = VehicleSelector.Vehicle;
-
-        if (vehicle == null)
-            return;
-
-        if (vehicle.IsPassengerInCar)
-            return;
-
-        vehicle.ResetPassenger();
-
-        vehicle.SetDestination(position);
+        HandleClick(position, null);
         PlaneClicked?.Invoke(position);
     }
 
     private void OnClickPassenger(Passenger passenger)
+    {
+        HandleClick(passenger.Point.position, passenger);
+        PlaneClicked?.Invoke(passenger.Point.transform.position);
+    }
+
+    private void HandleClick(Vector3 position, Passenger passenger)
     {
         Vehicle vehicle = VehicleSelector.Vehicle;
 
@@ -44,9 +40,9 @@ public class VehicleDispatcher : MonoBehaviour
             return;
 
         vehicle.ResetPassenger();
+        vehicle.SetDestination(position);
 
-        vehicle.SetDestination(passenger.Point.position);
-        vehicle.SetWaitingPassenger(passenger);
-        PlaneClicked?.Invoke(passenger.Point.transform.position);
+        if (passenger != null)
+            vehicle.SetWaitingPassenger(passenger);
     }
 }

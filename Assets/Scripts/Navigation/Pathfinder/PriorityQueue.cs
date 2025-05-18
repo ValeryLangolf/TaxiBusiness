@@ -31,8 +31,8 @@ public class PriorityQueue<T> where T : IComparable<T>
         int lastIndex = _elements.Count - 1;
         _elements[0] = _elements[lastIndex];
         _elements.RemoveAt(lastIndex);
-
         int parentIndex = 0;
+
         while (true)
         {
             int leftChildIndex = parentIndex * 2 + 1;
@@ -50,7 +50,6 @@ public class PriorityQueue<T> where T : IComparable<T>
                 break;
 
             (_elements[parentIndex], _elements[minIndex]) = (_elements[minIndex], _elements[parentIndex]);
-
             parentIndex = minIndex;
         }
 

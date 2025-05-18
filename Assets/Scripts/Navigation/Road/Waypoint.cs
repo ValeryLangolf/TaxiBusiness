@@ -35,11 +35,6 @@ public class Waypoint : MonoBehaviour
     public void AddConnectedPoint(Waypoint waypoint) =>
         _connectedWaypoints.Add(waypoint);
 
-    private float CalculateLenght()
-    {
-        if (_connectedWaypoints.Count > 0)
-            return Vector3.Distance(transform.position, _connectedWaypoints[0].Position);
-
-        return int.MaxValue;
-    }
+    private float CalculateLenght() =>
+        _connectedWaypoints.Count > 0 ? Vector3.Distance(transform.position, _connectedWaypoints[0].Position) : int.MaxValue;
 }

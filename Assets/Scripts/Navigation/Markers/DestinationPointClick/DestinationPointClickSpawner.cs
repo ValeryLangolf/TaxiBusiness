@@ -11,12 +11,12 @@ public class DestinationPointClickSpawner : MonoBehaviour
         _pool = new(_prefab, transform);
 
     private void OnEnable() =>
-        VehicleDispatcher.PlaneClicked += HandlePlaneClicked;
+        VehicleDispatcher.PlaneClicked += OnPlaneClicked;
 
     private void OnDisable() =>
-        VehicleDispatcher.PlaneClicked -= HandlePlaneClicked;
+        VehicleDispatcher.PlaneClicked -= OnPlaneClicked;
 
-    private void HandlePlaneClicked(Vector3 position)
+    private void OnPlaneClicked(Vector3 position)
     {
         if(_pool.TryGet(out DestinationPointClickMarker marker))
             marker.SetPosition(position + _offset);

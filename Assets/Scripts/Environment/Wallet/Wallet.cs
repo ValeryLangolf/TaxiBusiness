@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Wallet : MonoBehaviour
 {
-    [SerializeField] private int _initialBalance = 0;
+    [SerializeField] private int _initialBalance;
     [SerializeField] private VehicleSpawner _spawner;
 
     private static int _balance;

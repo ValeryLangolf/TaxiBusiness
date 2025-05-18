@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class RoadNetwork : MonoBehaviour
 {
+    public static RoadNetwork Instance { get; private set; }
+
     [Header("Автозаполняемый список")]
     [SerializeField] private List<SectionRoadStrip> _sections;
 
     private readonly List<Waypoint> _points = new();
-
-    public static RoadNetwork Instance { get; private set; }
 
     public List<SectionRoadStrip> Sections => new(_sections);
 
