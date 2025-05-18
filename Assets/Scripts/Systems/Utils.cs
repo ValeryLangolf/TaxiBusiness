@@ -7,9 +7,14 @@ public static class Utils
 {
     public static bool AreListsEqual<T>(List<T> list1, List<T> list2) where T : Component
     {
-        if (list1 == null && list2 == null) return true;
-        if (list1 == null || list2 == null) return false;
-        if (list1.Count != list2.Count) return false;
+        if (list1 == null && list2 == null) 
+            return true;
+
+        if (list1 == null || list2 == null) 
+            return false;
+
+        if (list1.Count != list2.Count) 
+            return false;
 
         var sortedList1 = list1.OrderBy(item => item.name).ToList();
         var sortedList2 = list2.OrderBy(item => item.name).ToList();

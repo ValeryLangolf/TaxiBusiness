@@ -12,33 +12,46 @@ public class MouseHitInformer : MonoBehaviour
     private void Update()
     {
         if (EventSystem.current.IsPointerOverGameObject())
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                GameObject uiObject = EventSystem.current.currentSelectedGameObject;                
+            HandleUi();
+        else
+            HandleClickObject();
+    }
 
-                if (uiObject == null)
-                    return;
-
-                if (uiObject.transform.parent.TryGetComponent(out Passenger passenger))
-                    PassengerClicked?.Invoke(passenger);
-            }
-
+    private void HandleUi()
+    {
+        if (Input.GetMouseButtonDown(0) == false)
             return;
-        }
 
+        GameObject uiObject = EventSystem.current.currentSelectedGameObject;
+
+        if (uiObject != null && uiObject.transform.parent.TryGetComponent(out Passenger passenger))
+            PassengerClicked?.Invoke(passenger);
+    }
+
+    private void HandleClickObject()
+    {
         if (Input.GetMouseButtonDown(0))
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
-            {
-                if (hit.collider.TryGetComponent(out Plane _))
-                    PlaneLeftClicked?.Invoke(hit.point);
-
-                if (hit.collider.TryGetComponent(out VehicleCollider vehicleCollider))
-                    VehicleClicked?.Invoke(vehicleCollider.Vehicle);
-            }
+            HandleLeftClickObject();
 
         if (Input.GetMouseButtonDown(1))
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
-                RightHitted?.Invoke(hit.collider, hit.point);
+            HandleRightClickObject();
+    }
+
+    private void HandleLeftClickObject()
+    {
+        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit) == false)
+            return;
+
+        if (hit.collider.TryGetComponent(out Plane _))
+            PlaneLeftClicked?.Invoke(hit.point);
+
+        if (hit.collider.TryGetComponent(out VehicleCollider vehicleCollider))
+            VehicleClicked?.Invoke(vehicleCollider.Vehicle);
+    }
+
+    private void HandleRightClickObject()
+    {
+        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
+            RightHitted?.Invoke(hit.collider, hit.point);
     }
 }

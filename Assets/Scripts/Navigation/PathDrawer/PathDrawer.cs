@@ -6,9 +6,6 @@ using UnityEngine;
 public class PathDrawer : MonoBehaviour
 {
     private PathDrawerView _view;
-    [SerializeField] private Color _pathToPassenger;
-    [SerializeField] private Color _pathFromPassenger;
-
     private Vehicle _vehicle;
 
     private void Awake() =>
@@ -77,17 +74,12 @@ public class PathDrawer : MonoBehaviour
         if (_vehicle == null || _vehicle.RemainingPath.Count == 0)
             return;
 
-        if (_vehicle.IsPassengerInCar)
-            _view.SetColor(_pathFromPassenger);
-        else
-            _view.SetColor(_pathToPassenger);
-
         List<Vector3> path = new()
         {
             _vehicle.Position
         };
 
         path.AddRange(_vehicle.RemainingPath.Where(v => v.Position != null).Select(v => v.Position).ToList());
-        _view.Draw(path);
+        _view.Draw(path, _vehicle.IsPassengerInCar);
     }
 }

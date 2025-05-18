@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class SpeedGameRegulator : MonoBehaviour
 {
-    private const float MinimumSpeed = 0.1f;
+    private const float MinimumSpeed = 0.01f;
     private const float MaximumSpeed = 5f;
 
     [SerializeField] private Slider _gameSpeed;

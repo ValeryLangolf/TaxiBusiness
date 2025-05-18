@@ -4,6 +4,9 @@ using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public class PathDrawerView : MonoBehaviour
 {
+    [SerializeField] private Color _defaultColor;
+    [SerializeField] private Color _passengerInCarColor;
+
     private LineRenderer _lineRenderer;
 
     private void Awake()
@@ -22,10 +25,11 @@ public class PathDrawerView : MonoBehaviour
     }
 
     public void Clear() =>
-        Draw(new());
+        _lineRenderer.positionCount = 0;
 
-    public void Draw(List<Vector3> path)
+    public void Draw(List<Vector3> path, bool isPassengerInCar)
     {
+        SetColor(isPassengerInCar ? _passengerInCarColor : _defaultColor);
         _lineRenderer.positionCount = path?.Count ?? 0;
 
         if (path != null && path.Count > 0)

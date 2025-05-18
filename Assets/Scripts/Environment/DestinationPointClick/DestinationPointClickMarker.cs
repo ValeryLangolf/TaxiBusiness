@@ -12,14 +12,14 @@ public class DestinationPointClickMarker : MonoBehaviour, IDeactivatable<Destina
     private void Awake() =>
         _animator = GetComponent<Animator>();
 
-    public void ReturnInPool() =>
-        Deactivated?.Invoke(this);
-
     private void OnEnable() =>
         StartCoroutine(WaitAnimationEnd());
 
     public void SetPosition(Vector3 position) =>
         transform.position = position;
+
+    public void ReturnInPool() =>
+        Deactivated?.Invoke(this);
 
     private IEnumerator WaitAnimationEnd()
     {

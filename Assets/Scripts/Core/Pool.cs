@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,15 +8,17 @@ public class Pool<T> where T : MonoBehaviour, IDeactivatable<T>
 
     private readonly T _prefab;
     private readonly Transform _parent;
+    private readonly Action<T> _created;
     private readonly Stack<T> _elements = new();
     private readonly int _size;
 
     private int _count;
 
-    public Pool(T prefab, Transform parent, int size = MaximumSize)
+    public Pool(T prefab, Transform parent, Action<T> created = null, int size = MaximumSize)
     {
         _prefab = prefab;
         _parent = parent;
+        _created = created;
         _size = size;
     }
 
@@ -29,7 +32,7 @@ public class Pool<T> where T : MonoBehaviour, IDeactivatable<T>
         if (_elements.Count > 0)
             element = _elements.Pop();
         else
-            element = Create();
+            element = Create();            
 
         element.Deactivated += Return;
         element.gameObject.SetActive(true);
@@ -48,6 +51,11 @@ public class Pool<T> where T : MonoBehaviour, IDeactivatable<T>
     {
         _count++;
 
-        return Object.Instantiate(_prefab, _parent);
+        T element = UnityEngine.Object.Instantiate(_prefab, _parent);
+
+        if (_created != null)
+            _created?.Invoke(element);
+
+        return element;
     }
 }

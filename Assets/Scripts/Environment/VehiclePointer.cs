@@ -13,6 +13,21 @@ public class VehiclePointer : MonoBehaviour
         VehicleSelector.Deselected += OnDeselected;
     }
 
+    private void OnDestroy()
+    {
+        VehicleSelector.Selected -= OnSelected;
+        VehicleSelector.Deselected -= OnDeselected;
+    }
+
+    private void LateUpdate()
+    {
+        if (_target == null)
+            return;
+
+        transform.position = _target.position + _offset;
+        transform.localRotation *= Quaternion.Euler(0, _speedRotation * Time.deltaTime, 0);
+    }
+
     public void OnSelected(Vehicle target)
     {
         gameObject.SetActive(true);
@@ -23,20 +38,5 @@ public class VehiclePointer : MonoBehaviour
     {
         gameObject.SetActive(false);
         _target = null;
-    }
-
-    private void LateUpdate()
-    {
-        if(_target == null)
-            return;
-
-        transform.position = _target.position + _offset;
-        transform.localRotation *= Quaternion.Euler(0, _speedRotation * Time.deltaTime, 0);
-    }
-
-    private void OnDestroy()
-    {
-        VehicleSelector.Selected -= OnSelected;
-        VehicleSelector.Deselected -= OnDeselected;
     }
 }

@@ -11,6 +11,7 @@ public class SectionRoadIconAssigner
     {
         { "road_network", typeof(RoadNetwork) },
         { "roadEditor", typeof(SectionRoadStrip) },
+        { "waypoint", typeof(Waypoint) },
     };
 
     private static readonly Dictionary<string, Texture2D> s_icons = new();

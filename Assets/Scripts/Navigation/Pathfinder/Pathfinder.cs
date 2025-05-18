@@ -5,33 +5,33 @@ public static class Pathfinder
 {
     public const float DefaultEstimateCost = 0f;
 
-    public static List<Waypoint> FindPath(Waypoint startSection, Waypoint targetSection)
+    public static List<Waypoint> FindPath(Waypoint startPoint, Waypoint targetPoint)
     {
         PriorityQueue<PathNode> frontier = new();
         Dictionary<Waypoint, Waypoint> cameFrom = new();
         Dictionary<Waypoint, float> costSoFar = new();
 
-        frontier.Enqueue(new PathNode(startSection, 0f));
-        costSoFar[startSection] = 0f;
+        frontier.Enqueue(new PathNode(startPoint, 0f));
+        costSoFar[startPoint] = 0f;
 
         while (frontier.Count > 0)
         {
             PathNode current = frontier.Dequeue();
 
-            if (current.Waypoint == targetSection)
+            if (current.Waypoint == targetPoint)
                 return BuildPathFromCameFrom(cameFrom, current.Waypoint);
 
             foreach (Waypoint neighbor in current.Waypoint.ConnectedPoints)
             {
                 float newCost = costSoFar[current.Waypoint] + current.Waypoint.LenghtInMeter;
 
-                if (costSoFar.ContainsKey(neighbor) == false || newCost < costSoFar[neighbor])
-                {
-                    costSoFar[neighbor] = newCost;
-                    float priority = newCost + EstimateRemainingCost(neighbor, targetSection);
-                    frontier.Enqueue(new PathNode(neighbor, priority));
-                    cameFrom[neighbor] = current.Waypoint;
-                }
+                if (costSoFar.ContainsKey(neighbor) && newCost >= costSoFar[neighbor])
+                    continue;
+
+                costSoFar[neighbor] = newCost;
+                float priority = newCost + EstimateRemainingCost(neighbor, targetPoint);
+                frontier.Enqueue(new PathNode(neighbor, priority));
+                cameFrom[neighbor] = current.Waypoint;
             }
         }
 
@@ -70,6 +70,6 @@ public class PathNode : IComparable<PathNode>
         Priority = priority;
     }
 
-    public int CompareTo(PathNode other) => 
+    public int CompareTo(PathNode other) =>
         Priority.CompareTo(other.Priority);
 }
