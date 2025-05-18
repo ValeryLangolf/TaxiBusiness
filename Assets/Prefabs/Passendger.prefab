@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _view: {fileID: 7441945374386983747}
-  _timeVisibleLimits: {x: 7, y: 20}
+  _timeVisibleLimits: {x: 15, y: 30}
 --- !u!1 &9212210384180719100
 GameObject:
   m_ObjectHideFlags: 0
