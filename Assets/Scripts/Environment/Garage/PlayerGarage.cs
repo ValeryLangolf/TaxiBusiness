@@ -51,10 +51,10 @@ public class PlayerGarage : MonoBehaviour
         vehicleParams.Card.Clicked += OnCardClicked;
     }
 
-    private void OnPassengerDelivered(Vehicle vehicle)
+    private void OnPassengerDelivered(Vehicle vehicle, float profit)
     {
-        int revenue = Random.Range(10, 500);
-        _wallet.AddMoney(revenue);
+        _wallet.AddMoney(profit);
+        Debug.Log($"Доход составил: {profit}");
     }
 
     private void OnCardClicked(VehicleCard vehicleCard)

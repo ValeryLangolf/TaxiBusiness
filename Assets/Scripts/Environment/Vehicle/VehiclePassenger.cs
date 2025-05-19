@@ -59,16 +59,27 @@ public class VehiclePassenger
     {
         passenger.Select();
         passenger.Refused += OnPassengerRefused;
+        passenger.Taked += OnPassengerTaked;
     }
 
     private void UnsubscribePassanger(Passenger passenger)
     {
         passenger.Deselect();
         passenger.Refused -= OnPassengerRefused;
+        passenger.Taked -= OnPassengerTaked;
     }
 
     private void OnPassengerRefused(Passenger passenger)
     {
+        Reset();
+        _refused?.Invoke(passenger);
+    }
+
+    private void OnPassengerTaked(Passenger passenger)
+    {
+        if (_isInCar)
+            return;
+
         Reset();
         _refused?.Invoke(passenger);
     }

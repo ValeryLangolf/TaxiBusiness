@@ -7,13 +7,13 @@ public static class Utils
 {
     public static bool AreListsEqual<T>(List<T> list1, List<T> list2) where T : Component
     {
-        if (list1 == null && list2 == null) 
+        if (list1 == null && list2 == null)
             return true;
 
-        if (list1 == null || list2 == null) 
+        if (list1 == null || list2 == null)
             return false;
 
-        if (list1.Count != list2.Count) 
+        if (list1.Count != list2.Count)
             return false;
 
         var sortedList1 = list1.OrderBy(item => item.name).ToList();
@@ -48,5 +48,15 @@ public static class Utils
         int numberPart = match.Groups[2].Success ? int.Parse(match.Groups[2].Value) : 0;
 
         return (textPart, numberPart);
+    }
+
+    public static float CalculateDistancePath(List<Waypoint> path)
+    {
+        float distance = 0;
+
+        foreach (Waypoint waypoint in path)
+            distance += waypoint.LenghtInMeter;
+
+        return distance;
     }
 }

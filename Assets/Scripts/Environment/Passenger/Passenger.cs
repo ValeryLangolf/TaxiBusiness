@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 [RequireComponent(typeof(UiFollower))]
 public class Passenger : MonoBehaviour, IDeactivatable<Passenger>
@@ -8,6 +9,7 @@ public class Passenger : MonoBehaviour, IDeactivatable<Passenger>
     [SerializeField] private PassengerView _view;
     [SerializeField] private Vector2 _timeVisibleLimits;
 
+    private Waypoint _pointDeparture;
     private Waypoint _destination;
     private Transform _passengerPoint;
     private UiFollower _follower;
@@ -15,8 +17,11 @@ public class Passenger : MonoBehaviour, IDeactivatable<Passenger>
 
     public event Action<Passenger> Deactivated;
     public event Action<Passenger> Refused;
+    public event Action<Passenger> Taked;
 
     public Transform Point => _passengerPoint;
+
+    public Waypoint Departure => _pointDeparture;
 
     public Waypoint Destination => _destination;
 
@@ -46,6 +51,14 @@ public class Passenger : MonoBehaviour, IDeactivatable<Passenger>
 
         _view.SetMiniIconSize();
         Follow(taxi);
+
+        Taked?.Invoke(this);
+    }
+
+    public void SetDeparture(Waypoint point)
+    {
+        _pointDeparture = point;
+        Follow(point.transform);
     }
 
     public void SetDestination(Waypoint point) =>

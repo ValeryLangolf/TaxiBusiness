@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 2853334794128048440}
   - component: {fileID: 2535222042804448764}
   - component: {fileID: 9204251012365960358}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: OldCar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,6 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 15
   _rotationSpeed: 70
+  _moneyRate: 1
 --- !u!1 &5053064067289825103
 GameObject:
   m_ObjectHideFlags: 0

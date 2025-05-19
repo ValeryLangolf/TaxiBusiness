@@ -35,8 +35,8 @@ public class PassengerSpawner : MonoBehaviour
 
         while(position == destination)
             destination = GetRandomWaypoint();
-
-        passenger.Follow(position.transform);
+        
+        passenger.SetDeparture(position);
         passenger.SetDestination(destination);
     }
 

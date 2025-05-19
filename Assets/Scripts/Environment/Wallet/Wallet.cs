@@ -15,7 +15,7 @@ public class Wallet : MonoBehaviour
     private void Start() =>
         UpdateView();
 
-    public void AddMoney(int amount)
+    public void AddMoney(float amount)
     {
         if (amount < 0)
         {
