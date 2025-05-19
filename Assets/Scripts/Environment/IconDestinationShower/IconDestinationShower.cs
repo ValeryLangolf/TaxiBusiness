@@ -3,6 +3,8 @@
 [RequireComponent(typeof(UiFollower))]
 public class IconDestinationShower : MonoBehaviour
 {
+    [SerializeField] private VehicleSelector _selector;
+
     private IconDestinationShowerView _view;
     private UiFollower _follower;
     private Vehicle _vehicle;
@@ -12,15 +14,15 @@ public class IconDestinationShower : MonoBehaviour
         _view = GetComponentInChildren<IconDestinationShowerView>(true);
         _follower = GetComponent<UiFollower>();
 
-        VehicleSelector.Selected += OnVehicleSelected;
-        VehicleSelector.Deselected += OnVehicleDeselected;
+        _selector.Selected += OnVehicleSelected;
+        _selector.Deselected += OnVehicleDeselected;
         _view.Hide();
     }
 
     private void OnDestroy()
     {
-        VehicleSelector.Selected -= OnVehicleSelected;
-        VehicleSelector.Deselected -= OnVehicleDeselected;
+        _selector.Selected -= OnVehicleSelected;
+        _selector.Deselected -= OnVehicleDeselected;
 
         if (_vehicle != null)
             UnsubscribeVehicle(_vehicle);

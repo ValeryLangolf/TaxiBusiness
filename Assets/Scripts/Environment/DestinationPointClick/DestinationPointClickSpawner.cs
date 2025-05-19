@@ -2,6 +2,7 @@
 
 public class DestinationPointClickSpawner : MonoBehaviour
 {
+    [SerializeField] private VehicleDispatcher _dispatcher;
     [SerializeField] private DestinationPointClickMarker _prefab;
     [SerializeField] private Vector3 _offset;
 
@@ -11,10 +12,10 @@ public class DestinationPointClickSpawner : MonoBehaviour
         _pool = new(_prefab, transform);
 
     private void OnEnable() =>
-        VehicleDispatcher.PlaneClicked += OnPlaneClicked;
+        _dispatcher.PlaneClicked += OnPlaneClicked;
 
     private void OnDisable() =>
-        VehicleDispatcher.PlaneClicked -= OnPlaneClicked;
+        _dispatcher.PlaneClicked -= OnPlaneClicked;
 
     private void OnPlaneClicked(Vector3 position)
     {

@@ -10,7 +10,7 @@ public class Vehicle : MonoBehaviour
     private Mover _mover;
     private Rotator _rotator;
     private VehiclePathKeeper _pathKeeper;
-    private VehiclePassenger _vehiclePassenger;
+    private VehicleSeat _vehiclePassenger;
 
     private List<Waypoint> _points;
 

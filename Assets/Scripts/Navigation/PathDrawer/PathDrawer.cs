@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(PathDrawerView))]
 public class PathDrawer : MonoBehaviour
 {
+    [SerializeField] private VehicleSelector _selector;
+
     private PathDrawerView _view;
     private Vehicle _vehicle;
 
@@ -16,14 +18,14 @@ public class PathDrawer : MonoBehaviour
 
     private void OnEnable()
     {
-        VehicleSelector.Selected += OnVehicleSelected;
-        VehicleSelector.Deselected += OnVehicleDeselected;
+        _selector.Selected += OnVehicleSelected;
+        _selector.Deselected += OnVehicleDeselected;
     }
 
     private void OnDisable()
     {
-        VehicleSelector.Selected -= OnVehicleSelected;
-        VehicleSelector.Deselected -= OnVehicleDeselected;
+        _selector.Selected -= OnVehicleSelected;
+        _selector.Deselected -= OnVehicleDeselected;
     }
 
     private void SubscribeVehicle(Vehicle vehicle)

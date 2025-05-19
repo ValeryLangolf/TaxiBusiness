@@ -3,18 +3,21 @@ using UnityEngine;
 
 public class VehicleDispatcher : MonoBehaviour
 {
-    public static event Action<Vector3> PlaneClicked;
+    [SerializeField] private VehicleSelector _selector;
+    [SerializeField] private MouseHitInformer _clickInformer;
+
+    public event Action<Vector3> PlaneClicked;
 
     private void OnEnable()
     {
-        MouseHitInformer.PlaneLeftClicked += OnPlaneClicked;
-        MouseHitInformer.PassengerClicked += OnClickPassenger;
+        _clickInformer.PlaneLeftClicked += OnPlaneClicked;
+        _clickInformer.PassengerClicked += OnClickPassenger;
     }
 
     private void OnDisable()
     {
-        MouseHitInformer.PlaneLeftClicked -= OnPlaneClicked;
-        MouseHitInformer.PassengerClicked -= OnClickPassenger;
+        _clickInformer.PlaneLeftClicked -= OnPlaneClicked;
+        _clickInformer.PassengerClicked -= OnClickPassenger;
     }
 
     private void OnPlaneClicked(Vector3 position)
@@ -31,7 +34,7 @@ public class VehicleDispatcher : MonoBehaviour
 
     private void HandleClick(Vector3 position, Passenger passenger)
     {
-        Vehicle vehicle = VehicleSelector.Vehicle;
+        Vehicle vehicle = _selector.Vehicle;
 
         if (vehicle == null)
             return;

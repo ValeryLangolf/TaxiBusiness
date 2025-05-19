@@ -4,10 +4,10 @@ using UnityEngine.EventSystems;
 
 public class MouseHitInformer : MonoBehaviour
 {
-    public static event Action<Vector3> PlaneLeftClicked;
-    public static event Action<Collider, Vector3> RightHitted;
-    public static event Action<Passenger> PassengerClicked;
-    public static event Action<Vehicle> VehicleClicked;
+    public event Action<Vector3> PlaneLeftClicked;
+    public event Action<Collider, Vector3> RightHitted;
+    public event Action<Passenger> PassengerClicked;
+    public event Action<Vehicle> VehicleClicked;
 
     private void Update()
     {
@@ -45,8 +45,8 @@ public class MouseHitInformer : MonoBehaviour
         if (hit.collider.TryGetComponent(out Plane _))
             PlaneLeftClicked?.Invoke(hit.point);
 
-        if (hit.collider.TryGetComponent(out VehicleCollider vehicleCollider))
-            VehicleClicked?.Invoke(vehicleCollider.Vehicle);
+        if (hit.collider.TryGetComponent(out Vehicle vehicle))
+            VehicleClicked?.Invoke(vehicle);
     }
 
     private void HandleRightClickObject()

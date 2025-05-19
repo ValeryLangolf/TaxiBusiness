@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class PassengerView : MonoBehaviour
 {
     private const string IsHide = nameof(IsHide);
+
     [SerializeField] private Sprite _defaultSprite;
     [SerializeField] private Sprite _selectedSprite;
 

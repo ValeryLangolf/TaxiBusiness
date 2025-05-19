@@ -3,23 +3,25 @@ using UnityEngine;
 
 public class VehicleSelector : MonoBehaviour
 {
-    private static Vehicle s_selectedVehicle;
+    [SerializeField] private MouseHitInformer _mouseHitInformer;
 
-    public static event Action<Vehicle> Selected;
-    public static event Action<Vehicle> Deselected;
+    private Vehicle _selectedVehicle;
 
-    public static Vehicle Vehicle => s_selectedVehicle;
+    public event Action<Vehicle> Selected;
+    public event Action<Vehicle> Deselected;
+
+    public Vehicle Vehicle => _selectedVehicle;
 
     private void OnEnable()
     {
-        MouseHitInformer.VehicleClicked += HandleLeftClick;
-        MouseHitInformer.RightHitted += HandleRightClick;
+        _mouseHitInformer.VehicleClicked += HandleLeftClick;
+        _mouseHitInformer.RightHitted += HandleRightClick;
     }
 
     private void OnDisable()
     {
-        MouseHitInformer.VehicleClicked -= HandleLeftClick;
-        MouseHitInformer.RightHitted -= HandleRightClick;
+        _mouseHitInformer.VehicleClicked -= HandleLeftClick;
+        _mouseHitInformer.RightHitted -= HandleRightClick;
     }
 
     private void HandleLeftClick(Vehicle vehicle) =>
@@ -27,16 +29,16 @@ public class VehicleSelector : MonoBehaviour
 
     private void HandleRightClick(Collider _, Vector3 __)
     {
-        Deselect(s_selectedVehicle);
-        s_selectedVehicle = null;
+        Deselect(_selectedVehicle);
+        _selectedVehicle = null;
     }
 
     private void Select(Vehicle vehicle)
     {
-        if (s_selectedVehicle != null && s_selectedVehicle != vehicle)
-            Deselect(s_selectedVehicle);
+        if (_selectedVehicle != null && _selectedVehicle != vehicle)
+            Deselect(_selectedVehicle);
 
-        s_selectedVehicle = vehicle;
+        _selectedVehicle = vehicle;
         Selected?.Invoke(vehicle);
     }
 
