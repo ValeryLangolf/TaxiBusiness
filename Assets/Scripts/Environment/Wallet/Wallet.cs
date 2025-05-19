@@ -1,52 +1,45 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Wallet : MonoBehaviour
 {
+    [SerializeField] private WalletView _view;
     [SerializeField] private int _initialBalance;
-    [SerializeField] private VehicleSpawner _spawner;
 
-    private static int _balance;
+    private static float _balance;
 
-    public static event Action<int> BalanceChanged;
+    public static float Balance => _balance;
 
-    public static int Balance => _balance;
-
-    private void Awake()
-    {
+    private void Awake() =>
         _balance = _initialBalance;
-        UpdateBalanceDisplay();
-        _spawner.Spawned += SubscribeVehicle;
-    }
 
-    public static void AddMoney(int amount)
+    private void Start() =>
+        UpdateView();
+
+    public void AddMoney(int amount)
     {
+        if (amount < 0)
+        {
+            Debug.LogWarning("Нельзя добавлять в кошелёк отрицательное количество денег!");
+            return;
+        }
+
         _balance += amount;
-        UpdateBalanceDisplay();
+        UpdateView();
+
+        SfxPlayer.Instance.PlayGettingRevenue();
     }
 
-    public static bool TrySpendMoney(int amount)
+    public bool TrySpendMoney(int amount)
     {
         if (_balance < amount)
             return false;
 
         _balance -= amount;
-        UpdateBalanceDisplay();
+        UpdateView();
 
         return true;
     }
 
-    private static void UpdateBalanceDisplay() =>
-        BalanceChanged?.Invoke(_balance);
-
-    private void SubscribeVehicle(Vehicle vehicle) =>
-        vehicle.PassengerDelivered += OnDelivered;
-
-    private void OnDelivered(Vehicle _)
-    {
-        int revenue = UnityEngine.Random.Range(10, 500);
-        AddMoney(revenue);
-
-        SfxPlayer.Instance.PlayGettingRevenue();
-    }
+    private void UpdateView() =>
+        _view.UpdateBalanceDisplay(_balance);
 }

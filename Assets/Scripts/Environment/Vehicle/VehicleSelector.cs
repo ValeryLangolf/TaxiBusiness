@@ -14,32 +14,32 @@ public class VehicleSelector : MonoBehaviour
 
     private void OnEnable()
     {
-        _mouseHitInformer.VehicleClicked += HandleLeftClick;
-        _mouseHitInformer.RightHitted += HandleRightClick;
+        _mouseHitInformer.VehicleClicked += OnLeftClick;
+        _mouseHitInformer.RightHitted += OnRightClick;
     }
 
     private void OnDisable()
     {
-        _mouseHitInformer.VehicleClicked -= HandleLeftClick;
-        _mouseHitInformer.RightHitted -= HandleRightClick;
+        _mouseHitInformer.VehicleClicked -= OnLeftClick;
+        _mouseHitInformer.RightHitted -= OnRightClick;
     }
 
-    private void HandleLeftClick(Vehicle vehicle) =>
-        Select(vehicle);
-
-    private void HandleRightClick(Collider _, Vector3 __)
-    {
-        Deselect(_selectedVehicle);
-        _selectedVehicle = null;
-    }
-
-    private void Select(Vehicle vehicle)
+    public void Select(Vehicle vehicle)
     {
         if (_selectedVehicle != null && _selectedVehicle != vehicle)
             Deselect(_selectedVehicle);
 
         _selectedVehicle = vehicle;
         Selected?.Invoke(vehicle);
+    }
+
+    private void OnLeftClick(Vehicle vehicle) =>
+        Select(vehicle);
+
+    private void OnRightClick(Collider _, Vector3 __)
+    {
+        Deselect(_selectedVehicle);
+        _selectedVehicle = null;
     }
 
     private void Deselect(Vehicle vehicle) =>
