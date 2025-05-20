@@ -25,7 +25,6 @@ public class VehicleSpawner : MonoBehaviour
     {
         Vector3 position = _startPosition.position;
         position.x += GetRandomOffset();
-        position.y += GetRandomOffset();
         position.z += GetRandomOffset();
 
         Vehicle vehicle = Instantiate(_vehiclePrefab, position, _startPosition.rotation);

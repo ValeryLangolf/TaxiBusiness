@@ -1,22 +1,22 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(UiFollower))]
 public class IconDestinationShower : MonoBehaviour
 {
     [SerializeField] private VehicleSelector _selector;
 
     private IconDestinationShowerView _view;
-    private UiFollower _follower;
     private Vehicle _vehicle;
+    private UiFollower _follower;
 
     private void Awake()
     {
         _view = GetComponentInChildren<IconDestinationShowerView>(true);
-        _follower = GetComponent<UiFollower>();
+        _follower = GetComponentInChildren<UiFollower>();
+
+        _view.Hide();
 
         _selector.Selected += OnVehicleSelected;
         _selector.Deselected += OnVehicleDeselected;
-        _view.Hide();
     }
 
     private void OnDestroy()
@@ -24,15 +24,21 @@ public class IconDestinationShower : MonoBehaviour
         _selector.Selected -= OnVehicleSelected;
         _selector.Deselected -= OnVehicleDeselected;
 
-        if (_vehicle != null)
-            UnsubscribeVehicle(_vehicle);
+        UnsubscribeVehicle(_vehicle);
     }
 
     private void SubscribeVehicle(Vehicle vehicle)
     {
-        vehicle.PathDestinated += OnPathDestinated;
-        vehicle.PathCompleted += OnPathCompleted;
-        vehicle.PassengerTransportationStarted += OnPassengerInCar;
+        if (_vehicle == vehicle)
+            return;
+
+        if (_vehicle != null)
+            UnsubscribeVehicle(_vehicle);
+
+        vehicle.PathDestinated += OnPathDestination;
+        vehicle.PathCompleted += OnPathComplete;
+
+        _vehicle = vehicle;
     }
 
     private void UnsubscribeVehicle(Vehicle vehicle)
@@ -40,29 +46,18 @@ public class IconDestinationShower : MonoBehaviour
         if (vehicle == null)
             return;
 
+        vehicle.PathDestinated -= OnPathDestination;
+        vehicle.PathCompleted -= OnPathComplete;
+
         _vehicle = null;
-        vehicle.PathDestinated -= OnPathDestinated;
-        vehicle.PathCompleted -= OnPathCompleted;
-        vehicle.PassengerTransportationStarted -= OnPassengerInCar;
     }
 
     private void OnVehicleSelected(Vehicle vehicle)
     {
-        if (vehicle.IsActivePath)
-            OnPathDestinated(vehicle);
-
-        if (vehicle == _vehicle)
-            return;
-
-        SwitchTrackedVehicle(vehicle);
-    }
-
-    private void SwitchTrackedVehicle(Vehicle vehicle)
-    {
-        UnsubscribeVehicle(_vehicle);
         SubscribeVehicle(vehicle);
 
-        _vehicle = vehicle;
+        if (_vehicle.IsActivePath)
+            OnPathDestination(_vehicle);
     }
 
     private void OnVehicleDeselected(Vehicle vehicle)
@@ -71,25 +66,29 @@ public class IconDestinationShower : MonoBehaviour
         _view.Hide();
     }
 
-    private void OnPathDestinated(Vehicle vehicle)
+    private void OnPathDestination(Vehicle vehicle)
     {
         _view.Show();
 
         if (vehicle.IsPassengerInCar)
+        {
             _view.SetPassengerFinishIcon();
+            Debug.Log($"Пассажир в машине");
+        }
+        else if (vehicle.IsPassengerAssigned)
+        {
+            _view.Hide();
+            Debug.Log($"Пассажир назначен");
+        }
         else
+        {
             _view.SetDefaultIcon();
-
+            Debug.Log($"Пассажира нет");
+        }
 
         _follower.Follow(vehicle.EndPoint.transform);
     }
 
-    private void OnPathCompleted(Vehicle _)
-    {
+    private void OnPathComplete(Vehicle _) =>
         _view.Hide();
-        _follower.Stop();
-    }
-
-    private void OnPassengerInCar(Vehicle vehicle) =>
-        _view.SetPassengerFinishIcon();
 }

@@ -42,10 +42,9 @@ public class VehicleDispatcher : MonoBehaviour
         if (vehicle.IsPassengerInCar)
             return;
 
-        vehicle.ResetPassenger();
-        vehicle.SetDestination(position);
-
         if (passenger != null)
-            vehicle.SetWaitingPassenger(passenger);
+            vehicle.AssignPassenger(passenger);
+
+        vehicle.SetDestination(position);        
     }
 }

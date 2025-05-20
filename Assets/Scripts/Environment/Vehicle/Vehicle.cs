@@ -17,7 +17,6 @@ public class Vehicle : MonoBehaviour
 
     public event Action<Vehicle> PathDestinated;
     public event Action<Vehicle> PathCompleted;
-    public event Action<Vehicle> PassengerTransportationStarted;
     public event Action<Vehicle, float> PassengerDelivered;
 
     public bool IsActivePath => _pathKeeper.IsActivePath;
@@ -27,6 +26,8 @@ public class Vehicle : MonoBehaviour
     public List<Waypoint> RemainingPath => new(_pathKeeper.RemainingPath);
 
     public bool IsPassengerInCar => _vehiclePassenger.IsInCar;
+
+    public bool IsPassengerAssigned => _vehiclePassenger.IsAssigned;
 
     public Vector3 Position => transform.position;
 
@@ -53,8 +54,8 @@ public class Vehicle : MonoBehaviour
             _rotator.Rotate(_pathKeeper.CurrentTarget);
     }
 
-    public void SetWaitingPassenger(Passenger passenger) =>
-        _vehiclePassenger.SetWaitingPassenger(passenger);
+    public void AssignPassenger(Passenger passenger) =>
+        _vehiclePassenger.AssignPassenger(passenger);
 
     public void ResetPassenger() =>
         _vehiclePassenger.Reset();
@@ -89,30 +90,33 @@ public class Vehicle : MonoBehaviour
 
     private void OnPathCompleted()
     {
+        PathCompleted?.Invoke(this);
+
         if (_vehiclePassenger.IsInCar)
         {
-            Passenger passenger = _vehiclePassenger.Passenger;
-            List<Waypoint> path = Pathfinder.FindPath(passenger.Departure, passenger.Destination);
-            float distance = Utils.CalculateDistancePath(path);
-            float profit = _moneyRate * distance;
-
+            float profit = GetProfit(_vehiclePassenger.Passenger);
             _vehiclePassenger.DropPassenger();
             PassengerDelivered?.Invoke(this, profit);
         }
-
-        if (_vehiclePassenger.Passenger != null && _vehiclePassenger.IsInCar == false)
+        else if (_vehiclePassenger.Passenger != null)
         {
-            SetDestination(_vehiclePassenger.Destination);
             _vehiclePassenger.PutInCar();
-            PassengerTransportationStarted?.Invoke(this);
+            SetDestination(_vehiclePassenger.Destination);
         }
-
-        PathCompleted?.Invoke(this);
     }
 
     private void OnPassengerRefused(Passenger passenger)
     {
         _pathKeeper.ResetPath();
         PathCompleted?.Invoke(this);
+    }
+
+    private float GetProfit(Passenger passenger)
+    {
+        List<Waypoint> path = Pathfinder.FindPath(passenger.Departure, passenger.Destination);
+        float distance = Utils.CalculateDistancePath(path);
+        float profit = _moneyRate * distance;
+
+        return profit;
     }
 }

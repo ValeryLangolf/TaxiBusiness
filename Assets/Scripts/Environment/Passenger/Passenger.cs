@@ -46,7 +46,7 @@ public class Passenger : MonoBehaviour, IDeactivatable<Passenger>
 
     public void PickUp(Transform taxi)
     {
-        if (this.enabled)
+        if (enabled)
             StopCoroutine(_coroutine);
 
         _view.SetMiniIconSize();

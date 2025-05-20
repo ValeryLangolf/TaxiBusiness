@@ -7,6 +7,7 @@ public class VehiclePassenger
     private Transform _transform;
 
     private bool _isInCar;
+
     private readonly Action<Passenger> _refused;
 
     public VehiclePassenger(Transform vehicle, Action<Passenger> refused)
@@ -17,29 +18,23 @@ public class VehiclePassenger
 
     public bool IsInCar => _isInCar;
 
+    public bool IsAssigned => _passenger != null;
+
     public Passenger Passenger => _passenger;
 
     public Vector3 Destination => _passenger.Destination.Position;
 
-    public void SetWaitingPassenger(Passenger passenger)
+    public void AssignPassenger(Passenger passenger)
     {
         if (_passenger == passenger)
             return;
-
-        if (_passenger != null)
-            Reset();
 
         SubscribePassanger(passenger);
         _passenger = passenger;
     }
 
-    public void Reset()
-    {
-        if (_passenger != null)
-            UnsubscribePassanger(_passenger);
-
-        _passenger = null;
-    }
+    public void Reset() =>
+        UnsubscribePassanger(_passenger);
 
     public void PutInCar()
     {
@@ -52,35 +47,45 @@ public class VehiclePassenger
         _isInCar = false;
         _passenger.Deselect();
         _passenger.ReturnInPool();
-        Reset();
+        UnsubscribePassanger(_passenger);
     }
 
     private void SubscribePassanger(Passenger passenger)
     {
+        if (passenger == _passenger)
+            return;
+
+        UnsubscribePassanger(_passenger);
+
         passenger.Select();
         passenger.Refused += OnPassengerRefused;
-        passenger.Taked += OnPassengerTaked;
+        passenger.Taked += OnPassengerPickUp;
+        _passenger = passenger;
     }
 
     private void UnsubscribePassanger(Passenger passenger)
     {
+        if (_passenger == null)
+            return;
+
         passenger.Deselect();
         passenger.Refused -= OnPassengerRefused;
-        passenger.Taked -= OnPassengerTaked;
+        passenger.Taked -= OnPassengerPickUp;
+        _passenger = null;
     }
 
     private void OnPassengerRefused(Passenger passenger)
     {
-        Reset();
+        UnsubscribePassanger(passenger);
         _refused?.Invoke(passenger);
     }
 
-    private void OnPassengerTaked(Passenger passenger)
+    private void OnPassengerPickUp(Passenger passenger)
     {
         if (_isInCar)
             return;
 
-        Reset();
+        UnsubscribePassanger(passenger);
         _refused?.Invoke(passenger);
     }
 }

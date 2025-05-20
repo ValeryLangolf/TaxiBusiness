@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 [RequireComponent(typeof(RectTransform))]
 public class UiFollower : MonoBehaviour
@@ -33,8 +34,13 @@ public class UiFollower : MonoBehaviour
         UpdateUiPositionFromWorldTarget(screenPosition);
     }
 
-    public void Follow(Transform target) =>
+    public void Follow(Transform target)
+    {
+        if (target == null)
+            throw new ArgumentNullException("Таргет не был установлен");
+
         _target = target;
+    }
 
     public void Stop() =>
         _target = null;
