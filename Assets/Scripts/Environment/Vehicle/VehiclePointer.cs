@@ -12,7 +12,6 @@ public class VehiclePointer : MonoBehaviour
     private void Awake()
     {
         _selector.Selected += OnSelected;
-
         _selector.Deselected += OnDeselected;
 
         OnDeselected(null);

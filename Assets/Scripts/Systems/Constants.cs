@@ -10,4 +10,6 @@
     public const float MaxFuelEfficiency = 30f;
 
     public const float MinMoneyRate = 1f;
+
+    public const float RatingMultiplier = 10f;
 }

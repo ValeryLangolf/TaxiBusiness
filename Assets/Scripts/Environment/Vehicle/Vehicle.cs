@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 
 public class Vehicle : MonoBehaviour
@@ -37,7 +35,7 @@ public class Vehicle : MonoBehaviour
     private float _price;
 
     [Tooltip("Коэффициент, влияющий на заработок. \n(чем выше значение, тем выше доход с поездки)")]
-    [SerializeField, Min(1f)] 
+    [SerializeField, Range(0f, 1f)]
     private float _moneyRate;
     #endregion
 
@@ -51,6 +49,8 @@ public class Vehicle : MonoBehaviour
     public event Action<Vehicle, float> PassengerDelivered;
 
     #region Properties
+    public float MoneyRate => _moneyRate;
+
     public string Name => _name;
 
     public Sprite Sprite => _sprite;
@@ -60,6 +60,8 @@ public class Vehicle : MonoBehaviour
     public float WearResistance => _wearResistance;
 
     public float FuelEfficiency => _fuelEfficiency;
+
+    public string Description => _description;
 
     public float Price => _price;
 
@@ -137,7 +139,7 @@ public class Vehicle : MonoBehaviour
     {
         List<Waypoint> path = Pathfinder.FindPath(passenger.Departure, passenger.Destination);
         float distance = Utils.CalculateDistancePath(path);
-        float profit = _moneyRate * distance;
+        float profit = _moneyRate * Constants.RatingMultiplier * distance;
 
         return profit;
     }
