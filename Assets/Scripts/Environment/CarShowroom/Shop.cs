@@ -5,23 +5,26 @@ using UnityEngine;
 public class Shop : MonoBehaviour
 {
     [SerializeField] private VehicleSpawner _spawner;
-    [SerializeField] private List<VehicleConfig> _vehicles;
+    [SerializeField] private Wallet _wallet;
+    [SerializeField] private List<Vehicle> _vehicles;
     [SerializeField] private VehicleShopCard _prefab;
     [SerializeField] private Transform _content;
 
-    private Dictionary<VehicleShopCard, VehicleConfig> _cards = new();
+    private readonly Dictionary<VehicleShopCard, Vehicle> _cards = new();
 
     private void Awake()
     {
         if (_prefab == null)
             throw new NullReferenceException("Префаб не установлен");
 
-        foreach (VehicleConfig vehicleSO in _vehicles)
+        foreach (Vehicle vehicle in _vehicles)
         {
             VehicleShopCard cardView = Instantiate(_prefab, _content);
-            _cards.Add(cardView, vehicleSO);
-            cardView.Initialize(vehicleSO, OnCardClicked);
+            _cards.Add(cardView, vehicle);
+            cardView.Initialize(vehicle, OnCardClicked);
         }
+
+        OnWalletValueChanged(_wallet.Balance);
     }
 
     private void Start()
@@ -30,14 +33,31 @@ public class Shop : MonoBehaviour
             Spawn(_vehicles[0]);
     }
 
+    private void OnEnable() =>
+        _wallet.ValueChanged += OnWalletValueChanged;
+
+    private void OnDisable() =>
+        _wallet.ValueChanged -= OnWalletValueChanged;
+
     private void OnCardClicked(VehicleShopCard card)
     {
-        if (_cards.TryGetValue(card, out VehicleConfig vehicle))
-            Spawn(vehicle);
-        else
-            Debug.LogError("Clicked card not found in dictionary!");
+        if (_cards.TryGetValue(card, out Vehicle vehiclePrefab))
+            if (_wallet.TrySpendMoney(vehiclePrefab.Price))
+            {
+                Spawn(vehiclePrefab);
+                SfxPlayer.Instance.PlayVehiclePurchased();
+            }
     }
 
-    private void Spawn(VehicleConfig vehicleSO) =>
-        _spawner.Spawn(vehicleSO);
+    private void OnWalletValueChanged(float balance)
+    {
+        foreach (VehicleShopCard card in _cards.Keys)
+        {
+            if (_cards.TryGetValue(card, out Vehicle vehiclePrefab))
+                card.SetInteractButton(balance >= vehiclePrefab.Price);
+        }
+    }
+
+    private void Spawn(Vehicle vehiclePrefab) =>
+        _spawner.Spawn(vehiclePrefab);
 }

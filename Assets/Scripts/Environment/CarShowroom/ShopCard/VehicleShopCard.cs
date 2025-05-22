@@ -20,21 +20,24 @@ public class VehicleShopCard : MonoBehaviour
     private void OnDestroy() =>
         _purchaseButton.Clicked -= OnClick;
 
-    public void Initialize(VehicleConfig config, Action<VehicleShopCard> onClick)
+    public void Initialize(Vehicle vehicle, Action<VehicleShopCard> onClick)
     {
         _clicked = onClick;
         _purchaseButton.Clicked += OnClick;
 
-        if (config == null) 
+        if (vehicle == null) 
             return;
 
-        _tittleLabel.text = config.Name;
-        _vehicleImage.sprite = config.CarImage;
-        _speed.SetValue(config.Speed, Constants.MaxSpeed);
-        _strength.SetValue(config.Strength, Constants.MaxStrength);
-        _fuel.SetValue(config.Petrol, Constants.MaxPetrol);
-        _priceLabel.text = config.Price.ToString("F0");
+        _tittleLabel.text = vehicle.Name;
+        _vehicleImage.sprite = vehicle.Sprite;
+        _speed.SetValue(vehicle.Speed, Constants.MaxSpeed);
+        _strength.SetValue(vehicle.WearResistance, Constants.MaxWearResistance);
+        _fuel.SetValue(vehicle.FuelEfficiency, Constants.MaxFuelEfficiency);
+        _priceLabel.text = vehicle.Price.ToString("F0");
     }
+
+    public void SetInteractButton(bool isOn) =>
+        _purchaseButton.SetInteractable(isOn);
 
     private void OnClick() =>
         _clicked?.Invoke(this);

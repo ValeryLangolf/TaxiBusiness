@@ -7,16 +7,27 @@ public class VehiclePathKeeper
     private const float ReachThreshold = 0.15f;
 
     private readonly Transform _vehicle;
+    private readonly Action _pathDestinated;
     private readonly Action _pathCompleted;
 
+    private List<Waypoint> _points;
     private List<Waypoint> _currentPath = new();
     private List<Waypoint> _remainingPath = new();
     private int _currentTargetIndex;
 
-    public VehiclePathKeeper(Transform vehicle, Action pathCompleted)
+    public VehiclePathKeeper(Transform vehicle, Action pathDestinated, Action pathCompleted)
     {
         _vehicle = vehicle;
+        _pathDestinated = pathDestinated;
         _pathCompleted = pathCompleted;
+
+        _points = RoadNetwork.Instance.Points;
+
+        if(_points == null)
+            throw new ArgumentNullException("Неудачная инициализация списка точек на карте");
+
+        if (_points.Count == 0)
+            throw new ArgumentNullException("Нет доступных точек маршрута");
     }
 
     public bool IsActivePath => _currentPath != null && _currentTargetIndex < _currentPath.Count;
@@ -29,7 +40,32 @@ public class VehiclePathKeeper
 
     public List<Waypoint> RemainingPath => new(_remainingPath);
 
-    public void SetPath(List<Waypoint> path)
+    public void SetDestination(Vector3 destination)
+    {
+        Waypoint start = Utils.GetNearestSectionAndPoint(_vehicle.position, _points);
+        Waypoint end = Utils.GetNearestSectionAndPoint(destination, _points);
+
+        if (start == null)
+            throw new ArgumentNullException("Не удалось получить ближайшую стартовую точку пути");
+
+        if (end == null)
+            throw new ArgumentNullException("Не удалось получить ближайшую конечную точку пути");
+
+        if (start == end)
+        {
+            Debug.LogWarning("Стартовая точка в то же время оказалась и конечной");
+
+            return;
+        }
+
+        List<Waypoint> path = Pathfinder.FindPath(start, end);
+        SetPath(path ?? new List<Waypoint>());
+
+        if (path?.Count > 0)
+            _pathDestinated?.Invoke();
+    }
+
+    private void SetPath(List<Waypoint> path)
     {
         if (path == null)
         {

@@ -43,7 +43,7 @@ public class VehicleDispatcher : MonoBehaviour
             return;
 
         if (passenger != null)
-            vehicle.AssignPassenger(passenger);
+            vehicle.SetPassenger(passenger);
 
         vehicle.SetDestination(position);
 

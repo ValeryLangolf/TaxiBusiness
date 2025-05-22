@@ -8,14 +8,13 @@ public class VehicleSpawner : MonoBehaviour
 
     public event Action<Vehicle> Spawned;
 
-    public void Spawn(VehicleConfig vehicleSO)
+    public void Spawn(Vehicle vehiclePrefab)
     {
         Vector3 position = _startPosition.position;
         position.x += GetRandomOffset();
         position.z += GetRandomOffset();
 
-        Vehicle vehicle = Instantiate(vehicleSO.Prefab, position, _startPosition.rotation);
-        vehicle.InitParams(vehicleSO);
+        Vehicle vehicle = Instantiate(vehiclePrefab, position, _startPosition.rotation);
         Spawned?.Invoke(vehicle);
     }
 

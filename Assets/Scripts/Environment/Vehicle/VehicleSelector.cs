@@ -31,6 +31,7 @@ public class VehicleSelector : MonoBehaviour
 
         _selectedVehicle = vehicle;
         Selected?.Invoke(vehicle);
+        SfxPlayer.Instance.PlayVehicleSelected();
     }
 
     private void OnLeftClick(Vehicle vehicle) =>

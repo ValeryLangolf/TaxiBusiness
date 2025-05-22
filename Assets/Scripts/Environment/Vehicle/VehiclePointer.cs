@@ -3,6 +3,7 @@ using UnityEngine;
 public class VehiclePointer : MonoBehaviour
 {
     [SerializeField] private VehicleSelector _selector;
+    [SerializeField] private GameObject _point;
     [SerializeField] float _speedRotation;
     [SerializeField] Vector3 _offset;
 
@@ -11,7 +12,10 @@ public class VehiclePointer : MonoBehaviour
     private void Awake()
     {
         _selector.Selected += OnSelected;
+
         _selector.Deselected += OnDeselected;
+
+        OnDeselected(null);
     }
 
     private void OnDestroy()
@@ -31,13 +35,13 @@ public class VehiclePointer : MonoBehaviour
 
     public void OnSelected(Vehicle target)
     {
-        gameObject.SetActive(true);
+        _point.SetActive(true);
         _target = target.transform;
     }
 
     public void OnDeselected(Vehicle _)
     {
-        gameObject.SetActive(false);
+        _point.SetActive(false);
         _target = null;
     }
 }

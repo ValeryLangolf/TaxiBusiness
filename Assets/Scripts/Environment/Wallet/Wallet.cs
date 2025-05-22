@@ -1,9 +1,12 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Wallet : MonoBehaviour
 {
     [SerializeField] private WalletView _view;
     [SerializeField] private int _initialBalance;
+
+    public event Action<float> ValueChanged;
 
     private float _balance;
 
@@ -26,16 +29,22 @@ public class Wallet : MonoBehaviour
         _balance += amount;
         UpdateView();
 
+        ValueChanged?.Invoke(_balance);
         SfxPlayer.Instance.PlayGettingRevenue();
     }
 
-    public bool TrySpendMoney(int amount)
+    public bool TrySpendMoney(float amount)
     {
         if (_balance < amount)
+        {
+            SfxPlayer.Instance.PlayUnsuccessfulPaymentAttempt();
             return false;
+        }
 
         _balance -= amount;
+
         UpdateView();
+        ValueChanged?.Invoke(_balance);
 
         return true;
     }

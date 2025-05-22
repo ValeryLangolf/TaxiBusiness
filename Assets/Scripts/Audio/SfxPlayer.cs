@@ -8,6 +8,9 @@ public class SfxPlayer : MonoBehaviour
     [SerializeField] private AudioClip _engin_roar;
     [SerializeField] private AudioClip _passengerGoInCar;
     [SerializeField] private AudioClip _gettingRevenue;
+    [SerializeField] private AudioClip _unsuccessfulPaymentAttempt;
+    [SerializeField] private AudioClip _vehicleSelected;
+    [SerializeField] private AudioClip _vehiclePurchased;
 
     public static SfxPlayer Instance { get; private set; }
 
@@ -40,4 +43,13 @@ public class SfxPlayer : MonoBehaviour
 
     public void PlayGettingRevenue() =>
         _source.PlayOneShot(_gettingRevenue);
+
+    public void PlayUnsuccessfulPaymentAttempt() =>
+        _source.PlayOneShot(_unsuccessfulPaymentAttempt);
+
+    public void PlayVehicleSelected() =>
+        _source.PlayOneShot(_vehicleSelected);
+
+    public void PlayVehiclePurchased() =>
+        _source.PlayOneShot(_vehiclePurchased);
 }

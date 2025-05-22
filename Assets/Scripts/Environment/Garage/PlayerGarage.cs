@@ -28,6 +28,8 @@ public class PlayerGarage : MonoBehaviour
     private void OnSpawn(Vehicle vehicle)
     {
         VehicleIcon icon = Instantiate(_iconPrefab, _iconContent.transform);
+        icon.SetIcon(vehicle.Sprite);
+
         VehicleParams vehicleParams = new(vehicle, icon);
         _vehicles.Add(new(vehicle, icon));
         SubscribeVehicle(vehicleParams);
@@ -39,7 +41,6 @@ public class PlayerGarage : MonoBehaviour
             return;
 
         card.Select();
-        card.SetIcon(vehicle.Sprite);
     }
 
     private void OnDeselected(Vehicle vehicle)

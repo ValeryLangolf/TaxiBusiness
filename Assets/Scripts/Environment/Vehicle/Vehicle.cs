@@ -1,27 +1,69 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 
 public class Vehicle : MonoBehaviour
 {
-    [SerializeField] private float _rotationSpeed;
+    #region SerializedFields
+    [Header("Параметры автомобиля")]
+
+    [Tooltip("Название авто \n(так отображается название в карточке магазина)")]
+    [SerializeField] 
+    private string _name;
+
+    [Tooltip("Краткое описание авто, плюсы и минусы")]
+    [SerializeField, TextArea(3, 10)]
+    private string _description;
+
+    [Tooltip("Отображается в карточках магазина и иконках авто")]
+    [SerializeField] private Sprite _sprite;
+
+    [Tooltip("Скорость авто \n(не соответствует км/ч)")]
+    [SerializeField, Range(Constants.MinSpeed, Constants.MaxSpeed)]
+    private float _speed;
+
+    [Tooltip("Износостойкость \n(чем выше значение, тем медленнее износ)")]
+    [SerializeField, Range(Constants.MinWearResistance, Constants.MaxWearResistance)] 
+    private float _wearResistance;
+
+    [Tooltip("Экономичность топлива \n(чем выше значение, тем дольше расходуется топливо)")]
+    [SerializeField, Range(Constants.MinFuelEfficiency, Constants.MaxFuelEfficiency)]
+    private float _fuelEfficiency;
+
+    [Tooltip("Изначальная стоимость авто в магазине \n(может меняться по мере прокачки для последующей продажи)")]
+    [SerializeField] 
+    private float _price;
+
+    [Tooltip("Коэффициент, влияющий на заработок. \n(чем выше значение, тем выше доход с поездки)")]
+    [SerializeField, Min(1f)] 
+    private float _moneyRate;
+    #endregion
 
     private Mover _mover;
     private Rotator _rotator;
     private VehiclePathKeeper _pathKeeper;
     private VehiclePassenger _vehiclePassenger;
 
-    private Sprite _sprite;
-    private float _moneyRate;
-    private float _strength;
-    private float _petrol;
-    private float _price;
-
-    private List<Waypoint> _points;
-
     public event Action<Vehicle> PathDestinated;
     public event Action<Vehicle> PathCompleted;
     public event Action<Vehicle, float> PassengerDelivered;
+
+    #region Properties
+    public string Name => _name;
+
+    public Sprite Sprite => _sprite;
+
+    public float Speed => _speed;
+
+    public float WearResistance => _wearResistance;
+
+    public float FuelEfficiency => _fuelEfficiency;
+
+    public float Price => _price;
+
+    public Vector3 Position => transform.position;
 
     public bool IsActivePath => _pathKeeper.IsActivePath;
 
@@ -29,72 +71,48 @@ public class Vehicle : MonoBehaviour
 
     public List<Waypoint> RemainingPath => new(_pathKeeper.RemainingPath);
 
-    public bool IsPassengerInCar => _vehiclePassenger.IsInCar;
-
     public bool IsPassengerAssigned => _vehiclePassenger.IsAssigned;
 
-    public Vector3 Position => transform.position;
-
-    public Sprite Sprite => _sprite;
+    public bool IsPassengerInCar => _vehiclePassenger.IsInCar;
+    #endregion
 
     private void Awake()
     {
         _mover = new(transform);
         _rotator = new(transform);
-        _pathKeeper = new(transform, OnPathCompleted);
         _vehiclePassenger = new(transform, OnPassengerRefused);
     }
 
     private void Start() =>
-        _points = RoadNetwork.Instance.Points;
+        _pathKeeper = new(transform, OnPathDestinated, OnPathCompleted);
 
     private void Update()
     {
         if (_pathKeeper.IsActivePath == false)
             return;
 
-        _mover.Move(_pathKeeper.CurrentTarget);
+        _mover.Move(_pathKeeper.CurrentTarget, _speed);
         _pathKeeper.UpdatePath();
 
         if (_pathKeeper.IsActivePath)
             _rotator.Rotate(_pathKeeper.CurrentTarget);
     }
 
-    public void InitParams(VehicleConfig vehicleSO)
-    {
-        _mover.UpdateSpeed(vehicleSO.Speed);
-
-        _moneyRate = vehicleSO.MoneyRate;
-        _sprite = vehicleSO.CarImage;
-        _strength = vehicleSO.Strength;
-        _petrol = vehicleSO.Petrol;
-        _price = vehicleSO.Price;
-    }
-
-    public void AssignPassenger(Passenger passenger) =>
+    public void SetPassenger(Passenger passenger) =>
         _vehiclePassenger.AssignPassenger(passenger);
 
-    public void SetDestination(Vector3 destination)
-    {
-        if (_points == null || _points.Count == 0) 
-            return;
+    public void SetDestination(Vector3 destination) =>
+        _pathKeeper.SetDestination(destination);
 
-        Waypoint start = Utils.GetNearestSectionAndPoint(transform.position, _points);
-        Waypoint end = Utils.GetNearestSectionAndPoint(destination, _points);
-
-        if (start == null || end == null || start == end) 
-            return;
-
-        List<Waypoint> path = Pathfinder.FindPath(start, end);
-        _pathKeeper.SetPath(path ?? new List<Waypoint>());
-
-        if (path?.Count > 0)
-            PathDestinated?.Invoke(this);
-    }
+    private void OnPathDestinated() =>
+        PathDestinated?.Invoke(this);
 
     private void OnPathCompleted()
     {
         PathCompleted?.Invoke(this);
+
+        if(_vehiclePassenger.Passenger == null)
+            return;
 
         if (_vehiclePassenger.IsInCar)
         {
@@ -102,7 +120,7 @@ public class Vehicle : MonoBehaviour
             _vehiclePassenger.DropPassenger();
             PassengerDelivered?.Invoke(this, profit);
         }
-        else if (_vehiclePassenger.Passenger != null)
+        else
         {
             _vehiclePassenger.PutInCar();
             SetDestination(_vehiclePassenger.Destination);
