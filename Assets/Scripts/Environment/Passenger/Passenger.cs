@@ -52,6 +52,7 @@ public class Passenger : MonoBehaviour, IDeactivatable<Passenger>
         _view.SetMiniIconSize();
         Follow(taxi);
 
+        SfxPlayer.Instance.PlayPassengerGoInCar();
         Taked?.Invoke(this);
     }
 

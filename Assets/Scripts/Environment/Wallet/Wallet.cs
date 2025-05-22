@@ -5,9 +5,9 @@ public class Wallet : MonoBehaviour
     [SerializeField] private WalletView _view;
     [SerializeField] private int _initialBalance;
 
-    private static float _balance;
+    private float _balance;
 
-    public static float Balance => _balance;
+    public float Balance => _balance;
 
     private void Awake() =>
         _balance = _initialBalance;

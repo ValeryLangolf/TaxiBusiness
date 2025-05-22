@@ -6,8 +6,8 @@ public class PlayerGarage : MonoBehaviour
     [SerializeField] private VehicleSelector _selector;
     [SerializeField] private VehicleSpawner _spawner;
     [SerializeField] private Wallet _wallet;
-    [SerializeField] private VehicleCard _prefabCard;
-    [SerializeField] private CardParent _cardParent;
+    [SerializeField] private VehicleIcon _iconPrefab;
+    [SerializeField] private IconContect _iconContent;
 
     private readonly List<VehicleParams> _vehicles = new();
 
@@ -27,21 +27,24 @@ public class PlayerGarage : MonoBehaviour
 
     private void OnSpawn(Vehicle vehicle)
     {
-        VehicleCard card = Instantiate(_prefabCard, _cardParent.transform);
-        VehicleParams vehicleParams = new(vehicle, card);
-        _vehicles.Add(new(vehicle, card));
+        VehicleIcon icon = Instantiate(_iconPrefab, _iconContent.transform);
+        VehicleParams vehicleParams = new(vehicle, icon);
+        _vehicles.Add(new(vehicle, icon));
         SubscribeVehicle(vehicleParams);
     }
 
     private void OnSelected(Vehicle vehicle)
     {
-        if (TryGetCard(vehicle, out VehicleCard card, _vehicles))
-            card.Select();
+        if (TryGetCard(vehicle, out VehicleIcon card, _vehicles) == false)
+            return;
+
+        card.Select();
+        card.SetIcon(vehicle.Sprite);
     }
 
     private void OnDeselected(Vehicle vehicle)
     {
-        if (TryGetCard(vehicle, out VehicleCard card, _vehicles))
+        if (TryGetCard(vehicle, out VehicleIcon card, _vehicles))
             card.Deselect();
     }
 
@@ -57,13 +60,13 @@ public class PlayerGarage : MonoBehaviour
         Debug.Log($"Доход составил: {profit}");
     }
 
-    private void OnCardClicked(VehicleCard vehicleCard)
+    private void OnCardClicked(VehicleIcon vehicleCard)
     {
-        if(TryGetVehicle(vehicleCard, out Vehicle vehicle, _vehicles))
+        if (TryGetVehicle(vehicleCard, out Vehicle vehicle, _vehicles))
             _selector.Select(vehicle);
     }
 
-    private bool TryGetCard(Vehicle vehicle, out VehicleCard card, List<VehicleParams> vehicles)
+    private bool TryGetCard(Vehicle vehicle, out VehicleIcon card, List<VehicleParams> vehicles)
     {
         card = null;
 
@@ -80,7 +83,7 @@ public class PlayerGarage : MonoBehaviour
         return false;
     }
 
-    private bool TryGetVehicle(VehicleCard card, out Vehicle vehicle, List<VehicleParams> vehicles)
+    private bool TryGetVehicle(VehicleIcon card, out Vehicle vehicle, List<VehicleParams> vehicles)
     {
         vehicle = null;
 

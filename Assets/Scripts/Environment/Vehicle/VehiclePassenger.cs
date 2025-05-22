@@ -26,6 +26,9 @@ public class VehiclePassenger
 
     public void AssignPassenger(Passenger passenger)
     {
+        if(passenger == null)
+            throw new ArgumentNullException("Переданный в качестве аргумента пассажир не установлен");
+
         if (_passenger == passenger)
             return;
 

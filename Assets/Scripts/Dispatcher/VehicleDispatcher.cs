@@ -45,6 +45,8 @@ public class VehicleDispatcher : MonoBehaviour
         if (passenger != null)
             vehicle.AssignPassenger(passenger);
 
-        vehicle.SetDestination(position);        
+        vehicle.SetDestination(position);
+
+        SfxPlayer.Instance.PlayEngineRoar();
     }
 }

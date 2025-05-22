@@ -73,17 +73,14 @@ public class IconDestinationShower : MonoBehaviour
         if (vehicle.IsPassengerInCar)
         {
             _view.SetPassengerFinishIcon();
-            Debug.Log($"Пассажир в машине");
         }
         else if (vehicle.IsPassengerAssigned)
         {
             _view.Hide();
-            Debug.Log($"Пассажир назначен");
         }
         else
         {
             _view.SetDefaultIcon();
-            Debug.Log($"Пассажира нет");
         }
 
         _follower.Follow(vehicle.EndPoint.transform);

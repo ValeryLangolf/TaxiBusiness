@@ -1,9 +1,9 @@
 public class VehicleParams
 {
     private Vehicle _vehicle;
-    private VehicleCard _card;
+    private VehicleIcon _card;
 
-    public VehicleParams(Vehicle vehicle, VehicleCard card)
+    public VehicleParams(Vehicle vehicle, VehicleIcon card)
     {
         _vehicle = vehicle;
         _card = card;
@@ -11,5 +11,5 @@ public class VehicleParams
 
     public Vehicle Vehicle => _vehicle;
 
-    public VehicleCard Card => _card;
+    public VehicleIcon Card => _card;
 }

@@ -3,13 +3,15 @@
 public class Mover
 {
     private readonly Transform _vehicle;
-    private readonly float _speed;
+    private float _speed;
 
-    public Mover(Transform vehicle, float speed)
+    public Mover(Transform vehicle)
     {
         _vehicle = vehicle;
-        _speed = speed;
     }
+
+    public void UpdateSpeed(float speed) =>
+        _speed = speed;
 
     public void Move(Vector3 target)
     {

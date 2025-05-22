@@ -3,31 +3,19 @@ using UnityEngine;
 
 public class VehicleSpawner : MonoBehaviour
 {
-    [SerializeField] private Vehicle _vehiclePrefab;
     [SerializeField] private Transform _startPosition;
     [SerializeField] private float _radiusOffset;
 
     public event Action<Vehicle> Spawned;
 
-    private void Awake()
-    {
-        if (_vehiclePrefab == null)
-            throw new NullReferenceException("_отсутствует ссылка на префаб транспортного средства");
-    }
-
-    private void Start()
-    {
-        SpawnVehicle();
-        SpawnVehicle();
-    }
-
-    private void SpawnVehicle()
+    public void Spawn(VehicleConfig vehicleSO)
     {
         Vector3 position = _startPosition.position;
         position.x += GetRandomOffset();
         position.z += GetRandomOffset();
 
-        Vehicle vehicle = Instantiate(_vehiclePrefab, position, _startPosition.rotation);
+        Vehicle vehicle = Instantiate(vehicleSO.Prefab, position, _startPosition.rotation);
+        vehicle.InitParams(vehicleSO);
         Spawned?.Invoke(vehicle);
     }
 

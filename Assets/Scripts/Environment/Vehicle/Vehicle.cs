@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class Vehicle : MonoBehaviour
 {
-    [SerializeField] private float _speed;
     [SerializeField] private float _rotationSpeed;
-    [SerializeField] private float _moneyRate;
 
     private Mover _mover;
     private Rotator _rotator;
     private VehiclePathKeeper _pathKeeper;
     private VehiclePassenger _vehiclePassenger;
+
+    private Sprite _sprite;
+    private float _moneyRate;
+    private float _strength;
+    private float _petrol;
+    private float _price;
 
     private List<Waypoint> _points;
 
@@ -31,9 +35,11 @@ public class Vehicle : MonoBehaviour
 
     public Vector3 Position => transform.position;
 
+    public Sprite Sprite => _sprite;
+
     private void Awake()
     {
-        _mover = new(transform, _speed);
+        _mover = new(transform);
         _rotator = new(transform);
         _pathKeeper = new(transform, OnPathCompleted);
         _vehiclePassenger = new(transform, OnPassengerRefused);
@@ -54,38 +60,36 @@ public class Vehicle : MonoBehaviour
             _rotator.Rotate(_pathKeeper.CurrentTarget);
     }
 
+    public void InitParams(VehicleConfig vehicleSO)
+    {
+        _mover.UpdateSpeed(vehicleSO.Speed);
+
+        _moneyRate = vehicleSO.MoneyRate;
+        _sprite = vehicleSO.CarImage;
+        _strength = vehicleSO.Strength;
+        _petrol = vehicleSO.Petrol;
+        _price = vehicleSO.Price;
+    }
+
     public void AssignPassenger(Passenger passenger) =>
         _vehiclePassenger.AssignPassenger(passenger);
 
-    public void ResetPassenger() =>
-        _vehiclePassenger.Reset();
-
     public void SetDestination(Vector3 destination)
     {
+        if (_points == null || _points.Count == 0) 
+            return;
+
         Waypoint start = Utils.GetNearestSectionAndPoint(transform.position, _points);
         Waypoint end = Utils.GetNearestSectionAndPoint(destination, _points);
 
-        if (start == end)
+        if (start == null || end == null || start == end) 
             return;
 
         List<Waypoint> path = Pathfinder.FindPath(start, end);
+        _pathKeeper.SetPath(path ?? new List<Waypoint>());
 
-        if (path == null)
-        {
-            Debug.Log($"Твой путь Null");
-            return;
-        }
-
-        if (path.Count == 0)
-        {
-            Debug.Log($"Для пути не найдено ни одной точки");
-            return;
-        }
-
-        _pathKeeper.SetPath(path);
-        PathDestinated?.Invoke(this);
-
-        SfxPlayer.Instance.PlayEngineRoar();
+        if (path?.Count > 0)
+            PathDestinated?.Invoke(this);
     }
 
     private void OnPathCompleted()
