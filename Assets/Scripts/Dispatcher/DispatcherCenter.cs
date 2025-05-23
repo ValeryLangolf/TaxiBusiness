@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,11 +8,24 @@ public class DispatcherCenter : MonoBehaviour
     [SerializeField] private Wallet _wallet;
     [SerializeField] private PlayerGarage _garage;
     [SerializeField] private PassengerSpawner _passengerSpawner;
+    [SerializeField] private TextMeshProUGUI _cardCount;
     [SerializeField] private Button _buttonAdd;
     [SerializeField] private DispatcherCard _prefab;
     [SerializeField] private Transform _content;
 
     private readonly List<DispatcherCard> _cards = new();
+
+    private void Awake()
+    {
+        _cardCount.text = string.Empty;
+        ClearAllChildren(_content);
+    }
+
+    private void ClearAllChildren(Transform parent)
+    {
+        foreach (Transform child in parent)
+            Destroy(child.gameObject);
+    }
 
     private void OnEnable() =>
         _buttonAdd.onClick.AddListener(OnClickAdd);
@@ -24,15 +38,31 @@ public class DispatcherCenter : MonoBehaviour
         DispatcherCard card = Instantiate(_prefab, _content);
         _cards.Add(card);
         Subscribe(card);
+        _cardCount.text = _cards.Count.ToString();
     }
 
-    private void Subscribe(DispatcherCard card) =>
+    private void Subscribe(DispatcherCard card)
+    {
         card.CycleCompleted += OnCardCycleCompleted;
+        card.RemoveClicked += OnRemoveClick;
+    }
+
+    private void Unsubscribe(DispatcherCard card)
+    {
+        card.CycleCompleted -= OnCardCycleCompleted;
+        card.RemoveClicked -= OnRemoveClick;
+    }
 
     private void OnCardCycleCompleted(DispatcherCard card)
     {
         _wallet.EmptyWallet(card.SalaryRate);
         AssignPassengerVehicle();
+    }
+
+    private void OnRemoveClick(DispatcherCard card)
+    {
+        Unsubscribe(card);
+        Destroy(card.gameObject);
     }
 
     private void AssignPassengerVehicle()
