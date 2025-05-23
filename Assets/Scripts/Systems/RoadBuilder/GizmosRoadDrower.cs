@@ -6,14 +6,16 @@ using UnityEngine;
 
 public class GizmosRoadDrower
 {
+    private Color _notPassengerColor;
     private Color _sectionColor;
     private Color _connectionColor;
     private float _waypointSphereRadius;
     private float _connectionSphereRadius;
     private List<SectionRoadStrip> _sections = new();
 
-    public void SetParams(Color sectionColor, Color connectionColor, float waypointSphereRadius, float connectionSphereRadius)
+    public void SetParams(Color sectionColor, Color notPassengerColor, Color connectionColor, float waypointSphereRadius, float connectionSphereRadius)
     {
+        _notPassengerColor = notPassengerColor;
         _sectionColor = sectionColor;
         _connectionColor = connectionColor;
         _waypointSphereRadius = waypointSphereRadius;
@@ -65,7 +67,7 @@ public class GizmosRoadDrower
 
     private void DrowSpheres()
     {
-        Gizmos.color = _sectionColor;        
+        Gizmos.color = _sectionColor;
 
         foreach (SectionRoadStrip section in _sections)
             DrowSphere(section);
@@ -89,7 +91,17 @@ public class GizmosRoadDrower
             if (points[i] == null)
                 continue;
 
-            Gizmos.DrawSphere(points[i].Position, _waypointSphereRadius);
+            if(points[i].IsNotForPassenger)
+            {
+                Color tempColor = Gizmos.color;
+                Gizmos.color = _notPassengerColor;
+                Gizmos.DrawSphere(points[i].Position, _waypointSphereRadius);
+                Gizmos.color = tempColor;
+            }
+            else
+            {
+                Gizmos.DrawSphere(points[i].Position, _waypointSphereRadius);
+            }
         }
     }
 

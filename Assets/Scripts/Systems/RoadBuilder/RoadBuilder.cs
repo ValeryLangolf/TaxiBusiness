@@ -9,6 +9,7 @@ using UnityEditor;
 public class RoadBuilder : MonoBehaviour
 {
     [SerializeField] private RoadNetwork _roadNet;
+    [SerializeField] private Color _notPassengerColor;
     [SerializeField] private Color _sectionColor;
     [SerializeField] private Color _connectionColor;
     [SerializeField] private float _waypointSphereRadius;
@@ -30,7 +31,7 @@ public class RoadBuilder : MonoBehaviour
     {
         if (_isShowGizmos)
         {
-            _drower.SetParams(_sectionColor, _connectionColor, _waypointSphereRadius, _connectionSphereRadius);
+            _drower.SetParams(_sectionColor, _notPassengerColor, _connectionColor, _waypointSphereRadius, _connectionSphereRadius);
             SceneView.duringSceneGui += OnSceneGUI;
         }
 
