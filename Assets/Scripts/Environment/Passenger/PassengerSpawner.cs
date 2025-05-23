@@ -9,6 +9,7 @@ public class PassengerSpawner : MonoBehaviour
     [SerializeField] private Vector2 _timeLimitInSeconds;
 
     private Pool<Passenger> _pool;
+    private List<Waypoint> _points;
     private readonly List<Passenger> _passengers = new();
 
     public List<Passenger> Passengers => new(_passengers);
@@ -16,8 +17,11 @@ public class PassengerSpawner : MonoBehaviour
     private void Awake() =>
         _pool = new(_prefab, transform);
 
-    private void Start() =>
+    private void Start()
+    {
+        _points = RoadNetwork.Instance.Points.Where(p => p.IsNotForPassenger == false).ToList();
         StartCoroutine(Spawning());
+    }
 
     public List<Passenger> GetAwailable() =>
         _passengers.Where(p => p.IsSelect == false).ToList();    
@@ -37,11 +41,8 @@ public class PassengerSpawner : MonoBehaviour
         if (_pool.TryGet(out Passenger passenger) == false)
             return;
 
-        Waypoint position = GetRandomWaypoint();
-        Waypoint destination = GetRandomWaypoint();
-
-        while(position == destination)
-            destination = GetRandomWaypoint();
+        Waypoint position = GetRandomWaypoint(out List<Waypoint> remainingPoints, _points);
+        Waypoint destination = GetRandomWaypoint(out _, remainingPoints);
         
         passenger.SetDeparture(position);
         passenger.SetDestination(destination);
@@ -49,10 +50,12 @@ public class PassengerSpawner : MonoBehaviour
         SubscribePassenger(passenger);
     }
 
-    private Waypoint GetRandomWaypoint()
+    private Waypoint GetRandomWaypoint(out List<Waypoint> remainingPoints, List<Waypoint> points)
     {
-        List<Waypoint> points = RoadNetwork.Instance.Points;
+        remainingPoints = new(points);
+
         int id = Random.Range(0, points.Count);
+        remainingPoints.RemoveAt(id);
 
         return points[id];
     }

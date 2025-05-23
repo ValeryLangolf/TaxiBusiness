@@ -15,6 +15,8 @@ public enum PassengerCategory
 
 public class Waypoint : MonoBehaviour
 {
+    [SerializeField] private bool _isNotForPassenger;
+
     [SerializeField, Range(0, 1)] private float _economy;
     [SerializeField, Range(0, 1)] private float _standard;
     [SerializeField, Range(0, 1)] private float _comfort;
@@ -31,6 +33,8 @@ public class Waypoint : MonoBehaviour
     public float LenghtInMeter => CalculateLenght();
 
     public Vector3 Position => transform.position;
+
+    public bool IsNotForPassenger => _isNotForPassenger;
 
     public void AddConnectedPoint(Waypoint waypoint) =>
         _connectedWaypoints.Add(waypoint);
