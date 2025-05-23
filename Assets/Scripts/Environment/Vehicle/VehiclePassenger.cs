@@ -1,20 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class VehiclePassenger
 {
+    private readonly Transform _transform;
+    private readonly Action _passengerRefused;
     private Passenger _passenger;
-    private Transform _transform;
-
     private bool _isInCar;
 
-    private readonly Action<Passenger> _refused;
-
-    public VehiclePassenger(Transform vehicle, Action<Passenger> refused)
+    public VehiclePassenger(Transform vehicle, Action passengerRefused)
     {
         _transform = vehicle;
-        _refused = refused;
+        _passengerRefused = passengerRefused;
     }
+
+    public Transform Transform => _transform;
 
     public bool IsInCar => _isInCar;
 
@@ -22,33 +23,20 @@ public class VehiclePassenger
 
     public Passenger Passenger => _passenger;
 
-    public Vector3 Destination => _passenger.Destination.Position;
+    public Vector3 Destination => _passenger.DestinationPoint.Position;
 
-    public void AssignPassenger(Passenger passenger)
-    {
-        if(passenger == null)
-            throw new ArgumentNullException("Переданный в качестве аргумента пассажир не установлен");
-
-        if (_passenger == passenger)
-            return;
-
+    public void AssignPassenger(Passenger passenger) =>
         SubscribePassanger(passenger);
-        _passenger = passenger;
-    }
-
-    public void Reset() =>
-        UnsubscribePassanger(_passenger);
 
     public void PutInCar()
     {
         _isInCar = true;
-        _passenger.PickUp(_transform);
+        _passenger.PickUp(this);
     }
 
     public void DropPassenger()
     {
         _isInCar = false;
-        _passenger.Deselect();
         _passenger.ReturnInPool();
         UnsubscribePassanger(_passenger);
     }
@@ -60,35 +48,33 @@ public class VehiclePassenger
 
         UnsubscribePassanger(_passenger);
 
-        passenger.Select();
-        passenger.Refused += OnPassengerRefused;
-        passenger.Taked += OnPassengerPickUp;
+        if(passenger != null)
+            passenger.AcceptOrder(this);
+        
         _passenger = passenger;
     }
 
-    private void UnsubscribePassanger(Passenger passenger)
+    public void UnsubscribePassanger(Passenger passenger)
     {
-        if (_passenger == null)
+        if (passenger == null)
             return;
 
-        passenger.Deselect();
-        passenger.Refused -= OnPassengerRefused;
-        passenger.Taked -= OnPassengerPickUp;
+        passenger.CancelOrder(this);
         _passenger = null;
     }
 
-    private void OnPassengerRefused(Passenger passenger)
+    public void Refuse(Passenger passenger)
     {
         UnsubscribePassanger(passenger);
-        _refused?.Invoke(passenger);
+        _passengerRefused?.Invoke();
     }
 
-    private void OnPassengerPickUp(Passenger passenger)
+    public float GetProfit(float moneyRate)
     {
-        if (_isInCar)
-            return;
+        List<Waypoint> path = Pathfinder.FindPath(_passenger.DeparturePoint, _passenger.DestinationPoint);
+        float distance = Utils.CalculateDistancePath(path);
+        float profit = moneyRate * Constants.RatingMultiplier * distance;
 
-        UnsubscribePassanger(passenger);
-        _refused?.Invoke(passenger);
+        return profit;
     }
 }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PlayerGarage : MonoBehaviour
@@ -10,6 +11,8 @@ public class PlayerGarage : MonoBehaviour
     [SerializeField] private IconContect _iconContent;
 
     private readonly List<VehicleParams> _vehicles = new();
+
+    public List<VehicleParams> Vehicles => new(_vehicles);
 
     private void OnEnable()
     {
@@ -24,6 +27,9 @@ public class PlayerGarage : MonoBehaviour
         _selector.Selected -= OnSelected;
         _selector.Deselected -= OnDeselected;
     }
+
+    public List<VehicleParams> GetAvailable() =>
+        _vehicles.Where(v => v.Vehicle.IsActivePath == false && v.Vehicle.IsPassengerAssigned == false).ToList();
 
     private void OnSpawn(Vehicle vehicle)
     {

@@ -10,6 +10,8 @@ public class UiFollower : MonoBehaviour
     private Canvas _canvas;
     private Camera _camera;
 
+    public Transform Target => _target;
+
     private void Awake()
     {
         _self = transform as RectTransform;

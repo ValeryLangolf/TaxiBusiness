@@ -8,7 +8,7 @@ public class Vehicle : MonoBehaviour
     [Header("Параметры автомобиля")]
 
     [Tooltip("Название авто \n(так отображается название в карточке магазина)")]
-    [SerializeField] 
+    [SerializeField]
     private string _name;
 
     [Tooltip("Краткое описание авто, плюсы и минусы")]
@@ -23,7 +23,7 @@ public class Vehicle : MonoBehaviour
     private float _speed;
 
     [Tooltip("Износостойкость \n(чем выше значение, тем медленнее износ)")]
-    [SerializeField, Range(Constants.MinWearResistance, Constants.MaxWearResistance)] 
+    [SerializeField, Range(Constants.MinWearResistance, Constants.MaxWearResistance)]
     private float _wearResistance;
 
     [Tooltip("Экономичность топлива \n(чем выше значение, тем дольше расходуется топливо)")]
@@ -31,7 +31,7 @@ public class Vehicle : MonoBehaviour
     private float _fuelEfficiency;
 
     [Tooltip("Изначальная стоимость авто в магазине \n(может меняться по мере прокачки для последующей продажи)")]
-    [SerializeField] 
+    [SerializeField]
     private float _price;
 
     [Tooltip("Коэффициент, влияющий на заработок. \n(чем выше значение, тем выше доход с поездки)")]
@@ -113,34 +113,25 @@ public class Vehicle : MonoBehaviour
     {
         PathCompleted?.Invoke(this);
 
-        if(_vehiclePassenger.Passenger == null)
+        if (_vehiclePassenger.IsAssigned == false)
             return;
 
-        if (_vehiclePassenger.IsInCar)
-        {
-            float profit = GetProfit(_vehiclePassenger.Passenger);
-            _vehiclePassenger.DropPassenger();
-            PassengerDelivered?.Invoke(this, profit);
-        }
-        else
+        if (IsPassengerInCar == false)
         {
             _vehiclePassenger.PutInCar();
             SetDestination(_vehiclePassenger.Destination);
         }
+        else
+        {
+            float profit = _vehiclePassenger.GetProfit(_moneyRate);
+            _vehiclePassenger.DropPassenger();
+            PassengerDelivered?.Invoke(this, profit);
+        }
     }
 
-    private void OnPassengerRefused(Passenger passenger)
+    private void OnPassengerRefused()
     {
         _pathKeeper.ResetPath();
         PathCompleted?.Invoke(this);
-    }
-
-    private float GetProfit(Passenger passenger)
-    {
-        List<Waypoint> path = Pathfinder.FindPath(passenger.Departure, passenger.Destination);
-        float distance = Utils.CalculateDistancePath(path);
-        float profit = _moneyRate * Constants.RatingMultiplier * distance;
-
-        return profit;
     }
 }

@@ -35,6 +35,9 @@ public class Wallet : MonoBehaviour
 
     public bool TrySpendMoney(float amount)
     {
+        if (amount < 0)
+            throw new ArgumentOutOfRangeException("Значение должно быть положительным!");
+
         if (_balance < amount)
         {
             SfxPlayer.Instance.PlayUnsuccessfulPaymentAttempt();
@@ -47,6 +50,20 @@ public class Wallet : MonoBehaviour
         ValueChanged?.Invoke(_balance);
 
         return true;
+    }
+
+    public void EmptyWallet(float amount)
+    {
+        if (amount < 0)
+            throw new ArgumentOutOfRangeException("Значение должно быть положительным!");
+
+        _balance -= amount;
+
+        if(_balance < 0)
+            _balance = 0;
+
+        UpdateView();
+        ValueChanged?.Invoke(_balance);
     }
 
     private void UpdateView() =>
