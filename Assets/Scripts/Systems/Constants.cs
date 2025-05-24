@@ -12,4 +12,6 @@
     public const float MinMoneyRate = 1f;
 
     public const float RatingMultiplier = 10f;
+
+    public const float InitialBalance = 100f;
 }

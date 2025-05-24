@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Wallet : MonoBehaviour
@@ -12,24 +13,19 @@ public class Wallet : MonoBehaviour
 
     public float Balance => _balance;
 
-    private void Awake() =>
-        _balance = _initialBalance;
-
-    private void Start() =>
-        UpdateView();
+    private void Start()
+    {
+        _balance = Saver.LoadBalance();
+        ProcessChange();
+    }
 
     public void AddMoney(float amount)
     {
         if (amount < 0)
-        {
-            Debug.LogWarning("Нельзя добавлять в кошелёк отрицательное количество денег!");
-            return;
-        }
+            throw new ArgumentOutOfRangeException("Значение должно быть положительным!");
 
         _balance += amount;
-        UpdateView();
-
-        ValueChanged?.Invoke(_balance);
+        ProcessChange();
         SfxPlayer.Instance.PlayGettingRevenue();
     }
 
@@ -45,9 +41,7 @@ public class Wallet : MonoBehaviour
         }
 
         _balance -= amount;
-
-        UpdateView();
-        ValueChanged?.Invoke(_balance);
+        ProcessChange();
 
         return true;
     }
@@ -58,14 +52,19 @@ public class Wallet : MonoBehaviour
             throw new ArgumentOutOfRangeException("Значение должно быть положительным!");
 
         _balance -= amount;
+        ProcessChange();        
+    }
 
-        if(_balance < 0)
-            _balance = 0;
-
-        UpdateView();
+    private void ProcessChange()
+    {
+        _balance = Mathf.Max(_balance, 0);
+        _view.UpdateBalanceDisplay(_balance);
         ValueChanged?.Invoke(_balance);
     }
 
-    private void UpdateView() =>
-        _view.UpdateBalanceDisplay(_balance);
+    private void SaveGameData() =>
+        Saver.SaveBalance(_balance);
+
+    private void OnApplicationQuit() =>
+        SaveGameData();
 }

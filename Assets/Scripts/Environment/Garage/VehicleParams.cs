@@ -1,7 +1,7 @@
 public class VehicleParams
 {
-    private Vehicle _vehicle;
-    private VehicleIcon _card;
+    private readonly Vehicle _vehicle;
+    private readonly VehicleIcon _card;
 
     public VehicleParams(Vehicle vehicle, VehicleIcon card)
     {

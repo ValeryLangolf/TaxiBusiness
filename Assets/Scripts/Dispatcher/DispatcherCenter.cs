@@ -19,6 +19,11 @@ public class DispatcherCenter : MonoBehaviour
     {
         _cardCount.text = string.Empty;
         ClearAllChildren(_content);
+
+        List<Saver.DispatcherSaveData> dispatcherSaveDatas = Saver.LoadDispatchers();
+
+        foreach (Saver.DispatcherSaveData data in dispatcherSaveDatas)
+            InstantiateCard(data.FillAmount);
     }
 
     private void ClearAllChildren(Transform parent)
@@ -33,16 +38,21 @@ public class DispatcherCenter : MonoBehaviour
     private void OnDisable() =>
         _buttonAdd.onClick.RemoveListener(OnClickAdd);
 
-    private void OnClickAdd()
+    private void OnClickAdd() =>
+        InstantiateCard(0);
+
+    private void InstantiateCard(float fillAmount)
     {
         DispatcherCard card = Instantiate(_prefab, _content);
-        _cards.Add(card);
         Subscribe(card);
-        _cardCount.text = _cards.Count.ToString();
+        card.SetFill(fillAmount);
     }
 
     private void Subscribe(DispatcherCard card)
     {
+        _cards.Add(card);
+        _cardCount.text = _cards.Count.ToString();
+
         card.CycleCompleted += OnCardCycleCompleted;
         card.RemoveClicked += OnRemoveClick;
     }
@@ -51,6 +61,9 @@ public class DispatcherCenter : MonoBehaviour
     {
         card.CycleCompleted -= OnCardCycleCompleted;
         card.RemoveClicked -= OnRemoveClick;
+
+        _cards.Remove(card);
+        _cardCount.text = _cards.Count.ToString();
     }
 
     private void OnCardCycleCompleted(DispatcherCard card)
@@ -70,7 +83,7 @@ public class DispatcherCenter : MonoBehaviour
         if (TryGetRandomVehicle(out Vehicle vehicle) == false)
             return;
 
-        if (TryGetRandomPassenger(out Passenger passenger) == false) 
+        if (TryGetRandomPassenger(out Passenger passenger) == false)
             return;
 
         vehicle.SetPassenger(passenger);
@@ -97,7 +110,7 @@ public class DispatcherCenter : MonoBehaviour
 
         List<Passenger> passengers = _passengerSpawner.GetAwailable();
 
-        if(passengers.Count == 0)
+        if (passengers.Count == 0)
             return false;
 
         int randomId = Random.Range(0, passengers.Count);
@@ -105,4 +118,10 @@ public class DispatcherCenter : MonoBehaviour
 
         return true;
     }
+
+    private void SaveGameData() =>
+        Saver.SaveDispatcher(_cards);
+
+    private void OnApplicationQuit() =>
+        SaveGameData();
 }

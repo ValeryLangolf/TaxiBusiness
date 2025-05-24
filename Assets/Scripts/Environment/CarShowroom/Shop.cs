@@ -27,26 +27,31 @@ public class Shop : MonoBehaviour
         OnWalletValueChanged(_wallet.Balance);
     }
 
-    private void Start()
-    {
-        if (_vehicles.Count > 0)
-            Spawn(_vehicles[0]);
-    }
-
     private void OnEnable() =>
         _wallet.ValueChanged += OnWalletValueChanged;
 
     private void OnDisable() =>
         _wallet.ValueChanged -= OnWalletValueChanged;
 
+    public Vehicle GetVehiclePrefab(string name)
+    {
+        foreach (Vehicle vehicle in _vehicles)
+            if (vehicle.Name == name)
+                return vehicle;
+
+        return null;
+    }
+
     private void OnCardClicked(VehicleShopCard card)
     {
-        if (_cards.TryGetValue(card, out Vehicle vehiclePrefab))
-            if (_wallet.TrySpendMoney(vehiclePrefab.Price))
-            {
-                Spawn(vehiclePrefab);
-                SfxPlayer.Instance.PlayVehiclePurchased();
-            }
+        if (_cards.TryGetValue(card, out Vehicle vehiclePrefab) == false)
+            return;
+
+        if (_wallet.TrySpendMoney(vehiclePrefab.Price) == false)
+            return;
+
+        _spawner.Spawn(vehiclePrefab);
+        SfxPlayer.Instance.PlayVehiclePurchased();
     }
 
     private void OnWalletValueChanged(float balance)
@@ -57,7 +62,4 @@ public class Shop : MonoBehaviour
                 card.SetInteractButton(balance >= vehiclePrefab.Price);
         }
     }
-
-    private void Spawn(Vehicle vehiclePrefab) =>
-        _spawner.Spawn(vehiclePrefab);
 }

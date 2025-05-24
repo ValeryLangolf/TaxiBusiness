@@ -67,6 +67,8 @@ public class Vehicle : MonoBehaviour
 
     public Vector3 Position => transform.position;
 
+    public Quaternion Rotation => transform.rotation;
+
     public bool IsActivePath => _pathKeeper.IsActivePath;
 
     public Waypoint EndPoint => _pathKeeper.EndPoint;

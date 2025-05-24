@@ -200,7 +200,7 @@ MonoBehaviour:
   _speed: 5
   _wearResistance: 5
   _fuelEfficiency: 3
-  _price: 12
+  _price: 150
   _moneyRate: 0.1
 --- !u!1 &5053064067289825103
 GameObject:

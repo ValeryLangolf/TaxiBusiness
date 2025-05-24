@@ -18,6 +18,12 @@ public class VehicleSpawner : MonoBehaviour
         Spawned?.Invoke(vehicle);
     }
 
+    public void Spawn(Vehicle vehiclePrefab, Vector3 position, Quaternion rotation)
+    {
+        Vehicle vehicle = Instantiate(vehiclePrefab, position, rotation);
+        Spawned?.Invoke(vehicle);
+    }
+
     private float GetRandomOffset() =>
         UnityEngine.Random.Range(-_radiusOffset, _radiusOffset);
 }

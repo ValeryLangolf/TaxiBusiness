@@ -113,7 +113,7 @@ MonoBehaviour:
   _speed: 7
   _wearResistance: 6
   _fuelEfficiency: 4
-  _price: 90
+  _price: 350
   _moneyRate: 0.3
 --- !u!1001 &501491038304148079
 PrefabInstance:

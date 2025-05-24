@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerGarage : MonoBehaviour
 {
+    [SerializeField] private Vehicle _initialPrefab;
+    [SerializeField] private Transform _initialTransform;
+    [SerializeField] private Shop _shop;
     [SerializeField] private VehicleSelector _selector;
     [SerializeField] private VehicleSpawner _spawner;
     [SerializeField] private Wallet _wallet;
@@ -12,7 +15,27 @@ public class PlayerGarage : MonoBehaviour
 
     private readonly List<VehicleParams> _vehicles = new();
 
-    public List<VehicleParams> Vehicles => new(_vehicles);
+    public List<VehicleParams> VehiclesParams => new(_vehicles);
+
+    private void Start()
+    {
+        List<Saver.VehicleSaveData> saveData = Saver.LoadVehicles();
+
+        if (saveData.Count == 0)
+        {
+            _spawner.Spawn(_initialPrefab, _initialTransform.position, _initialTransform.rotation);
+            return;
+        }
+
+        var prefabs = saveData
+        .Select(vehicle =>
+        {
+            var prefab = _shop.GetVehiclePrefab(vehicle.Name);
+            _spawner.Spawn(prefab, vehicle.Position, vehicle.Rotation);
+            return prefab;
+        })
+        .ToList();
+    }
 
     private void OnEnable()
     {
@@ -106,4 +129,13 @@ public class PlayerGarage : MonoBehaviour
 
         return false;
     }
+
+    private void SaveGameData()
+    {
+        List<Vehicle> vehicles = _vehicles.Select(v => v.Vehicle).ToList();
+        Saver.SaveVehicles(vehicles);
+    }
+
+    private void OnApplicationQuit() =>
+        SaveGameData();
 }

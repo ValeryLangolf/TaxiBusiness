@@ -14,6 +14,8 @@ public class DispatcherCard : MonoBehaviour
     public event Action<DispatcherCard> CycleCompleted;
     public event Action<DispatcherCard> RemoveClicked;
 
+    public float Fill => _amount;
+
     public float SalaryRate => _salaryRate;
 
     private void OnEnable() =>
@@ -34,6 +36,9 @@ public class DispatcherCard : MonoBehaviour
 
         UpdateVisuals();
     }
+
+    public void SetFill(float value) =>
+        _amount = value;
 
     private void OnClickRemove() =>
         RemoveClicked?.Invoke(this);
