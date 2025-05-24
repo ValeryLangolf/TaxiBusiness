@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -11,9 +12,12 @@ public class PlayerGarage : MonoBehaviour
     [SerializeField] private VehicleSpawner _spawner;
     [SerializeField] private Wallet _wallet;
     [SerializeField] private VehicleIcon _iconPrefab;
-    [SerializeField] private IconContect _iconContent;
+    [SerializeField] private IconContent _iconContent;
 
     private readonly List<VehicleParams> _vehicles = new();
+
+    public event Action<float, Vector3> MoneyAdded;
+    public event Action<Vehicle> Added;
 
     public List<VehicleParams> VehiclesParams => new(_vehicles);
 
@@ -27,14 +31,14 @@ public class PlayerGarage : MonoBehaviour
             return;
         }
 
-        var prefabs = saveData
-        .Select(vehicle =>
-        {
-            var prefab = _shop.GetVehiclePrefab(vehicle.Name);
-            _spawner.Spawn(prefab, vehicle.Position, vehicle.Rotation);
-            return prefab;
-        })
-        .ToList();
+        List<Vehicle> prefabs = saveData
+            .Select(vehicle =>
+            {
+                Vehicle prefab = _shop.GetVehiclePrefab(vehicle.Name);
+                _spawner.Spawn(prefab, vehicle.Position, vehicle.Rotation);
+                return prefab;
+            })
+            .ToList();
     }
 
     private void OnEnable()
@@ -54,6 +58,16 @@ public class PlayerGarage : MonoBehaviour
     public List<VehicleParams> GetAvailable() =>
         _vehicles.Where(v => v.Vehicle.IsActivePath == false && v.Vehicle.IsPassengerAssigned == false).ToList();
 
+    public void SaleVehicle(Vehicle vehicle)
+    {
+        if (TryGetCard(vehicle, out VehicleIcon card, _vehicles) == false)
+            return;
+
+        _vehicles.RemoveAll(v => v.Vehicle == vehicle);
+        Destroy(card.gameObject);
+        Destroy(vehicle.gameObject);
+    }
+
     private void OnSpawn(Vehicle vehicle)
     {
         VehicleIcon icon = Instantiate(_iconPrefab, _iconContent.transform);
@@ -62,6 +76,7 @@ public class PlayerGarage : MonoBehaviour
         VehicleParams vehicleParams = new(vehicle, icon);
         _vehicles.Add(new(vehicle, icon));
         SubscribeVehicle(vehicleParams);
+        Added?.Invoke(vehicle);
     }
 
     private void OnSelected(Vehicle vehicle)
@@ -87,7 +102,7 @@ public class PlayerGarage : MonoBehaviour
     private void OnPassengerDelivered(Vehicle vehicle, float profit)
     {
         _wallet.AddMoney(profit);
-        Debug.Log($"Доход составил: {profit}");
+        MoneyAdded?.Invoke(profit, vehicle.Position);
     }
 
     private void OnCardClicked(VehicleIcon vehicleCard)

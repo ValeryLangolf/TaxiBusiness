@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -14,6 +15,8 @@ public class DispatcherCenter : MonoBehaviour
     [SerializeField] private Transform _content;
 
     private readonly List<DispatcherCard> _cards = new();
+
+    public event Action<float> Paided;
 
     private void Awake()
     {
@@ -70,6 +73,8 @@ public class DispatcherCenter : MonoBehaviour
     {
         _wallet.EmptyWallet(card.SalaryRate);
         AssignPassengerVehicle();
+
+        Paided?.Invoke(card.SalaryRate);
     }
 
     private void OnRemoveClick(DispatcherCard card)
@@ -98,7 +103,7 @@ public class DispatcherCenter : MonoBehaviour
         if (vehicles.Count == 0)
             return false;
 
-        int randomId = Random.Range(0, vehicles.Count);
+        int randomId = UnityEngine.Random.Range(0, vehicles.Count);
         vehicle = vehicles[randomId].Vehicle;
 
         return true;
@@ -113,7 +118,7 @@ public class DispatcherCenter : MonoBehaviour
         if (passengers.Count == 0)
             return false;
 
-        int randomId = Random.Range(0, passengers.Count);
+        int randomId = UnityEngine.Random.Range(0, passengers.Count);
         passenger = passengers[randomId];
 
         return true;
