@@ -3,7 +3,7 @@ using UnityEngine;
 public class ProfitShower : MonoBehaviour
 {
     [SerializeField] private ProfitView _profitViewPrefab;
-    [SerializeField] private VehicleSpawner _vehicleSpawner;
+    [SerializeField] private PlayerGarage _garage;
 
     private Pool<ProfitView> _pool;
 
@@ -11,20 +11,17 @@ public class ProfitShower : MonoBehaviour
         _pool = new(_profitViewPrefab, transform);
 
     private void OnEnable() =>
-        _vehicleSpawner.Spawned += OnVehicleSpawned;
+        _garage.MoneyAdded += OnMoneyAdded;
 
     private void OnDisable() =>
-        _vehicleSpawner.Spawned -= OnVehicleSpawned;
+        _garage.MoneyAdded -= OnMoneyAdded;
 
-    private void OnVehicleSpawned(Vehicle vehicle) =>
-        vehicle.PassengerDelivered += OnPassengerDelivered;
-
-    private void OnPassengerDelivered(Vehicle vehicle, float profit)
+    private void OnMoneyAdded(float profit, Vector3 position)
     {
         if (_pool.TryGet(out ProfitView profitView) == false)
             return;
 
         profitView.SetText(profit);
-        profitView.SetPositionUi(vehicle.Position);
+        profitView.SetPositionUi(position);
     }
 }

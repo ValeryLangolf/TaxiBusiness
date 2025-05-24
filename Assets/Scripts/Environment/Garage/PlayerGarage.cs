@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -11,9 +12,11 @@ public class PlayerGarage : MonoBehaviour
     [SerializeField] private VehicleSpawner _spawner;
     [SerializeField] private Wallet _wallet;
     [SerializeField] private VehicleIcon _iconPrefab;
-    [SerializeField] private IconContect _iconContent;
+    [SerializeField] private IconContent _iconContent;
 
     private readonly List<VehicleParams> _vehicles = new();
+
+    public event Action<float, Vector3> MoneyAdded;
 
     public List<VehicleParams> VehiclesParams => new(_vehicles);
 
@@ -84,8 +87,11 @@ public class PlayerGarage : MonoBehaviour
         vehicleParams.Card.Clicked += OnCardClicked;
     }
 
-    private void OnPassengerDelivered(Vehicle vehicle, float profit) =>
+    private void OnPassengerDelivered(Vehicle vehicle, float profit)
+    {
         _wallet.AddMoney(profit);
+        MoneyAdded?.Invoke(profit, vehicle.Position);
+    }
 
     private void OnCardClicked(VehicleIcon vehicleCard)
     {
