@@ -17,6 +17,7 @@ public class PlayerGarage : MonoBehaviour
     private readonly List<VehicleParams> _vehicles = new();
 
     public event Action<float, Vector3> MoneyAdded;
+    public event Action<Vehicle> Added;
 
     public List<VehicleParams> VehiclesParams => new(_vehicles);
 
@@ -57,6 +58,16 @@ public class PlayerGarage : MonoBehaviour
     public List<VehicleParams> GetAvailable() =>
         _vehicles.Where(v => v.Vehicle.IsActivePath == false && v.Vehicle.IsPassengerAssigned == false).ToList();
 
+    public void SaleVehicle(Vehicle vehicle)
+    {
+        if (TryGetCard(vehicle, out VehicleIcon card, _vehicles) == false)
+            return;
+
+        _vehicles.RemoveAll(v => v.Vehicle == vehicle);
+        Destroy(card.gameObject);
+        Destroy(vehicle.gameObject);
+    }
+
     private void OnSpawn(Vehicle vehicle)
     {
         VehicleIcon icon = Instantiate(_iconPrefab, _iconContent.transform);
@@ -65,6 +76,7 @@ public class PlayerGarage : MonoBehaviour
         VehicleParams vehicleParams = new(vehicle, icon);
         _vehicles.Add(new(vehicle, icon));
         SubscribeVehicle(vehicleParams);
+        Added?.Invoke(vehicle);
     }
 
     private void OnSelected(Vehicle vehicle)

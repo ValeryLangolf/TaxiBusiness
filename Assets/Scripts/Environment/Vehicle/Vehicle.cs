@@ -85,10 +85,8 @@ public class Vehicle : MonoBehaviour
         _mover = new(transform);
         _rotator = new(transform);
         _vehiclePassenger = new(transform, OnPassengerRefused);
-    }
-
-    private void Start() =>
         _pathKeeper = new(transform, OnPathDestinated, OnPathCompleted);
+    }        
 
     private void Update()
     {
@@ -136,4 +134,7 @@ public class Vehicle : MonoBehaviour
         _pathKeeper.ResetPath();
         PathCompleted?.Invoke(this);
     }
+
+    private void OnDestroy() =>
+        _vehiclePassenger.ProcessDestroyed();
 }

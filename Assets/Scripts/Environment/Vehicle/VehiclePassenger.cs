@@ -41,6 +41,17 @@ public class VehiclePassenger
         UnsubscribePassanger(_passenger);
     }
 
+    public void ProcessDestroyed()
+    {
+        if(_isInCar)
+        {
+            DropPassenger();
+            return;
+        }
+
+        UnsubscribePassanger(_passenger);
+    }
+
     private void SubscribePassanger(Passenger passenger)
     {
         if (passenger == _passenger)
