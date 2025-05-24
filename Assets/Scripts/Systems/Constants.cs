@@ -13,5 +13,5 @@
 
     public const float RatingMultiplier = 10f;
 
-    public const float InitialBalance = 100f;
+    public const float InitialBalance = 500f;
 }
