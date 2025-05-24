@@ -27,14 +27,14 @@ public class PlayerGarage : MonoBehaviour
             return;
         }
 
-        var prefabs = saveData
-        .Select(vehicle =>
-        {
-            var prefab = _shop.GetVehiclePrefab(vehicle.Name);
-            _spawner.Spawn(prefab, vehicle.Position, vehicle.Rotation);
-            return prefab;
-        })
-        .ToList();
+        List<Vehicle> prefabs = saveData
+            .Select(vehicle =>
+            {
+                Vehicle prefab = _shop.GetVehiclePrefab(vehicle.Name);
+                _spawner.Spawn(prefab, vehicle.Position, vehicle.Rotation);
+                return prefab;
+            })
+            .ToList();
     }
 
     private void OnEnable()
@@ -84,11 +84,8 @@ public class PlayerGarage : MonoBehaviour
         vehicleParams.Card.Clicked += OnCardClicked;
     }
 
-    private void OnPassengerDelivered(Vehicle vehicle, float profit)
-    {
+    private void OnPassengerDelivered(Vehicle vehicle, float profit) =>
         _wallet.AddMoney(profit);
-        Debug.Log($"Доход составил: {profit}");
-    }
 
     private void OnCardClicked(VehicleIcon vehicleCard)
     {
