@@ -336,7 +336,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9063597445891031711}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -361,12 +361,9 @@ MonoBehaviour:
   _notPassengerColor: {r: 1, g: 0, b: 0, a: 1}
   _sectionColor: {r: 0.07791346, g: 0.735849, b: 0, a: 1}
   _connectionColor: {r: 1, g: 0.9191775, b: 0, a: 1}
-  _waypointSphereRadius: 0.21
-  _connectionSphereRadius: 0.14
+  _waypointSphereRadius: 0.09
+  _connectionSphereRadius: 0.05
   _connectDistance: 0.54
-  _isShowGizmos: 1
-  _isAutoConnect: 1
-  _isAutoFind: 1
 --- !u!114 &1267976719669919645
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -21,7 +21,7 @@ public class GizmosRoadDrower
         _waypointSphereRadius = waypointSphereRadius;
         _connectionSphereRadius = connectionSphereRadius;
 
-        if (_waypointSphereRadius < 0.015f)
+        if (_waypointSphereRadius < 0.005f)
             Debug.LogWarning($"Диаметр рисуемых сфер ({_waypointSphereRadius}м) подозрительно мал");
     }
 
@@ -32,7 +32,7 @@ public class GizmosRoadDrower
         if (_sections == null || _sections.Count == 0)
         {
             Debug.LogWarning($"Нет доступных секций для отрисовки");
-            return;
+            return; 
         }
 
         DrowSections();
@@ -70,14 +70,14 @@ public class GizmosRoadDrower
         Gizmos.color = _sectionColor;
 
         foreach (SectionRoadStrip section in _sections)
-            DrowSphere(section);
+            DrawSphere(section);
     }
 
-    private void DrowSphere(SectionRoadStrip section)
+    private void DrawSphere(SectionRoadStrip section)
     {
         if (section == null)
         {
-            Debug.LogWarning("Переданная секция в DrowSphere имеет нулевую ссылку");
+            Debug.LogWarning("Переданная секция в DrawSphere имеет нулевую ссылку"); 
             return;
         }
 

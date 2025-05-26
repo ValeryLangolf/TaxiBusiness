@@ -24,6 +24,21 @@ public class SectionRoadBuilder : MonoBehaviour
     public void UpdateCount()
     {
         List<Transform> transforms = GetChildren();
+
+        while (transforms.Count < 2)
+        {
+            Debug.Log(transforms.Count);
+            GameObject newElement = new($"{Waypoint}");
+            newElement.AddComponent<Waypoint>();
+            newElement.transform.SetParent(transform);
+            int secondLastIndex = transforms.Count - 1;
+
+            if(secondLastIndex < 0)
+                transforms.Add(newElement.transform);
+            else
+                transforms.Insert(secondLastIndex, newElement.transform);
+        }
+
         transforms = GetSortedByName(transforms);
 
         if (_isDistanceDependency)

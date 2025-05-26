@@ -43,9 +43,21 @@ public static class Utils
 
     public static (string, int) ExtractName(string name)
     {
+        if (string.IsNullOrEmpty(name))
+            return (string.Empty, 0);
+
         Match match = Regex.Match(name, @"(\D+)(\d*)");
+
+        if (match.Success == false)
+            return (string.Empty, 0);
+
         string textPart = match.Groups[1].Value;
-        int numberPart = match.Groups[2].Success ? int.Parse(match.Groups[2].Value) : 0;
+
+        int numberPart = 0;
+
+        if (match.Groups[2].Success && !string.IsNullOrEmpty(match.Groups[2].Value))
+            if (!int.TryParse(match.Groups[2].Value, out numberPart))
+                numberPart = 0;
 
         return (textPart, numberPart);
     }
@@ -58,5 +70,35 @@ public static class Utils
             distance += waypoint.LenghtInMeter;
 
         return distance;
+    }
+
+    public static bool HasChanges<T>(IEnumerable<T> newCollection, IEnumerable<T> oldCollection)
+    {
+        if (newCollection == null || oldCollection == null)
+            return true;
+
+        if (ReferenceEquals(newCollection, oldCollection))
+            return false;
+
+        if (newCollection.Count() != oldCollection.Count())
+            return true;
+
+        HashSet<T> newSet = new HashSet<T>(newCollection);
+        return oldCollection.Any(item => newSet.Contains(item) == false);
+    }
+
+    public static bool HasChanges<T>(IEnumerable<T> newCollection, IEnumerable<T> oldCollection, IEqualityComparer<T> comparer)
+    {
+        if (newCollection == null || oldCollection == null)
+            return true;
+
+        if (ReferenceEquals(newCollection, oldCollection))
+            return false;
+
+        if (newCollection.Count() != oldCollection.Count())
+            return true;
+
+        HashSet<T> newSet = new HashSet<T>(newCollection, comparer);
+        return oldCollection.Any(item => newSet.Contains(item) == false);
     }
 }

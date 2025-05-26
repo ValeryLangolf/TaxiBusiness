@@ -1,26 +1,20 @@
 ﻿#if UNITY_EDITOR
-
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
 public class RoadConnector
 {
-    private float _connectDistance;
-
-    public void SetParams(float connectDistance) =>
-        _connectDistance = connectDistance;
-
-    public void Connect(List<SectionRoadStrip> sections)
+    public void Connect(List<SectionRoadStrip> sections, float connectDistance)
     {
         foreach (SectionRoadStrip section in sections)
-            ConnectSection(section, sections);
+            ConnectSection(section, sections, connectDistance);
     }
 
-    private void ConnectSection(SectionRoadStrip section, List<SectionRoadStrip> sections)
+    private void ConnectSection(SectionRoadStrip section, List<SectionRoadStrip> sections, float connectDistance)
     {
         List<SectionRoadStrip> connectedSections = new();
-        IReadOnlyList<Waypoint> points = section.Points;
+        List<Waypoint> points = new(section.Points);
 
         if (points == null || points.Count == 0)
         {
@@ -35,7 +29,7 @@ public class RoadConnector
             if (otherSection == section)
                 continue;
 
-            IReadOnlyList<Waypoint> otherSectionPoints = otherSection.Points;
+            List<Waypoint> otherSectionPoints = new(otherSection.Points);
 
             if (otherSectionPoints == null || otherSectionPoints.Count == 0)
                 continue;
@@ -43,7 +37,7 @@ public class RoadConnector
             Vector3 otherStart = otherSectionPoints[0].Position;
             float distance = Vector3.Distance(endPoint, otherStart);
 
-            if (distance <= _connectDistance)
+            if (distance <= connectDistance)
                 connectedSections.Add(otherSection);
         }
 
@@ -54,5 +48,4 @@ public class RoadConnector
         EditorUtility.SetDirty(section);
     }
 }
-
 #endif

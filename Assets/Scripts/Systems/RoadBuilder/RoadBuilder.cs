@@ -1,9 +1,8 @@
 ﻿#if UNITY_EDITOR
-
 using System.Collections.Generic;
 using System.Linq;
-using UnityEngine;
 using UnityEditor;
+using UnityEngine;
 
 [ExecuteAlways]
 public class RoadBuilder : MonoBehaviour
@@ -16,10 +15,7 @@ public class RoadBuilder : MonoBehaviour
     [SerializeField] private float _connectionSphereRadius;
     [SerializeField] private float _connectDistance;
 
-    [Space(10)]
-    [SerializeField] private bool _isShowGizmos;
-    [SerializeField] private bool _isAutoConnect;
-    [SerializeField] private bool _isAutoFind;
+    private bool _isShowGizmos;
 
     private readonly List<(Vector3 position, float radius, GameObject linkedObject)> _clickableSpheres = new();
     private readonly GizmosRoadDrower _drower = new();
@@ -27,34 +23,17 @@ public class RoadBuilder : MonoBehaviour
 
     public List<SectionRoadStrip> Sections => new(_roadNet.Sections);
 
-    private void OnValidate()
-    {
-        if (_isShowGizmos)
-        {
-            _drower.SetParams(_sectionColor, _notPassengerColor, _connectionColor, _waypointSphereRadius, _connectionSphereRadius);
-            SceneView.duringSceneGui += OnSceneGUI;
-        }
-
-        if (_isAutoConnect)
-            _connector.SetParams(_connectDistance);
-    }
-
-    private void Update()
-    {
-        if (_isAutoFind)
-            Find();
-
-        if (_isAutoConnect)
-            _connector.Connect(_roadNet.Sections);
-    }
-
     private void OnDrawGizmos()
     {
+        if (_isShowGizmos == false)
+            return;
+
         List<SectionRoadStrip> sections = _roadNet.Sections;
 
         if (_isShowGizmos == false || sections.Count == 0)
             return;
 
+        _drower.SetParams(_sectionColor, _notPassengerColor, _connectionColor, _waypointSphereRadius, _connectionSphereRadius);
         _drower.Drow(sections);
         _clickableSpheres.Clear();
 
@@ -64,12 +43,38 @@ public class RoadBuilder : MonoBehaviour
 
     public void SetGizmosFlag(bool isOn) =>
         _isShowGizmos = isOn;
-    
-    public void SetAutoFindFlag(bool isOn) =>
-        _isAutoFind = isOn;
-    
-    public void SetAutoConnectFlag(bool isOn) =>
-        _isAutoConnect = isOn;
+
+    public void UpdateSections()
+    {
+        List<SectionRoadStrip> currentSections = GetComponentsInChildren<SectionRoadStrip>().ToList();
+
+        if (Utils.HasChanges(currentSections, _roadNet.Sections))
+        {
+            _roadNet.SetSections(currentSections);
+            EditorUtility.SetDirty(_roadNet);
+
+            Debug.Log("Обновлены секции дорожной сети!");
+        }
+
+        UpdatePoints();
+    }
+
+    public void ConnectPoints() =>
+        _connector.Connect(_roadNet.Sections, _connectDistance);
+
+    public void ConnectAllLanes()
+    {
+        _connector.Connect(_roadNet.Sections, _connectDistance);
+
+        int countPoint = 0;
+
+        foreach (SectionRoadStrip section in _roadNet.Sections)
+            countPoint += section.Points.Count;
+
+        Debug.Log($"ОБЪЕДИНЕНИЕ СЕКЦИЙ В ЕДИНУЮ ДОРОЖНУЮ СЕТЬ!");
+        Debug.Log($"Количество секций: {_roadNet.Sections.Count}");
+        Debug.Log($"Количество точек: {countPoint}");
+    }
 
     private void SetClickable(SectionRoadStrip section)
     {
@@ -93,44 +98,18 @@ public class RoadBuilder : MonoBehaviour
         }
     }
 
-    public void ConnectAllLanes()
-    {
-        Find();
-        _connector.Connect(RoadNetwork.Instance.Sections);
-        Debug.Log($"ОБЪЕДИНЕНИЕ СЕКЦИЙ В ЕДИНУЮ ДОРОЖНУЮ СЕТЬ. Количество секций: {RoadNetwork.Instance.Sections.Count}");
-    }
-
-    private void Find()
-    {
-        FindSections();
-        FindPointsInSections();
-    }
-
-    private void FindSections()
-    {
-        List<SectionRoadStrip> sections = GetComponentsInChildren<SectionRoadStrip>(true).ToList();
-
-        if (Utils.AreListsEqual(_roadNet.Sections, sections))
-            return;
-
-        _roadNet.SetSections(sections);
-        EditorUtility.SetDirty(_roadNet);
-    }
-
-    private void FindPointsInSections()
+    private void UpdatePoints()
     {
         foreach (SectionRoadStrip section in _roadNet.Sections)
         {
-            List<Waypoint> points = section.GetComponentsInChildren<Waypoint>()
-                .Where(child => child != section.transform)
-                .OrderBy(child => Utils.ExtractName(child.name))
-                .ToList();
+            List<Waypoint> points = section.GetComponentsInChildren<Waypoint>().ToList();
 
-            if (section.Points.SequenceEqual(points))
+            if (Utils.HasChanges(points, section.Points) == false)
                 continue;
 
             section.SetPoints(points);
             EditorUtility.SetDirty(section);
+            Debug.Log($"Обновлены точки секции {section.name}");
         }
     }
 
@@ -163,5 +142,4 @@ public class RoadBuilder : MonoBehaviour
         }
     }
 }
-
 #endif
