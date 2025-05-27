@@ -9,7 +9,7 @@ public class PointEqualizer
 
     public PointEqualizer()
     {
-        _minCount = SectionRoadBuilder.MinWaypointsCount;
+        _minCount = SectionRoadStrip.MinWaypointsCount;
     }
 
     public void EqualizeDistanceBetweenPoints(List<Transform> transforms, Vector3 arcValue)

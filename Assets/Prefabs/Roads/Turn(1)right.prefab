@@ -395,7 +395,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3604283649840784476}
   - component: {fileID: 3898975575046081947}
-  - component: {fileID: 3458155127290377379}
   m_Layer: 0
   m_Name: Street0 (8)
   m_TagString: Untagged
@@ -442,20 +441,8 @@ MonoBehaviour:
   - {fileID: 8943229878458717789}
   - {fileID: 3410633022965084981}
   _connectedSections: []
---- !u!114 &3458155127290377379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8388829310448490206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 435df476c007b6f45a80b9b61bf6c686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   _count: 5
   _isDistanceDependency: 0
-  _distance: 0.05
-  _isAutoEqualizingPoint: 0
+  _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0, y: 0, z: 0}

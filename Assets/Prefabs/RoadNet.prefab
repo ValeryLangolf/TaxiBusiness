@@ -319,7 +319,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1322051364292405927}
-  - component: {fileID: 2909759764183456127}
   - component: {fileID: 1267976719669919645}
   m_Layer: 0
   m_Name: RoadNet
@@ -345,25 +344,6 @@ Transform:
   - {fileID: 635778619321958700}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2909759764183456127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9063597445891031711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f365dba34b8a22841b87c63ef1689ba6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _roadNet: {fileID: 1267976719669919645}
-  _notPassengerColor: {r: 1, g: 0, b: 0, a: 1}
-  _sectionColor: {r: 0.07791346, g: 0.735849, b: 0, a: 1}
-  _connectionColor: {r: 1, g: 0.9191775, b: 0, a: 1}
-  _waypointSphereRadius: 0.09
-  _connectionSphereRadius: 0.05
-  _connectDistance: 0.54
 --- !u!114 &1267976719669919645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1006,6 +986,12 @@ MonoBehaviour:
   - {fileID: 4250024609546481323}
   - {fileID: 3718185728160673992}
   - {fileID: 4345952872903723307}
+  _notPassengerColor: {r: 1, g: 0, b: 0, a: 1}
+  _sectionColor: {r: 0.036990643, g: 1, b: 0, a: 1}
+  _connectionColor: {r: 0.9557719, g: 1, b: 0, a: 1}
+  _waypointSphereRadius: 0.09
+  _connectionSphereRadius: 0.05
+  _connectDistance: 0.54
 --- !u!1001 &30591101034682696
 PrefabInstance:
   m_ObjectHideFlags: 0

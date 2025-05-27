@@ -3,9 +3,9 @@ using UnityEditor;
 
 public class MenuLanesConnection : Editor
 {
-    private const string MenuName = "Дороги/Автоконнект";
+    private const string MenuName = "Дороги/Автоконнект (прожорливая опция)";
     private const string Key = "AutoConnect";
-    private const int Priority = 2;
+    private const int Priority = 4;
     private static bool _isOn;
 
     static MenuLanesConnection()
@@ -46,7 +46,7 @@ public class MenuLanesConnection : Editor
 
     private static void OnUpdate()
     {
-        foreach (RoadBuilder network in RoadNetworkStorage.RoadBuilderList)
+        foreach (RoadNetwork network in RoadNetworkStorage.RoadBuilderList)
             network.ConnectPoints();
     }
 }

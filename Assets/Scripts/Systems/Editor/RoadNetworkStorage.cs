@@ -6,10 +6,10 @@ using UnityEngine;
 
 public class RoadNetworkStorage : Editor
 {
-    private static List<RoadBuilder> s_roadBuilders = new();
+    private static List<RoadNetwork> s_roadBuilders = new();
     private static bool s_isInitialized;
 
-    public static List<RoadBuilder> RoadBuilderList => new(s_roadBuilders);
+    public static List<RoadNetwork> RoadBuilderList => new(s_roadBuilders);
 
     [InitializeOnLoadMethod]
     private static void Initialize()
@@ -45,12 +45,12 @@ public class RoadNetworkStorage : Editor
     }
 
     private static void UpdateRoadBuildersList() =>
-        s_roadBuilders = FindObjectsByType<RoadBuilder>(FindObjectsInactive.Exclude, FindObjectsSortMode.None).ToList();
+        s_roadBuilders = FindObjectsByType<RoadNetwork>(FindObjectsInactive.Exclude, FindObjectsSortMode.None).ToList();
 
     private static void UpdateSections()
     {
-        foreach (RoadBuilder network in s_roadBuilders)
-            network.UpdateSections();        
+        foreach (RoadNetwork network in s_roadBuilders)
+            network.UpdateSections();
     }
 
     private static void CleanUp()

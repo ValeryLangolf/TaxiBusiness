@@ -42,7 +42,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2724542357250069548}
   - component: {fileID: 8493644077168032646}
-  - component: {fileID: 3279650645306400074}
   m_Layer: 0
   m_Name: Street0 (8)
   m_TagString: Untagged
@@ -89,22 +88,10 @@ MonoBehaviour:
   - {fileID: 8172419346971649381}
   - {fileID: 7056154001630920378}
   _connectedSections: []
---- !u!114 &3279650645306400074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309028842312922112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 435df476c007b6f45a80b9b61bf6c686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   _count: 5
   _isDistanceDependency: 0
-  _distance: 0.05
-  _isAutoEqualizingPoint: 0
+  _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!1 &2843520349230578555
 GameObject:
@@ -577,7 +564,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1520407942277509280}
   - component: {fileID: 83227534774744987}
-  - component: {fileID: 2634637660952961020}
   m_Layer: 0
   m_Name: Street0 (15)
   m_TagString: Untagged
@@ -624,22 +610,10 @@ MonoBehaviour:
   - {fileID: 8598974818249537759}
   - {fileID: 404622492650319337}
   _connectedSections: []
---- !u!114 &2634637660952961020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5716177147911822395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 435df476c007b6f45a80b9b61bf6c686, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   _count: 5
   _isDistanceDependency: 0
-  _distance: 0.05
-  _isAutoEqualizingPoint: 0
+  _distance: 1
+  _isAutoEqualizingPoint: 1
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!1 &6042904244276767217
 GameObject:

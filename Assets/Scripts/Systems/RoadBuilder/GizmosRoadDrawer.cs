@@ -1,10 +1,9 @@
 ﻿#if UNITY_EDITOR
-
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class GizmosRoadDrower
+public class GizmosRoadDrawer
 {
     private Color _notPassengerColor;
     private Color _sectionColor;
@@ -25,7 +24,7 @@ public class GizmosRoadDrower
             Debug.LogWarning($"Диаметр рисуемых сфер ({_waypointSphereRadius}м) подозрительно мал");
     }
 
-    public void Drow(List<SectionRoadStrip> sections)
+    public void Draw(List<SectionRoadStrip> sections)
     {
         _sections = new(sections);
 
@@ -76,12 +75,9 @@ public class GizmosRoadDrower
     private void DrawSphere(SectionRoadStrip section)
     {
         if (section == null)
-        {
-            Debug.LogWarning("Переданная секция в DrawSphere имеет нулевую ссылку"); 
             return;
-        }
 
-        IReadOnlyList<Waypoint> points = section.Points;
+        List<Waypoint> points = section.Points;
 
         if (points == null || points.Count == 0)
             return;
@@ -136,6 +132,9 @@ public class GizmosRoadDrower
             Waypoint startPoint = points.Last();
             Waypoint endPoint = connectedLane.Points.First();
 
+            if(startPoint == null || endPoint == null)
+                continue;
+
             Gizmos.DrawLine(startPoint.Position, endPoint.Position);
         }
     }
@@ -166,10 +165,59 @@ public class GizmosRoadDrower
             Waypoint startPoint = section.Points.Last();
             Waypoint endPoint = connectedLane.Points.First();
 
+            if (startPoint == null || endPoint == null)
+                continue;
+
             Gizmos.DrawSphere(startPoint.Position, _connectionSphereRadius);
             Gizmos.DrawSphere(endPoint.Position, _connectionSphereRadius);
         }
     }
-}
 
+    public void DrawSpheresNotConnection(float sphereRadius, Color color, List<SectionRoadStrip> sections)
+    {
+        Gizmos.color = color;
+
+        foreach (SectionRoadStrip section in sections)
+            DrawSpheresNotConnection(sphereRadius, section);
+    }
+
+    private void DrawSpheresNotConnection(float sphereRadius, SectionRoadStrip section)
+    {
+        if (section == null || section.Points == null || section.Points.Count == 0)
+            return;
+
+        bool lastPointConnected = false;
+
+        if (section.ConnectedSections != null && section.ConnectedSections.Count > 0)
+        {
+            foreach (SectionRoadStrip connectedSection in section.ConnectedSections)
+            {
+                if (connectedSection != null && connectedSection.Points != null && connectedSection.Points.Count > 0)
+                {
+                    lastPointConnected = true;
+                    break;
+                }
+            }
+        }
+
+        bool firstPointConnected = false;
+
+        foreach (SectionRoadStrip otherSection in _sections)
+        {
+            if (otherSection != section && 
+                otherSection.ConnectedSections != null &&
+                otherSection.ConnectedSections.Contains(section))
+            {
+                firstPointConnected = true;
+                break;
+            }
+        }
+
+        if (lastPointConnected == false && section.Points.Last() != null)
+            Gizmos.DrawSphere(section.Points.Last().Position, sphereRadius);
+
+        if (firstPointConnected == false && section.Points.First() != null)
+            Gizmos.DrawSphere(section.Points.First().Position, sphereRadius);
+    }
+}
 #endif

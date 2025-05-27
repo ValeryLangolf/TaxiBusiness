@@ -6,7 +6,7 @@ public class MenuWaypointAutoEqualizerEditor : Editor
 {
     private const string MenuName = "Дороги/Автовыравнивание точек";
     private const string Key = "AutoDistance";
-    private const int Priority = 4;
+    private const int Priority = 3;
     private static bool _isOn;
 
     static MenuWaypointAutoEqualizerEditor()
@@ -47,12 +47,10 @@ public class MenuWaypointAutoEqualizerEditor : Editor
 
     private static void OnUpdate()
     {
-        RoadBuilder[] networks = FindObjectsByType<RoadBuilder>(UnityEngine.FindObjectsSortMode.None);
-
-        foreach (RoadBuilder network in networks)
+        foreach (RoadNetwork network in RoadNetworkStorage.RoadBuilderList)
             foreach (SectionRoadStrip section in network.Sections)
-                if (section.TryGetComponent(out SectionRoadBuilder sectionRoadBuilder))
-                    sectionRoadBuilder.UpdateCount();
+                if (section != null)
+                    section.UpdateCount();
     }
 }
 #endif

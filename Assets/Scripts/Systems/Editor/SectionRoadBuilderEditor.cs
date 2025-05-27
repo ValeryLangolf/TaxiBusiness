@@ -1,14 +1,14 @@
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(SectionRoadBuilder))]
+[CustomEditor(typeof(SectionRoadStrip))]
 public class SectionRoadBuilderEditor : Editor
 {
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
 
-        SectionRoadBuilder builder = (SectionRoadBuilder)target;
+        SectionRoadStrip builder = (SectionRoadStrip)target;
 
         if (GUILayout.Button("Применить"))
             builder.UpdateCount();

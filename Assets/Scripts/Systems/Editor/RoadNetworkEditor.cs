@@ -7,7 +7,7 @@ public class RoadNetworkEditor : Editor
     [MenuItem("Дороги/Объединить в дорожную сеть")]
     private static void ConnectAllLanes()
     {
-        foreach (RoadBuilder network in RoadNetworkStorage.RoadBuilderList)
+        foreach (RoadNetwork network in RoadNetworkStorage.RoadBuilderList)
             network.ConnectAllLanes();
     }
 }

@@ -3,7 +3,7 @@ using UnityEditor;
 
 public class MenuDrawerSectionsAndPoints : Editor
 {
-    private const string MenuName = "Дороги/Показать на сцене";
+    private const string MenuName = "Дороги/Показывать линии и точки";
     private const string Key = "ShowGizmos";
     private const int Priority = 1;
     private static bool _isOn;
@@ -49,13 +49,13 @@ public class MenuDrawerSectionsAndPoints : Editor
 
     private static void UpdateFlag()
     {
-        foreach (RoadBuilder network in RoadNetworkStorage.RoadBuilderList)
+        foreach (RoadNetwork network in RoadNetworkStorage.RoadBuilderList)
             network.SetGizmosFlag(_isOn);
     }
 
     private static void OnUpdate(SceneView _)
     {
-        foreach (RoadBuilder network in RoadNetworkStorage.RoadBuilderList)
+        foreach (RoadNetwork network in RoadNetworkStorage.RoadBuilderList)
             network.OnSceneGUI(null);
     }
 }
