@@ -18,12 +18,21 @@ public class DispatcherCenter : MonoBehaviour
 
     public event Action<float> Paided;
 
-    private void Awake()
-    {
-        _cardCount.text = string.Empty;
-        ClearAllChildren(_content);
+    public List<DispatcherCard> Cards => new(_cards);
 
-        List<Saver.DispatcherSaveData> dispatcherSaveDatas = Saver.LoadDispatchers();
+    private void OnEnable() =>
+        _buttonAdd.onClick.AddListener(OnClickAdd);
+
+    private void OnDisable() =>
+        _buttonAdd.onClick.RemoveListener(OnClickAdd);
+
+    public void Init(List<Saver.DispatcherSaveData> dispatcherSaveDatas)
+    {
+        foreach(DispatcherCard card in new List<DispatcherCard>(_cards))
+            RemoveCard(card);
+
+        _cardCount.text = _cards.Count.ToString();
+        ClearAllChildren(_content);
 
         foreach (Saver.DispatcherSaveData data in dispatcherSaveDatas)
             InstantiateCard(data.FillAmount);
@@ -34,12 +43,6 @@ public class DispatcherCenter : MonoBehaviour
         foreach (Transform child in parent)
             Destroy(child.gameObject);
     }
-
-    private void OnEnable() =>
-        _buttonAdd.onClick.AddListener(OnClickAdd);
-
-    private void OnDisable() =>
-        _buttonAdd.onClick.RemoveListener(OnClickAdd);
 
     private void OnClickAdd() =>
         InstantiateCard(0);
@@ -77,8 +80,14 @@ public class DispatcherCenter : MonoBehaviour
         Paided?.Invoke(card.SalaryRate);
     }
 
-    private void OnRemoveClick(DispatcherCard card)
+    private void OnRemoveClick(DispatcherCard card) =>
+        RemoveCard(card);
+
+    private void RemoveCard(DispatcherCard card)
     {
+        if (card == null)
+            throw new ArgumentNullException("Карта, предназначенная для удаления, имеет нулевую ссылку");
+
         Unsubscribe(card);
         Destroy(card.gameObject);
     }
@@ -123,10 +132,4 @@ public class DispatcherCenter : MonoBehaviour
 
         return true;
     }
-
-    private void SaveGameData() =>
-        Saver.SaveDispatcher(_cards);
-
-    private void OnApplicationQuit() =>
-        SaveGameData();
 }

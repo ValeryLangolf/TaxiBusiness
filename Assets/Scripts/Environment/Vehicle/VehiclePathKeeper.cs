@@ -10,7 +10,7 @@ public class VehiclePathKeeper
     private readonly Action _pathDestinated;
     private readonly Action _pathCompleted;
 
-    private List<Waypoint> _points;
+    private List<Waypoint> _points = new();
     private List<Waypoint> _currentPath = new();
     private List<Waypoint> _remainingPath = new();
     private int _currentTargetIndex;
@@ -20,14 +20,6 @@ public class VehiclePathKeeper
         _vehicle = vehicle;
         _pathDestinated = pathDestinated;
         _pathCompleted = pathCompleted;
-
-        _points = RoadNetwork.Instance.Points;
-
-        if(_points == null)
-            throw new ArgumentNullException("Неудачная инициализация списка точек на карте");
-
-        if (_points.Count == 0)
-            throw new ArgumentNullException("Нет доступных точек маршрута");
     }
 
     public bool IsActivePath => _currentPath != null && _currentTargetIndex < _currentPath.Count;
@@ -40,6 +32,9 @@ public class VehiclePathKeeper
 
     public List<Waypoint> RemainingPath => new(_remainingPath);
 
+    public void Init(List<Waypoint> points) =>
+        _points = points;
+
     public void SetDestination(Vector3 destination)
     {
         Waypoint start = Utils.GetNearestSectionAndPoint(_vehicle.position, _points);
@@ -51,14 +46,18 @@ public class VehiclePathKeeper
         if (end == null)
             throw new ArgumentNullException("Не удалось получить ближайшую конечную точку пути");
 
+        List<Waypoint> path;
+
         if (start == end)
         {
+            path = new() { end };
             Debug.LogWarning("Стартовая точка в то же время оказалась и конечной");
-
-            return;
+        }
+        else
+        {
+            path = Pathfinder.FindPath(start, end);
         }
 
-        List<Waypoint> path = Pathfinder.FindPath(start, end);
         SetPath(path ?? new List<Waypoint>());
 
         if (path?.Count > 0)

@@ -26,6 +26,12 @@ public class VehicleSelector : MonoBehaviour
 
     public void Select(Vehicle vehicle)
     {
+        if(vehicle!= null && vehicle == _selectedVehicle)
+        {
+            Deselect(vehicle);
+            return;
+        }
+
         if (_selectedVehicle != null && _selectedVehicle != vehicle)
             Deselect(_selectedVehicle);
 
@@ -34,15 +40,21 @@ public class VehicleSelector : MonoBehaviour
         SfxPlayer.Instance.PlayVehicleSelected();
     }
 
-    private void OnLeftClick(Vehicle vehicle) =>
-        Select(vehicle);
-
-    private void OnRightClick(Collider _, Vector3 __)
+    public void DeselectCurrentVehicle()
     {
-        Deselect(_selectedVehicle);
+        Deselected?.Invoke(_selectedVehicle);
         _selectedVehicle = null;
     }
 
-    private void Deselect(Vehicle vehicle) =>
+    private void Deselect(Vehicle vehicle)
+    {
+        _selectedVehicle = null;
         Deselected?.Invoke(vehicle);
+    }
+
+    private void OnLeftClick(Vehicle vehicle) =>
+        Select(vehicle);
+
+    private void OnRightClick(Collider _, Vector3 __) =>
+        Deselect(_selectedVehicle);
 }

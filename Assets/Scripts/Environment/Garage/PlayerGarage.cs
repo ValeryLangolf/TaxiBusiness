@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.tvOS;
 
 public class PlayerGarage : MonoBehaviour
 {
@@ -18,28 +19,9 @@ public class PlayerGarage : MonoBehaviour
 
     public event Action<float, Vector3> MoneyAdded;
     public event Action<Vehicle> Added;
+    public event Action<Vehicle> WillBeRemoved;
 
     public List<VehicleParams> VehiclesParams => new(_vehicles);
-
-    private void Start()
-    {
-        List<Saver.VehicleSaveData> saveData = Saver.LoadVehicles();
-
-        if (saveData.Count == 0)
-        {
-            _spawner.Spawn(_initialPrefab, _initialTransform.position, _initialTransform.rotation);
-            return;
-        }
-
-        List<Vehicle> prefabs = saveData
-            .Select(vehicle =>
-            {
-                Vehicle prefab = _shop.GetVehiclePrefab(vehicle.Name);
-                _spawner.Spawn(prefab, vehicle.Position, vehicle.Rotation);
-                return prefab;
-            })
-            .ToList();
-    }
 
     private void OnEnable()
     {
@@ -55,17 +37,45 @@ public class PlayerGarage : MonoBehaviour
         _selector.Deselected -= OnDeselected;
     }
 
+    public void Init(List<Saver.VehicleSaveData> vehicleSaveData)
+    {
+        foreach (VehicleParams vehicleParams in new List<VehicleParams>(_vehicles))
+            RemoveVehicle(vehicleParams.Vehicle);
+
+        ClearAllChildren(_iconContent.transform);
+
+        if (vehicleSaveData.Count == 0)
+        {
+            _spawner.Spawn(_initialPrefab, _initialTransform.position, _initialTransform.rotation);
+            return;
+        }
+
+        foreach (Saver.VehicleSaveData vehicleData in vehicleSaveData)
+        {
+            Vehicle prefab = _shop.GetVehiclePrefab(vehicleData.Name);
+            _spawner.Spawn(prefab, vehicleData.Position, vehicleData.Rotation);
+        }
+    }
+
     public List<VehicleParams> GetAvailable() =>
         _vehicles.Where(v => v.Vehicle.IsActivePath == false && v.Vehicle.IsPassengerAssigned == false).ToList();
 
-    public void SaleVehicle(Vehicle vehicle)
+    public void RemoveVehicle(Vehicle vehicle)
     {
         if (TryGetCard(vehicle, out VehicleIcon card, _vehicles) == false)
             return;
 
+        WillBeRemoved?.Invoke(vehicle);
+
         _vehicles.RemoveAll(v => v.Vehicle == vehicle);
         Destroy(card.gameObject);
         Destroy(vehicle.gameObject);
+    }
+
+    private void ClearAllChildren(Transform parent)
+    {
+        foreach (Transform child in parent)
+            Destroy(child.gameObject);
     }
 
     private void OnSpawn(Vehicle vehicle)
@@ -144,13 +154,4 @@ public class PlayerGarage : MonoBehaviour
 
         return false;
     }
-
-    private void SaveGameData()
-    {
-        List<Vehicle> vehicles = _vehicles.Select(v => v.Vehicle).ToList();
-        Saver.SaveVehicles(vehicles);
-    }
-
-    private void OnApplicationQuit() =>
-        SaveGameData();
 }

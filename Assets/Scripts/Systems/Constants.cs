@@ -13,5 +13,7 @@
 
     public const float RatingMultiplier = 10f;
 
-    public const float InitialBalance = 500f;
+    public const float InitialBalance = 0f;
+    public const float InitialVolumeSound = 0.8f;
+    public const float InitialVolumeMusic = 0.3f;
 }

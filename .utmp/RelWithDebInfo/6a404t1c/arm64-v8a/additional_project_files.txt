@@ -1,0 +1,17 @@
+C:\ALL\Coding_And_Other\IJunior\Repository\TaxiBusiness\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\GAToUnityCallbacks.h
+C:\ALL\Coding_And_Other\IJunior\Repository\TaxiBusiness\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\MacroEnd.h
+C:\ALL\Coding_And_Other\IJunior\Repository\TaxiBusiness\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\MacroHeaderBegin.h
+C:\ALL\Coding_And_Other\IJunior\Repository\TaxiBusiness\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\MacroSourceBegin.h
+C:\ALL\Coding_And_Other\IJunior\Repository\TaxiBusiness\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAApplication.h
+C:\ALL\Coding_And_Other\IJunior\Repository\TaxiBusiness\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAConfiguration.h
+C:\ALL\Coding_And_Other\IJunior\Repository\TaxiBusiness\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGADebug.h
+C:\ALL\Coding_And_Other\IJunior\Repository\TaxiBusiness\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAEvents.h
+C:\ALL\Coding_And_Other\IJunior\Repository\TaxiBusiness\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAInput.h
+C:\ALL\Coding_And_Other\IJunior\Repository\TaxiBusiness\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGASoftKeyboard.h
+C:\ALL\Coding_And_Other\IJunior\Repository\TaxiBusiness\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGASoftKeyboardCallbacks.h
+C:\ALL\Coding_And_Other\IJunior\Repository\TaxiBusiness\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGATypes.h
+C:\ALL\Coding_And_Other\IJunior\Repository\TaxiBusiness\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UGAVersion.h
+C:\ALL\Coding_And_Other\IJunior\Repository\TaxiBusiness\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGACallbacks.h
+C:\ALL\Coding_And_Other\IJunior\Repository\TaxiBusiness\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGAConfigurationCallbacks.h
+C:\ALL\Coding_And_Other\IJunior\Repository\TaxiBusiness\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGAKeyEventCallbacks.h
+C:\ALL\Coding_And_Other\IJunior\Repository\TaxiBusiness\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\UnityToGAMotionEventCallbacks.h

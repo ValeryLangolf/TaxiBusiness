@@ -9,13 +9,11 @@ public class DispatcherViewToggler : MonoBehaviour
     [SerializeField] private Sprite _leftArrow;
     [SerializeField] private Sprite _rightArrow;
 
-    private bool _isShow;
+    private bool _isShow = true;
 
     public event Action<bool> Switched;
 
-    public bool IsShow => _isShow;
-
-    private void Awake() =>
+    private void Start() =>
         UpdateSprite();
 
     private void OnEnable() =>

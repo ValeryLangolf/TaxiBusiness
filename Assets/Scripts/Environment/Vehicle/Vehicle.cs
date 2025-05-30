@@ -69,7 +69,7 @@ public class Vehicle : MonoBehaviour
 
     public Quaternion Rotation => transform.rotation;
 
-    public bool IsActivePath => _pathKeeper.IsActivePath;
+    public bool IsActivePath => _pathKeeper != null && _pathKeeper.IsActivePath;
 
     public Waypoint EndPoint => _pathKeeper.EndPoint;
 
@@ -86,7 +86,10 @@ public class Vehicle : MonoBehaviour
         _rotator = new(transform);
         _vehiclePassenger = new(transform, OnPassengerRefused);
         _pathKeeper = new(transform, OnPathDestinated, OnPathCompleted);
-    }        
+    }
+
+    private void Start() =>
+        _pathKeeper.Init(RoadNetwork.Instance.Points);
 
     private void Update()
     {

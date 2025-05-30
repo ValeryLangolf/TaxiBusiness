@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Wallet : MonoBehaviour
@@ -13,9 +12,12 @@ public class Wallet : MonoBehaviour
 
     public float Balance => _balance;
 
-    private void Start()
+    private void Start() =>
+        ProcessChange();
+
+    public void Init(float balance)
     {
-        _balance = Saver.LoadBalance();
+        _balance = balance;
         ProcessChange();
     }
 
@@ -61,10 +63,4 @@ public class Wallet : MonoBehaviour
         _view.UpdateBalanceDisplay(_balance);
         ValueChanged?.Invoke(_balance);
     }
-
-    private void SaveGameData() =>
-        Saver.SaveBalance(_balance);
-
-    private void OnApplicationQuit() =>
-        SaveGameData();
 }

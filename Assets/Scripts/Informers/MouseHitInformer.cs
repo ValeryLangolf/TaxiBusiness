@@ -8,6 +8,7 @@ public class MouseHitInformer : MonoBehaviour
     public event Action<Collider, Vector3> RightHitted;
     public event Action<Passenger> PassengerClicked;
     public event Action<Vehicle> VehicleClicked;
+    public event Action WorldClicked;
 
     private void Update()
     {
@@ -39,6 +40,8 @@ public class MouseHitInformer : MonoBehaviour
 
     private void HandleLeftClickObject()
     {
+        WorldClicked?.Invoke();
+
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit) == false)
             return;
 
@@ -51,6 +54,8 @@ public class MouseHitInformer : MonoBehaviour
 
     private void HandleRightClickObject()
     {
+        WorldClicked?.Invoke();
+
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out RaycastHit hit))
             RightHitted?.Invoke(hit.collider, hit.point);
     }

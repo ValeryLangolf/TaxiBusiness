@@ -42,6 +42,9 @@ public class Pool<T> where T : MonoBehaviour, IDeactivatable<T>
 
     private void Return(T element)
     {
+        if (element == null)
+            return;
+
         element.Deactivated -= Return;
         element.gameObject.SetActive(false);
         _elements.Push(element);

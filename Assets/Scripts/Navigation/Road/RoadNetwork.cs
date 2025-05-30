@@ -1,8 +1,8 @@
 ﻿#if UNITY_EDITOR
 using UnityEditor;
-using System.Linq;
 #endif
 
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 

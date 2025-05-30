@@ -18,11 +18,17 @@ public class Sale : MonoBehaviour
             throw new NullReferenceException("Префаб не установлен");
     }
 
-    private void OnEnable() =>
+    private void OnEnable()
+    {
         _garage.Added += OnAddVehicle;
+        _garage.WillBeRemoved += OnRemoveVehicle;
+    }
 
-    private void OnDisable() =>
+    private void OnDisable()
+    {
         _garage.Added -= OnAddVehicle;
+        _garage.WillBeRemoved -= OnRemoveVehicle;
+    }
 
     private void OnAddVehicle(Vehicle vehicle)
     {
@@ -32,21 +38,39 @@ public class Sale : MonoBehaviour
         UpdateButtonSelection();
     }
 
+    private void OnRemoveVehicle(Vehicle vehicle)
+    {
+        VehicleSaleCard cardToRemove = null;
+
+        foreach (var entry in _cards)
+        {
+            if (entry.Value != vehicle)
+                continue;
+
+            cardToRemove = entry.Key;
+            break;
+        }
+
+        if (cardToRemove == null)
+            return;
+
+        Destroy(cardToRemove.gameObject);
+        _cards.Remove(cardToRemove);
+        UpdateButtonSelection();
+    }
+
     private void OcSaleClicked(VehicleSaleCard card)
     {
-        if(_cards.TryGetValue(card, out Vehicle vehicle) == false)
+        if (_cards.TryGetValue(card, out Vehicle vehicle) == false)
             return;
 
         _wallet.AddMoney(vehicle.Price * _salesIncome);
-        _cards.Remove(card);
-        _garage.SaleVehicle(vehicle);
-        Destroy(card.gameObject);
-        UpdateButtonSelection();
+        _garage.RemoveVehicle(vehicle);
     }
 
     private void UpdateButtonSelection()
     {
-        if(_cards.Count == 1)
+        if (_cards.Count == 1)
         {
             VehicleSaleCard firstCard = null;
 
