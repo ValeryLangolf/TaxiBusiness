@@ -9,6 +9,7 @@ public class Shop : MonoBehaviour
     [SerializeField] private List<Vehicle> _vehicles;
     [SerializeField] private VehicleShopCard _prefab;
     [SerializeField] private Transform _content;
+    [SerializeField] private Transform _startPosition;
 
     private readonly Dictionary<VehicleShopCard, Vehicle> _cards = new();
 
@@ -50,7 +51,7 @@ public class Shop : MonoBehaviour
         if (_wallet.TrySpendMoney(vehiclePrefab.Params.Price) == false)
             return;
 
-        _spawner.Spawn(vehiclePrefab);
+        _spawner.Spawn(vehiclePrefab, _startPosition.position, _startPosition.rotation);
         SfxPlayer.Instance.PlayVehiclePurchased();
     }
 
