@@ -29,6 +29,8 @@ public class Saver
         public string Name;
         public Vector3 Position;
         public Quaternion Rotation;
+        public float RemainingFuel;
+        public float RemainingRepair;
     }
 
     public bool TryLoad(out SaveData saveData)

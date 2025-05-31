@@ -30,14 +30,16 @@ public class VehicleSaleCard : MonoBehaviour
         if (vehicle == null)
             return;
 
-        _rating.fillAmount = Mathf.Clamp(vehicle.MoneyRate, 0, 1);
-        _tittleLabel.text = vehicle.Name;
-        _vehicleImage.sprite = vehicle.Sprite;
-        _speed.SetValue(vehicle.Speed, Constants.MaxSpeed);
-        _strength.SetValue(vehicle.WearResistance, Constants.MaxWearResistance);
-        _fuel.SetValue(vehicle.FuelEfficiency, Constants.MaxFuelEfficiency);
-        _descriptionLabel.text = vehicle.Description;
-        _priceLabel.text = (vehicle.Price * salesIncome).ToString("F0");
+        VehicleParams vehicleParams = vehicle.Params;
+
+        _rating.fillAmount = Mathf.Clamp(vehicleParams.MoneyRate, 0, 1);
+        _tittleLabel.text = vehicleParams.Name;
+        _vehicleImage.sprite = vehicleParams.Sprite;
+        _speed.SetValue(vehicleParams.Speed, Constants.MaxSpeed);
+        _strength.SetValue(vehicleParams.WearResistance, Constants.MaxWearResistance);
+        _fuel.SetValue(vehicleParams.FuelEfficiency, Constants.MaxFuelEfficiency);
+        _descriptionLabel.text = vehicleParams.Description;
+        _priceLabel.text = (vehicleParams.Price * salesIncome).ToString("F0");
     }
 
     public void SetInteractButton(bool isOn) =>

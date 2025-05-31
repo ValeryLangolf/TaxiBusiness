@@ -48,7 +48,7 @@ public class Wallet : MonoBehaviour
         return true;
     }
 
-    public void EmptyWallet(float amount)
+    public void SpendOnEmptyWallet(float amount)
     {
         if (amount < 0)
             throw new ArgumentOutOfRangeException("Значение должно быть положительным!");

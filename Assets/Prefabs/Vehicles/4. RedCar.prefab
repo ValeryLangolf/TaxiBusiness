@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3740405894512397514}
   - component: {fileID: 2853334794128048440}
   - component: {fileID: 2535222042804448764}
+  - component: {fileID: 745602696918293224}
   - component: {fileID: 9204251012365960358}
   m_Layer: 3
   m_Name: 4. RedCar
@@ -92,6 +93,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
+--- !u!114 &745602696918293224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836528091573056692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58af09f750d06bb49934b6481cfe7c82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: "\u041D\u0435\u043F\u043B\u043E\u0445\u043E\u0435 \u0430\u0432\u0442\u043E"
+  _description: "\u0412\u044B\u0431\u043E\u0440 \u0431\u043E\u043B\u044C\u0448\u0438\u043D\u0441\u0442\u0432\u0430
+    \u0430\u0432\u0442\u043E\u043C\u043E\u0431\u0438\u043B\u0438\u0441\u0442\u043E\u0432.
+    \u041D\u0430\u0434\u0451\u0436\u043D\u044B\u0439 \u0438 \u043F\u0440\u0430\u043A\u0442\u0438\u0447\u043D\u044B\u0439
+    \u0442\u0440\u0430\u043D\u0441\u043F\u043E\u0440\u0442."
+  _sprite: {fileID: 21300000, guid: f15b7e8055b546c45a6d7376c8855cad, type: 3}
+  _speed: 10
+  _wearResistance: 6
+  _fuelEfficiency: 5
+  _price: 5000
+  _moneyRate: 0.3
 --- !u!114 &9204251012365960358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,17 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84db3a1516d9b37499aa80b880a589e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: "\u041D\u0435\u043F\u043B\u043E\u0445\u043E\u0435 \u0430\u0432\u0442\u043E"
-  _description: "\u0412\u044B\u0431\u043E\u0440 \u0431\u043E\u043B\u044C\u0448\u0438\u043D\u0441\u0442\u0432\u0430
-    \u0430\u0432\u0442\u043E\u043C\u043E\u0431\u0438\u043B\u0438\u0441\u0442\u043E\u0432.
-    \u041D\u0430\u0434\u0451\u0436\u043D\u044B\u0439 \u0438 \u043F\u0440\u0430\u043A\u0442\u0438\u0447\u043D\u044B\u0439
-    \u0442\u0440\u0430\u043D\u0441\u043F\u043E\u0440\u0442."
-  _sprite: {fileID: 21300000, guid: f15b7e8055b546c45a6d7376c8855cad, type: 3}
-  _speed: 10
-  _wearResistance: 8
-  _fuelEfficiency: 6
-  _price: 5000
-  _moneyRate: 0.3
+  _params: {fileID: 745602696918293224}
 --- !u!1001 &4830502665307525500
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -64,7 +64,7 @@ public class Sale : MonoBehaviour
         if (_cards.TryGetValue(card, out Vehicle vehicle) == false)
             return;
 
-        _wallet.AddMoney(vehicle.Price * _salesIncome);
+        _wallet.AddMoney(vehicle.Params.Price * _salesIncome);
         _garage.RemoveVehicle(vehicle);
     }
 

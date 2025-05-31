@@ -74,7 +74,7 @@ public class DispatcherCenter : MonoBehaviour
 
     private void OnCardCycleCompleted(DispatcherCard card)
     {
-        _wallet.EmptyWallet(card.SalaryRate);
+        _wallet.SpendOnEmptyWallet(card.SalaryRate);
         AssignPassengerVehicle();
 
         Paided?.Invoke(card.SalaryRate);
@@ -107,7 +107,7 @@ public class DispatcherCenter : MonoBehaviour
     private bool TryGetRandomVehicle(out Vehicle vehicle)
     {
         vehicle = null;
-        List<VehicleParams> vehicles = _garage.GetAvailable();
+        List<VehicleIcon> vehicles = _garage.GetAvailable();
 
         if (vehicles.Count == 0)
             return false;

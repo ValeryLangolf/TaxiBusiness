@@ -14,14 +14,15 @@ public class VehicleSpawner : MonoBehaviour
         position.x += GetRandomOffset();
         position.z += GetRandomOffset();
 
-        Vehicle vehicle = Instantiate(vehiclePrefab, position, _startPosition.rotation);
-        Spawned?.Invoke(vehicle);
+        Spawn(vehiclePrefab, position, _startPosition.rotation);
     }
 
-    public void Spawn(Vehicle vehiclePrefab, Vector3 position, Quaternion rotation)
+    public Vehicle Spawn(Vehicle vehiclePrefab, Vector3 position, Quaternion rotation)
     {
         Vehicle vehicle = Instantiate(vehiclePrefab, position, rotation);
         Spawned?.Invoke(vehicle);
+
+        return vehicle;
     }
 
     private float GetRandomOffset() =>

@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.tvOS;
 
 public class PlayerGarage : MonoBehaviour
 {
@@ -14,14 +13,15 @@ public class PlayerGarage : MonoBehaviour
     [SerializeField] private Wallet _wallet;
     [SerializeField] private VehicleIcon _iconPrefab;
     [SerializeField] private IconContent _iconContent;
+    [SerializeField] private VehicleWorldIndicatorSpawner _lackIndicatorSpawner;
 
-    private readonly List<VehicleParams> _vehicles = new();
+    private readonly List<VehicleIcon> _cards = new();
 
     public event Action<float, Vector3> MoneyAdded;
     public event Action<Vehicle> Added;
     public event Action<Vehicle> WillBeRemoved;
 
-    public List<VehicleParams> VehiclesParams => new(_vehicles);
+    public List<VehicleIcon> Cards => new(_cards);
 
     private void OnEnable()
     {
@@ -39,7 +39,7 @@ public class PlayerGarage : MonoBehaviour
 
     public void Init(List<Saver.VehicleSaveData> vehicleSaveData)
     {
-        foreach (VehicleParams vehicleParams in new List<VehicleParams>(_vehicles))
+        foreach (VehicleIcon vehicleParams in new List<VehicleIcon>(_cards))
             RemoveVehicle(vehicleParams.Vehicle);
 
         ClearAllChildren(_iconContent.transform);
@@ -53,21 +53,25 @@ public class PlayerGarage : MonoBehaviour
         foreach (Saver.VehicleSaveData vehicleData in vehicleSaveData)
         {
             Vehicle prefab = _shop.GetVehiclePrefab(vehicleData.Name);
-            _spawner.Spawn(prefab, vehicleData.Position, vehicleData.Rotation);
+            Vehicle vehicle = _spawner.Spawn(prefab, vehicleData.Position, vehicleData.Rotation);
+            vehicle.Params.SetRemainingFuel(vehicleData.RemainingFuel);
+            vehicle.Params.SetRemainingRepair(vehicleData.RemainingRepair);
         }
     }
 
-    public List<VehicleParams> GetAvailable() =>
-        _vehicles.Where(v => v.Vehicle.IsActivePath == false && v.Vehicle.IsPassengerAssigned == false).ToList();
+    public List<VehicleIcon> GetAvailable() =>
+        _cards.Where(v => v.Vehicle.IsActivePath == false 
+        && v.Vehicle.IsPassengerAssigned == false
+        && v.Vehicle.Params.CanGo).ToList();
 
     public void RemoveVehicle(Vehicle vehicle)
     {
-        if (TryGetCard(vehicle, out VehicleIcon card, _vehicles) == false)
+        if (TryGetCard(vehicle, out VehicleIcon card, _cards) == false)
             return;
 
         WillBeRemoved?.Invoke(vehicle);
 
-        _vehicles.RemoveAll(v => v.Vehicle == vehicle);
+        _cards.RemoveAll(v => v.Vehicle == vehicle);
         Destroy(card.gameObject);
         Destroy(vehicle.gameObject);
     }
@@ -80,18 +84,16 @@ public class PlayerGarage : MonoBehaviour
 
     private void OnSpawn(Vehicle vehicle)
     {
-        VehicleIcon icon = Instantiate(_iconPrefab, _iconContent.transform);
-        icon.SetIcon(vehicle.Sprite);
-
-        VehicleParams vehicleParams = new(vehicle, icon);
-        _vehicles.Add(new(vehicle, icon));
-        SubscribeVehicle(vehicleParams);
+        VehicleIcon card = Instantiate(_iconPrefab, _iconContent.transform);        
+        card.Init(vehicle);
+        _cards.Add(card);
+        SubscribeVehicle(card);
         Added?.Invoke(vehicle);
     }
 
     private void OnSelected(Vehicle vehicle)
     {
-        if (TryGetCard(vehicle, out VehicleIcon card, _vehicles) == false)
+        if (TryGetCard(vehicle, out VehicleIcon card, _cards) == false)
             return;
 
         card.Select();
@@ -99,14 +101,16 @@ public class PlayerGarage : MonoBehaviour
 
     private void OnDeselected(Vehicle vehicle)
     {
-        if (TryGetCard(vehicle, out VehicleIcon card, _vehicles))
+        if (TryGetCard(vehicle, out VehicleIcon card, _cards))
             card.Deselect();
     }
 
-    private void SubscribeVehicle(VehicleParams vehicleParams)
+    private void SubscribeVehicle(VehicleIcon card)
     {
-        vehicleParams.Vehicle.PassengerDelivered += OnPassengerDelivered;
-        vehicleParams.Card.Clicked += OnCardClicked;
+        card.Vehicle.PassengerDelivered += OnPassengerDelivered;
+        card.Vehicle.Params.FuelWasted += OnFuelWasted;
+        card.Vehicle.Params.RepairWasted += OnRepairWasted;
+        card.Clicked += OnCardClicked;
     }
 
     private void OnPassengerDelivered(Vehicle vehicle, float profit)
@@ -117,20 +121,19 @@ public class PlayerGarage : MonoBehaviour
 
     private void OnCardClicked(VehicleIcon vehicleCard)
     {
-        if (TryGetVehicle(vehicleCard, out Vehicle vehicle, _vehicles))
+        if (TryGetVehicle(vehicleCard, out Vehicle vehicle, _cards))
             _selector.Select(vehicle);
     }
 
-    private bool TryGetCard(Vehicle vehicle, out VehicleIcon card, List<VehicleParams> vehicles)
+    private bool TryGetCard(Vehicle vehicle, out VehicleIcon vehicleIcon, List<VehicleIcon> cards)
     {
-        card = null;
+        vehicleIcon = null;
 
-        foreach (VehicleParams vehicleParams in vehicles)
+        foreach (VehicleIcon card in cards)
         {
-            if (vehicleParams.Vehicle == vehicle)
+            if (card.Vehicle == vehicle)
             {
-                card = vehicleParams.Card;
-
+                vehicleIcon = card;
                 return true;
             }
         }
@@ -138,20 +141,25 @@ public class PlayerGarage : MonoBehaviour
         return false;
     }
 
-    private bool TryGetVehicle(VehicleIcon card, out Vehicle vehicle, List<VehicleParams> vehicles)
+    private bool TryGetVehicle(VehicleIcon vehicleIcon, out Vehicle vehicle, List<VehicleIcon> cards)
     {
         vehicle = null;
 
-        foreach (VehicleParams vehicleParams in vehicles)
+        foreach (VehicleIcon card in cards)
         {
-            if (vehicleParams.Card == card)
+            if (vehicleIcon == card)
             {
-                vehicle = vehicleParams.Vehicle;
-
+                vehicle = card.Vehicle;
                 return true;
             }
         }
 
         return false;
     }
+
+    private void OnFuelWasted(VehicleParams vehicleParams) =>
+        _lackIndicatorSpawner.SpawnFuelIndicator(vehicleParams);
+    
+    private void OnRepairWasted(VehicleParams vehicleParams) =>
+        _lackIndicatorSpawner.SpawnRepairIndicator(vehicleParams);
 }

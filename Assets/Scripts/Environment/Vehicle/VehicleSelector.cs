@@ -42,6 +42,9 @@ public class VehicleSelector : MonoBehaviour
 
     public void DeselectCurrentVehicle()
     {
+        if(_selectedVehicle == null)
+            return;
+
         Deselected?.Invoke(_selectedVehicle);
         _selectedVehicle = null;
     }

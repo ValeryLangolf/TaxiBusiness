@@ -15,5 +15,15 @@
 
     public const float InitialBalance = 0f;
     public const float InitialVolumeSound = 0.8f;
-    public const float InitialVolumeMusic = 0.3f;
+    public const float InitialVolumeMusic = 0.2f;
+
+    public const float FullFuel = 1f;
+    public const float CostFuel = 20f;
+    public const float FuelFillingSpeed = 0.2f;
+    public const float FuelConsumptionMultiplier = 0.01f;
+
+    public const float FullRepair = 1f;
+    public const float CostRepair = 30f;
+    public const float RepairFillingSpeed = 0.2f;
+    public const float WearResistanceConsumptionMultiplier = 0.004f;
 }

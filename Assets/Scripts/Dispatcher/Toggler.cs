@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GarageViewToggler : MonoBehaviour
+public class Toggler : MonoBehaviour
 {
     [SerializeField] private Button _button;
     [SerializeField] private Image _arrow;

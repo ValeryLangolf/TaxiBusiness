@@ -11,6 +11,7 @@ public class SfxPlayer : MonoBehaviour
     [SerializeField] private AudioClip _unsuccessfulPaymentAttempt;
     [SerializeField] private AudioClip _vehicleSelected;
     [SerializeField] private AudioClip _vehiclePurchased;
+    [SerializeField] private AudioClip _progressResetted;
 
     public static SfxPlayer Instance { get; private set; }
 
@@ -52,4 +53,7 @@ public class SfxPlayer : MonoBehaviour
 
     public void PlayVehiclePurchased() =>
         _source.PlayOneShot(_vehiclePurchased);
+
+    public void PlayProgressResetted() =>
+        _source.PlayOneShot(_progressResetted);
 }

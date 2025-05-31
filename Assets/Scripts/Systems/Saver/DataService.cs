@@ -44,6 +44,7 @@ public class DataService : MonoBehaviour
     public void ResetGame()
     {
         _saver.Save(new Saver.SaveData());
+        SfxPlayer.Instance.PlayProgressResetted();
         LoadGameData();
     }
 
@@ -61,12 +62,14 @@ public class DataService : MonoBehaviour
     {
         List<Saver.VehicleSaveData> vehicleSaveDatas = new();
 
-        foreach (VehicleParams vehicleParams in _garage.VehiclesParams)
+        foreach (VehicleIcon card in _garage.Cards)
             vehicleSaveDatas.Add(new()
             {
-                Name = vehicleParams.Vehicle.Name,
-                Position = vehicleParams.Vehicle.Position,
-                Rotation = vehicleParams.Vehicle.Rotation,
+                Name = card.Vehicle.Params.Name,
+                Position = card.Vehicle.Position,
+                Rotation = card.Vehicle.Rotation,
+                RemainingFuel = card.Vehicle.Params.RemainingFuel,
+                RemainingRepair = card.Vehicle.Params.RemainingRepair,
             });
 
         return vehicleSaveDatas;

@@ -1,11 +1,11 @@
 using UnityEngine;
 
-public class GaragePanelShower : MonoBehaviour
+public class TogglePanelShower : MonoBehaviour
 {
     private const string IsShow = nameof(IsShow);
 
     [SerializeField] private Animator _animator;
-    [SerializeField] private GarageViewToggler _toggler;
+    [SerializeField] private Toggler _toggler;
 
     private void OnEnable() =>
         _toggler.Switched += OnSwitch;

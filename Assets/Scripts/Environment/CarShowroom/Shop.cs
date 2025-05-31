@@ -36,7 +36,7 @@ public class Shop : MonoBehaviour
     public Vehicle GetVehiclePrefab(string name)
     {
         foreach (Vehicle vehicle in _vehicles)
-            if (vehicle.Name == name)
+            if (vehicle.Params.Name == name)
                 return vehicle;
 
         return null;
@@ -47,7 +47,7 @@ public class Shop : MonoBehaviour
         if (_cards.TryGetValue(card, out Vehicle vehiclePrefab) == false)
             return;
 
-        if (_wallet.TrySpendMoney(vehiclePrefab.Price) == false)
+        if (_wallet.TrySpendMoney(vehiclePrefab.Params.Price) == false)
             return;
 
         _spawner.Spawn(vehiclePrefab);
@@ -59,7 +59,7 @@ public class Shop : MonoBehaviour
         foreach (VehicleShopCard card in _cards.Keys)
         {
             if (_cards.TryGetValue(card, out Vehicle vehiclePrefab))
-                card.SetInteractButton(balance >= vehiclePrefab.Price);
+                card.SetInteractButton(balance >= vehiclePrefab.Params.Price);
         }
     }
 }

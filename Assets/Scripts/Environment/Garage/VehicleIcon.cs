@@ -8,7 +8,11 @@ public class VehicleIcon : MonoBehaviour
     [SerializeField] private Image _selectImage;
     [SerializeField] private ButtonClickInformer _clickInformer;
 
+    private Vehicle _vehicle;
+
     public event Action<VehicleIcon> Clicked;
+
+    public Vehicle Vehicle => _vehicle;
 
     private void Awake() =>
         Deselect();
@@ -17,10 +21,13 @@ public class VehicleIcon : MonoBehaviour
         _clickInformer.Clicked += OnClick;
 
     private void OnDisable() =>
-        _clickInformer.Clicked -= OnClick;
+        _clickInformer.Clicked -= OnClick;        
 
-    public void SetIcon(Sprite sprite) =>
-        _imageIcon.sprite = sprite;
+    public void Init(Vehicle vehicle)
+    {
+        _vehicle = vehicle;
+        _imageIcon.sprite = vehicle.Params.Sprite;
+    }
 
     public void Select() =>
         _selectImage.gameObject.SetActive(true);

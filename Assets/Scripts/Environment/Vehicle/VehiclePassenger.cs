@@ -52,28 +52,6 @@ public class VehiclePassenger
         UnsubscribePassanger(_passenger);
     }
 
-    private void SubscribePassanger(Passenger passenger)
-    {
-        if (passenger == _passenger)
-            return;
-
-        UnsubscribePassanger(_passenger);
-
-        if(passenger != null)
-            passenger.AcceptOrder(this);
-        
-        _passenger = passenger;
-    }
-
-    public void UnsubscribePassanger(Passenger passenger)
-    {
-        if (passenger == null)
-            return;
-
-        passenger.CancelOrder(this);
-        _passenger = null;
-    }
-
     public void Refuse(Passenger passenger)
     {
         UnsubscribePassanger(passenger);
@@ -87,5 +65,27 @@ public class VehiclePassenger
         float profit = moneyRate * Constants.RatingMultiplier * distance;
 
         return profit;
+    }
+
+    private void SubscribePassanger(Passenger passenger)
+    {
+        if (passenger == _passenger)
+            return;
+
+        UnsubscribePassanger(_passenger);
+
+        if (passenger != null)
+            passenger.AcceptOrder(this);
+
+        _passenger = passenger;
+    }
+
+    private void UnsubscribePassanger(Passenger passenger)
+    {
+        if (passenger == null)
+            return;
+
+        passenger.CancelOrder(this);
+        _passenger = null;
     }
 }

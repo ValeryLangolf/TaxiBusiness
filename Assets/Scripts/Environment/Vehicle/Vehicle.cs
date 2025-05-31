@@ -2,42 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(VehicleParams))]
 public class Vehicle : MonoBehaviour
 {
-    #region SerializedFields
-    [Header("Параметры автомобиля")]
-
-    [Tooltip("Название авто \n(так отображается название в карточке магазина)")]
-    [SerializeField]
-    private string _name;
-
-    [Tooltip("Краткое описание авто, плюсы и минусы")]
-    [SerializeField, TextArea(3, 10)]
-    private string _description;
-
-    [Tooltip("Отображается в карточках магазина и иконках авто")]
-    [SerializeField] private Sprite _sprite;
-
-    [Tooltip("Скорость авто \n(не соответствует км/ч)")]
-    [SerializeField, Range(Constants.MinSpeed, Constants.MaxSpeed)]
-    private float _speed;
-
-    [Tooltip("Износостойкость \n(чем выше значение, тем медленнее износ)")]
-    [SerializeField, Range(Constants.MinWearResistance, Constants.MaxWearResistance)]
-    private float _wearResistance;
-
-    [Tooltip("Экономичность топлива \n(чем выше значение, тем дольше расходуется топливо)")]
-    [SerializeField, Range(Constants.MinFuelEfficiency, Constants.MaxFuelEfficiency)]
-    private float _fuelEfficiency;
-
-    [Tooltip("Изначальная стоимость авто в магазине \n(может меняться по мере прокачки для последующей продажи)")]
-    [SerializeField]
-    private float _price;
-
-    [Tooltip("Коэффициент, влияющий на заработок. \n(чем выше значение, тем выше доход с поездки)")]
-    [SerializeField, Range(0f, 1f)]
-    private float _moneyRate;
-    #endregion
+    [SerializeField] private VehicleParams _params;
 
     private Mover _mover;
     private Rotator _rotator;
@@ -49,21 +17,7 @@ public class Vehicle : MonoBehaviour
     public event Action<Vehicle, float> PassengerDelivered;
 
     #region Properties
-    public float MoneyRate => _moneyRate;
-
-    public string Name => _name;
-
-    public Sprite Sprite => _sprite;
-
-    public float Speed => _speed;
-
-    public float WearResistance => _wearResistance;
-
-    public float FuelEfficiency => _fuelEfficiency;
-
-    public string Description => _description;
-
-    public float Price => _price;
+    public VehicleParams Params => _params;
 
     public Vector3 Position => transform.position;
 
@@ -96,7 +50,21 @@ public class Vehicle : MonoBehaviour
         if (_pathKeeper.IsActivePath == false)
             return;
 
-        _mover.Move(_pathKeeper.CurrentTarget, _speed);
+        if (_params.CanGo == false)
+        {
+            if (_vehiclePassenger.IsInCar)
+                _vehiclePassenger.DropPassenger();                
+            else if (_vehiclePassenger.IsAssigned)
+                _vehiclePassenger.Refuse(_vehiclePassenger.Passenger);
+
+            OnPathCompleted();
+
+            return;
+        }
+
+        _mover.Move(_pathKeeper.CurrentTarget, _params.Speed);
+        _params.BurnFuel();
+        _params.Wear();
         _pathKeeper.UpdatePath();
 
         if (_pathKeeper.IsActivePath)
@@ -126,7 +94,7 @@ public class Vehicle : MonoBehaviour
         }
         else
         {
-            float profit = _vehiclePassenger.GetProfit(_moneyRate);
+            float profit = _vehiclePassenger.GetProfit(_params.MoneyRate);
             _vehiclePassenger.DropPassenger();
             PassengerDelivered?.Invoke(this, profit);
         }
