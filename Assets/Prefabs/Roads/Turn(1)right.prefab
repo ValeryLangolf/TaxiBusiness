@@ -271,7 +271,7 @@ Transform:
   m_GameObject: {fileID: 7523467895899500003}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10.64}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -444,5 +444,5 @@ MonoBehaviour:
   _count: 5
   _isDistanceDependency: 0
   _distance: 1
-  _isAutoEqualizingPoint: 1
+  _isAutoEqualizingPoint: 0
   _arcValue: {x: 0, y: 0, z: 0}
