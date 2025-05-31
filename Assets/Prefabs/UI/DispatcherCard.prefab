@@ -415,8 +415,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fillImage: {fileID: 4515606776902171205}
   _buttonRemove: {fileID: 1090159109445331000}
-  _timeInSeconds: 5
-  _salaryRate: 5
+  _timeInSeconds: 10
+  _salaryRate: 25
 --- !u!1 &7517174434211117266
 GameObject:
   m_ObjectHideFlags: 0
