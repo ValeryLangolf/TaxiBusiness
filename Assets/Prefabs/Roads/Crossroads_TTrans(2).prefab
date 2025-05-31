@@ -218,7 +218,7 @@ MonoBehaviour:
   _count: 5
   _isDistanceDependency: 0
   _distance: 1
-  _isAutoEqualizingPoint: 1
+  _isAutoEqualizingPoint: 0
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!1 &808390001126090459
 GameObject:
@@ -438,7 +438,7 @@ MonoBehaviour:
   _count: 5
   _isDistanceDependency: 0
   _distance: 1
-  _isAutoEqualizingPoint: 1
+  _isAutoEqualizingPoint: 0
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!1 &1577854032567924711
 GameObject:
@@ -552,7 +552,7 @@ MonoBehaviour:
   _count: 5
   _isDistanceDependency: 0
   _distance: 1
-  _isAutoEqualizingPoint: 1
+  _isAutoEqualizingPoint: 0
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!1 &1967842299470087673
 GameObject:
@@ -1005,7 +1005,7 @@ Transform:
   m_GameObject: {fileID: 5373091690253226171}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1448,7 +1448,7 @@ MonoBehaviour:
   _count: 5
   _isDistanceDependency: 0
   _distance: 1
-  _isAutoEqualizingPoint: 1
+  _isAutoEqualizingPoint: 0
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!1 &6663793796541342653
 GameObject:

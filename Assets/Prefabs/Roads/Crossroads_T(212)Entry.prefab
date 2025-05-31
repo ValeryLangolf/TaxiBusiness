@@ -59,7 +59,7 @@ Transform:
   m_GameObject: {fileID: 278841705249918600}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 56.86, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -607,7 +607,7 @@ MonoBehaviour:
   _count: 5
   _isDistanceDependency: 0
   _distance: 1
-  _isAutoEqualizingPoint: 1
+  _isAutoEqualizingPoint: 0
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!1 &2908739132780648820
 GameObject:
@@ -967,7 +967,7 @@ MonoBehaviour:
   _count: 5
   _isDistanceDependency: 0
   _distance: 1
-  _isAutoEqualizingPoint: 1
+  _isAutoEqualizingPoint: 0
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!1 &5121692305692245908
 GameObject:
@@ -1305,7 +1305,7 @@ MonoBehaviour:
   _count: 5
   _isDistanceDependency: 0
   _distance: 1
-  _isAutoEqualizingPoint: 1
+  _isAutoEqualizingPoint: 0
   _arcValue: {x: 0, y: 0, z: 0}
 --- !u!1 &8229734177748260981
 GameObject:
