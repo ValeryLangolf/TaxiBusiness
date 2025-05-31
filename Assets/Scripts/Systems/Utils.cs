@@ -16,10 +16,10 @@ public static class Utils
         if (list1.Count != list2.Count)
             return false;
 
-        var sortedList1 = list1.OrderBy(item => item.name).ToList();
-        var sortedList2 = list2.OrderBy(item => item.name).ToList();
+        var filteredList1 = list1.Where(item => item != null).OrderBy(item => item.name).ToList();
+        var filteredList2 = list2.Where(item => item != null).OrderBy(item => item.name).ToList();
 
-        return sortedList1.SequenceEqual(sortedList2);
+        return filteredList1.SequenceEqual(filteredList2);
     }
 
     public static Waypoint GetNearestSectionAndPoint(Vector3 position, List<Waypoint> waypoints)
