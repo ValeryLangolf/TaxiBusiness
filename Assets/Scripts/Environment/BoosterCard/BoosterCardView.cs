@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AdvertisingCardView : MonoBehaviour
+public class BoosterCardView : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _passengerPercent;
     [SerializeField] private TextMeshProUGUI _time;
@@ -11,7 +11,7 @@ public class AdvertisingCardView : MonoBehaviour
     [SerializeField] private Image _fill;
 
     public void SetPercent(float percent) =>
-        _passengerPercent.SetText($"{percent}%");
+        _passengerPercent.SetText($"+{percent:F0}%");
 
     public void SetTime(float timeInSeconds)
     {
@@ -31,10 +31,10 @@ public class AdvertisingCardView : MonoBehaviour
     }
 
     public void SetPrice(float value) =>
-        _price.SetText(value.ToString());
+        _price.SetText($"{value:F0}");
 
-    public void SetFill(float maxValue, float currentValue) =>
-        _fill.fillAmount = currentValue/maxValue;
+    public void SetFill(float value) =>
+        _fill.fillAmount = value;
 
     public void ResetFill() =>
         _fill.fillAmount = 0;

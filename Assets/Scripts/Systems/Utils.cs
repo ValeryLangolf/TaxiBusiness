@@ -101,4 +101,6 @@ public static class Utils
         HashSet<T> newSet = new HashSet<T>(newCollection, comparer);
         return oldCollection.Any(item => newSet.Contains(item) == false);
     }
+
+
 }

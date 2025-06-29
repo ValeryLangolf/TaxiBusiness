@@ -74,7 +74,7 @@ public class BottomPanel : MonoBehaviour
     {
         if (_fuelFillButton.IsPressed && vehicleParams.TryFillFuel(Constants.FuelFillingSpeed * Time.deltaTime))
         {
-            _wallet.SpendOnEmptyWallet(Constants.PriceFuel * Time.deltaTime);
+            _wallet.SpendOnEmptyWallet(FuelParams.CurrentPrice * Time.deltaTime);
 
             if (_fuelFillButton.IsPlaying == false)
                 _fuelFillButton.PlaySound();
@@ -89,7 +89,7 @@ public class BottomPanel : MonoBehaviour
     {
         if (_repairFillButton.IsPressed && vehicleParams.TryFillRepair(Constants.RepairFillingSpeed * Time.deltaTime))
         {
-            _wallet.SpendOnEmptyWallet(Constants.PriceRepair * Time.deltaTime);
+            _wallet.SpendOnEmptyWallet(RepairParams.CurrentPrice * Time.deltaTime);
 
             if (_repairFillButton.IsPlaying == false)
                 _repairFillButton.PlaySound();

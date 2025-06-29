@@ -1,10 +1,12 @@
 using System;
 using UnityEngine;
 
-public class AdvertisingCard : MonoBehaviour
+public class BoosterCard : MonoBehaviour
 {
-    [SerializeField] private AdvertisingCardView _view;
+    [SerializeField] private BoosterCardView _view;
     [SerializeField] private PurchaseButtonHandler _purchasedButton;
+    [SerializeField] private BoosterType _type;
+    [SerializeField] private RotatotImageRepeatButton _repeatButton;
     [SerializeField] private float _passengerPercent;
     [SerializeField] private float _timeInSeconds;
     [SerializeField] private float _price;
@@ -12,9 +14,9 @@ public class AdvertisingCard : MonoBehaviour
     private float _remainingTime;
     private bool _isOn;
 
-    public event Action<AdvertisingCard> Started;
-    public event Action<AdvertisingCard> Completed;
-    public event Action<AdvertisingCard> Clicked;
+    public event Action<BoosterCard> Started;
+    public event Action<BoosterCard> Completed;
+    public event Action<BoosterCard> Clicked;
 
     public bool IsOn => _isOn;
 
@@ -22,26 +24,21 @@ public class AdvertisingCard : MonoBehaviour
 
     public float Price => _price;
 
+    public bool IsRepeat => _repeatButton.IsPlaying;
+
+    public BoosterType Type => _type;
+
     private void OnEnable() =>
-        _purchasedButton.Clicked += OnClick;
+        _purchasedButton.Clicked += OnClickPurchasedButton;
 
     private void OnDisable() =>
-        _purchasedButton.Clicked -= OnClick;
+        _purchasedButton.Clicked -= OnClickPurchasedButton;
 
     public void Init()
     {
         ResetParams();
-        _view.SetPrice(_price);
-    }
-
-    public void ResetParams()
-    {
         _view.SetPercent(_passengerPercent);
-        _view.SetTime(_timeInSeconds);
-        _view.ResetFill();
-        _purchasedButton.SetInteractable(true);
-        _remainingTime = 0;
-        _isOn = false;
+        _view.SetPrice(_price);
     }
 
     public void UpdateTime()
@@ -51,7 +48,7 @@ public class AdvertisingCard : MonoBehaviour
 
         _remainingTime -= Time.deltaTime;
         _remainingTime = Mathf.Max(_remainingTime, 0);
-        _view.SetFill(_timeInSeconds, _remainingTime);
+        _view.SetFill(_remainingTime/_timeInSeconds);
         _view.SetTime(_remainingTime);
 
         if (_remainingTime == 0)
@@ -61,22 +58,29 @@ public class AdvertisingCard : MonoBehaviour
         }
     }
 
-    public void EnableCard()
+    public void Enable()
     {
-        _purchasedButton.SetInteractable(false);
         _remainingTime = _timeInSeconds;
         _isOn = true;
         Started?.Invoke(this);
     }
 
-    public void SetInteractButton(bool isOn)
+    public void SetInteractButton(bool canOn)
     {
-        if(_isOn || isOn == false)
+        if(_isOn || canOn == false)
             _purchasedButton.SetInteractable(false);
         else
             _purchasedButton.SetInteractable(true);
     }
 
-    private void OnClick() =>
+    private void OnClickPurchasedButton() =>
         Clicked?.Invoke(this);
+
+    private void ResetParams()
+    {
+        _view.SetTime(_timeInSeconds);
+        _view.ResetFill();        
+        _remainingTime = 0;
+        _isOn = false;
+    }
 }

@@ -104,7 +104,7 @@ public class Vehicle : MonoBehaviour
         if(_params.TryFillFuel(Constants.FuelFillingSpeed * Time.deltaTime) == false)
             return;
 
-        MoneySpended?.Invoke(Constants.PriceFuel * Time.deltaTime);
+        MoneySpended?.Invoke(FuelParams.CurrentPrice * Time.deltaTime);
     }
 
     private void FillRepairAutomatically()
@@ -115,7 +115,7 @@ public class Vehicle : MonoBehaviour
         if (_params.TryFillRepair(Constants.RepairFillingSpeed * Time.deltaTime) == false)
             return;
 
-        MoneySpended?.Invoke(Constants.PriceRepair * Time.deltaTime);
+        MoneySpended?.Invoke(RepairParams.CurrentPrice * Time.deltaTime);
     }
 
     private void OnPathDestinated() =>
