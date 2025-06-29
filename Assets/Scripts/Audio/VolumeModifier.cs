@@ -11,37 +11,37 @@ public class VolumeModifier : MonoBehaviour
     private const string Sound = nameof(Sound);
 
     [SerializeField] private AudioMixer _mixer;
-    [SerializeField] private Slider _sliderVolumeMusic;
-    [SerializeField] private Slider _sliderVolumeSound;
+    [SerializeField] private Slider _musicSlider;
+    [SerializeField] private Slider _soundSlider;
 
     private float _minimumValueSlider;
     private float _maximumValueSlider;
 
     private void Start()
     {
-        _minimumValueSlider = _sliderVolumeMusic.minValue;
-        _maximumValueSlider = _sliderVolumeMusic.maxValue;
+        _minimumValueSlider = _musicSlider.minValue;
+        _maximumValueSlider = _musicSlider.maxValue;
 
-        OnChangedMusicVolume(_sliderVolumeMusic.value);
-        OnChangedGameVolume(_sliderVolumeSound.value);
+        OnChangedMusic(_musicSlider.value);
+        OnChangedSound(_soundSlider.value);
     }
 
     private void OnEnable()
     {
-        _sliderVolumeMusic.onValueChanged.AddListener(OnChangedMusicVolume);
-        _sliderVolumeSound.onValueChanged.AddListener(OnChangedGameVolume);
+        _musicSlider.onValueChanged.AddListener(OnChangedMusic);
+        _soundSlider.onValueChanged.AddListener(OnChangedSound);
     }
 
     private void OnDisable()
     {
-        _sliderVolumeMusic.onValueChanged.RemoveListener(OnChangedMusicVolume);
-        _sliderVolumeSound.onValueChanged.RemoveListener(OnChangedGameVolume);
+        _musicSlider.onValueChanged.RemoveListener(OnChangedMusic);
+        _soundSlider.onValueChanged.RemoveListener(OnChangedSound);
     }
 
-    private void OnChangedMusicVolume(float value) =>
+    private void OnChangedMusic(float value) =>
         SetLevel(Music, value);
 
-    private void OnChangedGameVolume(float value) =>
+    private void OnChangedSound(float value) =>
         SetLevel(Sound, value);
 
     public void SetLevel(string group, float value)

@@ -26,7 +26,6 @@ public class SfxPlayer : MonoBehaviour
         }
 
         Instance = this;
-
         _source = GetComponent<AudioSource>();
     }
 

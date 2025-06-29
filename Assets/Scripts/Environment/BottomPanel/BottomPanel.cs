@@ -8,6 +8,8 @@ public class BottomPanel : MonoBehaviour
     [SerializeField] private VehicleSelector _selector;
     [SerializeField] private BottomPanelView _view;
     [SerializeField] private BottomPanelShower _shower;
+    [SerializeField] private DriverCard _driverManCard;
+    [SerializeField] private DriverManSpawner _driverManSpaner;
 
     private void Start()
     {
@@ -41,6 +43,8 @@ public class BottomPanel : MonoBehaviour
 
         _repairFillButton.Pressed += OnRepairPressed;
         _repairFillButton.Unpressed += OnRepairUnpressed;
+
+        _driverManCard.Clicked += OnClickDriverManCard;
     }
 
     private void OnDisable()
@@ -53,6 +57,8 @@ public class BottomPanel : MonoBehaviour
 
         _repairFillButton.Pressed -= OnRepairPressed;
         _repairFillButton.Unpressed -= OnRepairUnpressed;
+
+        _driverManCard.Clicked -= OnClickDriverManCard;
     }
 
     private void Fill(VehicleParams vehicleParams)
@@ -68,9 +74,9 @@ public class BottomPanel : MonoBehaviour
     {
         if (_fuelFillButton.IsPressed && vehicleParams.TryFillFuel(Constants.FuelFillingSpeed * Time.deltaTime))
         {
-            _wallet.SpendOnEmptyWallet(Constants.CostFuel * Time.deltaTime);
+            _wallet.SpendOnEmptyWallet(Constants.PriceFuel * Time.deltaTime);
 
-            if (_fuelFillButton.IPlaying == false)
+            if (_fuelFillButton.IsPlaying == false)
                 _fuelFillButton.PlaySound();
 
             return;
@@ -83,9 +89,9 @@ public class BottomPanel : MonoBehaviour
     {
         if (_repairFillButton.IsPressed && vehicleParams.TryFillRepair(Constants.RepairFillingSpeed * Time.deltaTime))
         {
-            _wallet.SpendOnEmptyWallet(Constants.CostRepair * Time.deltaTime);
+            _wallet.SpendOnEmptyWallet(Constants.PriceRepair * Time.deltaTime);
 
-            if (_repairFillButton.IPlaying == false)
+            if (_repairFillButton.IsPlaying == false)
                 _repairFillButton.PlaySound();
 
             return;
@@ -100,6 +106,10 @@ public class BottomPanel : MonoBehaviour
         _view.SetSprite(vehicleParams.Sprite);
         OnFuelChanged(vehicleParams.RemainingFuel);
         OnRepairChanged(vehicleParams.RemainingRepair);
+
+        if(vehicle.DriverMan != null)
+            _driverManCard.SetSprite(vehicle.DriverMan.Sprite);
+
         SubscribeVehicle(vehicle);
         _shower.Show();
     }
@@ -108,6 +118,7 @@ public class BottomPanel : MonoBehaviour
     {
         _view.ResetSprite();
         UnsubscribeVehicle(vehicle);
+        _driverManCard.ResetSprite();
         _shower.Hide();
     }
 
@@ -146,4 +157,23 @@ public class BottomPanel : MonoBehaviour
 
     private void OnRepairUnpressed() =>
         _repairFillButton.StopSound();
+
+    private void OnClickDriverManCard()
+    {
+        Vehicle vehicle = _selector.Vehicle;
+
+        if (vehicle == null)
+            return;
+
+        if (vehicle.DriverMan != null)
+        {
+            vehicle.ResetDriverMan();
+            _driverManCard.ResetSprite();
+        }
+        else
+        {
+            vehicle.SetDriverMan(_driverManSpaner.Spawn());
+            _driverManCard.SetSprite(vehicle.DriverMan.Sprite);
+        }
+    }
 }

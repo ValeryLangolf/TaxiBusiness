@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class VehicleSpawner : MonoBehaviour
 {
-    [SerializeField] private Transform _startPosition;
     [SerializeField] private float _radiusOffset;
 
     public event Action<Vehicle> Spawned;

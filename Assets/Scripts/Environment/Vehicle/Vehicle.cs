@@ -11,10 +11,15 @@ public class Vehicle : MonoBehaviour
     private Rotator _rotator;
     private VehiclePathKeeper _pathKeeper;
     private VehiclePassenger _vehiclePassenger;
+    private DriverMan _driverMan;
 
+    #region Events
     public event Action<Vehicle> PathDestinated;
     public event Action<Vehicle> PathCompleted;
     public event Action<Vehicle, float> PassengerDelivered;
+    public event Action<float> MoneySpended;
+    public event Action<Vehicle> Destroyed;
+    #endregion
 
     #region Properties
     public VehicleParams Params => _params;
@@ -32,6 +37,8 @@ public class Vehicle : MonoBehaviour
     public bool IsPassengerAssigned => _vehiclePassenger.IsAssigned;
 
     public bool IsPassengerInCar => _vehiclePassenger.IsInCar;
+
+    public DriverMan DriverMan => _driverMan;
     #endregion
 
     private void Awake()
@@ -47,6 +54,9 @@ public class Vehicle : MonoBehaviour
 
     private void Update()
     {
+        FillFuelAutomatically();
+        FillRepairAutomatically();
+
         if (_pathKeeper.IsActivePath == false)
             return;
 
@@ -65,7 +75,7 @@ public class Vehicle : MonoBehaviour
         _mover.Move(_pathKeeper.CurrentTarget, _params.Speed);
         _params.BurnFuel();
         _params.Wear();
-        _pathKeeper.UpdatePath();
+        _pathKeeper.UpdatePath();        
 
         if (_pathKeeper.IsActivePath)
             _rotator.Rotate(_pathKeeper.CurrentTarget);
@@ -76,6 +86,37 @@ public class Vehicle : MonoBehaviour
 
     public void SetDestination(Vector3 destination) =>
         _pathKeeper.SetDestination(destination);
+
+    public void SetDriverMan(DriverMan driverMan) =>
+        _driverMan = driverMan;
+
+    public void ResetDriverMan()
+    {
+        Destroy(_driverMan.gameObject);
+        _driverMan = null;
+    }
+
+    private void FillFuelAutomatically()
+    {
+        if (_driverMan == null)
+            return;
+
+        if(_params.TryFillFuel(Constants.FuelFillingSpeed * Time.deltaTime) == false)
+            return;
+
+        MoneySpended?.Invoke(Constants.PriceFuel * Time.deltaTime);
+    }
+
+    private void FillRepairAutomatically()
+    {
+        if (_driverMan == null)
+            return;
+
+        if (_params.TryFillRepair(Constants.RepairFillingSpeed * Time.deltaTime) == false)
+            return;
+
+        MoneySpended?.Invoke(Constants.PriceRepair * Time.deltaTime);
+    }
 
     private void OnPathDestinated() =>
         PathDestinated?.Invoke(this);
@@ -95,6 +136,10 @@ public class Vehicle : MonoBehaviour
         else
         {
             float profit = _vehiclePassenger.GetProfit(_params.MoneyRate);
+
+            if (_driverMan != null)
+                profit -= profit * _driverMan.ShareOfRevenue;
+
             _vehiclePassenger.DropPassenger();
             PassengerDelivered?.Invoke(this, profit);
         }
@@ -106,6 +151,9 @@ public class Vehicle : MonoBehaviour
         PathCompleted?.Invoke(this);
     }
 
-    private void OnDestroy() =>
+    private void OnDestroy()
+    {
         _vehiclePassenger.ProcessDestroyed();
+        Destroyed?.Invoke(this);
+    }
 }

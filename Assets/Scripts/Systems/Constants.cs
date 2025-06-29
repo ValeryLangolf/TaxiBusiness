@@ -18,12 +18,12 @@
     public const float InitialVolumeMusic = 0.2f;
 
     public const float FullFuel = 1f;
-    public const float CostFuel = 20f;
+    public const float PriceFuel = 20f;
     public const float FuelFillingSpeed = 0.2f;
     public const float FuelConsumptionMultiplier = 0.01f;
 
     public const float FullRepair = 1f;
-    public const float CostRepair = 30f;
+    public const float PriceRepair = 30f;
     public const float RepairFillingSpeed = 0.2f;
     public const float WearResistanceConsumptionMultiplier = 0.004f;
 }

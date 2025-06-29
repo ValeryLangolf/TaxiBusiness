@@ -14,6 +14,7 @@ public class PlayerGarage : MonoBehaviour
     [SerializeField] private VehicleIcon _iconPrefab;
     [SerializeField] private IconContent _iconContent;
     [SerializeField] private VehicleWorldIndicatorSpawner _lackIndicatorSpawner;
+    [SerializeField] private DriverManSpawner _driverManSpawner;
 
     private readonly List<VehicleIcon> _cards = new();
 
@@ -56,6 +57,9 @@ public class PlayerGarage : MonoBehaviour
             Vehicle vehicle = _spawner.Spawn(prefab, vehicleData.Position, vehicleData.Rotation);
             vehicle.Params.SetRemainingFuel(vehicleData.RemainingFuel);
             vehicle.Params.SetRemainingRepair(vehicleData.RemainingRepair);
+
+            if (vehicleData.IsDriverMan)
+                vehicle.SetDriverMan(_driverManSpawner.Spawn());
         }
     }
 
@@ -72,6 +76,7 @@ public class PlayerGarage : MonoBehaviour
         WillBeRemoved?.Invoke(vehicle);
 
         _cards.RemoveAll(v => v.Vehicle == vehicle);
+        UnsubscribeVehicle(card);
         Destroy(card.gameObject);
         Destroy(vehicle.gameObject);
     }
@@ -108,9 +113,19 @@ public class PlayerGarage : MonoBehaviour
     private void SubscribeVehicle(VehicleIcon card)
     {
         card.Vehicle.PassengerDelivered += OnPassengerDelivered;
+        card.Vehicle.MoneySpended += OnMoneySpended;
         card.Vehicle.Params.FuelWasted += OnFuelWasted;
         card.Vehicle.Params.RepairWasted += OnRepairWasted;
         card.Clicked += OnCardClicked;
+    }
+
+    private void UnsubscribeVehicle(VehicleIcon card)
+    {
+        card.Vehicle.PassengerDelivered -= OnPassengerDelivered;
+        card.Vehicle.MoneySpended -= OnMoneySpended;
+        card.Vehicle.Params.FuelWasted -= OnFuelWasted;
+        card.Vehicle.Params.RepairWasted -= OnRepairWasted;
+        card.Clicked -= OnCardClicked;
     }
 
     private void OnPassengerDelivered(Vehicle vehicle, float profit)
@@ -118,6 +133,9 @@ public class PlayerGarage : MonoBehaviour
         _wallet.AddMoney(profit);
         MoneyAdded?.Invoke(profit, vehicle.Position);
     }
+
+    private void OnMoneySpended(float value) =>
+        _wallet.SpendOnEmptyWallet(value);
 
     private void OnCardClicked(VehicleIcon vehicleCard)
     {

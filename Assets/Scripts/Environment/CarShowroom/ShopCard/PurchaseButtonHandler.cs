@@ -7,6 +7,9 @@ public class PurchaseButtonHandler : MonoBehaviour
 {
     [SerializeField] private Button _button;
     [SerializeField] private TextMeshProUGUI _buttonText;
+    [SerializeField] private Image _image;
+    [SerializeField] private Sprite _active;
+    [SerializeField] private Sprite _inactive;
     [SerializeField] private Color _activeTextColor;
     [SerializeField] private Color _inactiveTextColor;
 
@@ -22,6 +25,7 @@ public class PurchaseButtonHandler : MonoBehaviour
     {
         _button.interactable = isInteractable;
         _buttonText.color = isInteractable ? _activeTextColor : _inactiveTextColor;
+        _image.sprite = isInteractable ? _active : _inactive;
     }
 
     private void OnClick() =>

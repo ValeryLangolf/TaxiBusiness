@@ -703,8 +703,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _button: {fileID: 4076515152650841864}
   _buttonText: {fileID: 5844632843778958720}
+  _image: {fileID: 3754459520812749482}
+  _active: {fileID: 21300000, guid: e23fc4d865f656645b6c1def98418815, type: 3}
+  _inactive: {fileID: 21300000, guid: a2a56a3837d7eb642b56f09b3163aada, type: 3}
   _activeTextColor: {r: 1, g: 0.7921569, b: 0.48235294, a: 1}
-  _inactiveTextColor: {r: 0.5924529, g: 0.4672299, b: 0.2805767, a: 1}
+  _inactiveTextColor: {r: 0.5245282, g: 0.5245282, b: 0.5245282, a: 1}
 --- !u!1 &2790078160859908814
 GameObject:
   m_ObjectHideFlags: 0

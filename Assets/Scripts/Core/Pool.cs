@@ -32,7 +32,7 @@ public class Pool<T> where T : MonoBehaviour, IDeactivatable<T>
         if (_elements.Count > 0)
             element = _elements.Pop();
         else
-            element = Create();            
+            element = Create();
 
         element.Deactivated += Return;
         element.gameObject.SetActive(true);

@@ -70,6 +70,7 @@ public class DataService : MonoBehaviour
                 Rotation = card.Vehicle.Rotation,
                 RemainingFuel = card.Vehicle.Params.RemainingFuel,
                 RemainingRepair = card.Vehicle.Params.RemainingRepair,
+                IsDriverMan = card.Vehicle.DriverMan != null,
             });
 
         return vehicleSaveDatas;

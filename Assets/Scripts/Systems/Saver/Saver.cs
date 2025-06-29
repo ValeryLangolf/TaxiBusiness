@@ -31,6 +31,7 @@ public class Saver
         public Quaternion Rotation;
         public float RemainingFuel;
         public float RemainingRepair;
+        public bool IsDriverMan;
     }
 
     public bool TryLoad(out SaveData saveData)

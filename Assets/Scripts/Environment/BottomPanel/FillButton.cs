@@ -13,7 +13,7 @@ public class FillButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     public bool IsPressed => _isPressed;
 
-    public bool IPlaying => _source.isPlaying;
+    public bool IsPlaying => _source.isPlaying;
 
     public void OnPointerDown(PointerEventData eventData)
     {
