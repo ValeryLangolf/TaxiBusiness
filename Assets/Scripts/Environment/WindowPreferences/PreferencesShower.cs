@@ -23,7 +23,7 @@ public class PreferencesShower : MonoBehaviour
         {
             GameObject uiObject = EventSystem.current.currentSelectedGameObject;
             
-            if(uiObject != null && uiObject.transform.TryGetComponent(out PreferencesMarker passenger))
+            if(uiObject != null && uiObject.transform.TryGetComponent(out PreferencesMarker _))
                 return;
         }
 
@@ -40,19 +40,25 @@ public class PreferencesShower : MonoBehaviour
     private void Hide()
     {
         _isShow = false;
-        _iconPanel.SetBool(IsShow, _isShow);
-        
-        foreach (SliderVolumeShower slider in _sliders)
-            if (slider != null)
-                slider.Hide();
+        ProcessSwitch();        
     }
 
     private void OnClickButtonShowIcon()
     {
         _vehicleSelector.DeselectCurrentVehicle();
         _isShow = !_isShow;
+        ProcessSwitch();
+
+        if(_isShow)
+            SfxPlayer.Instance.PlaySlidingPanelShow();
+        else
+            SfxPlayer.Instance.PlaySlidingPanelHide();
+    }
+
+    private void ProcessSwitch()
+    {
         _iconPanel.SetBool(IsShow, _isShow);
-        
+
         foreach (SliderVolumeShower slider in _sliders)
             if (slider != null)
                 slider.Hide();

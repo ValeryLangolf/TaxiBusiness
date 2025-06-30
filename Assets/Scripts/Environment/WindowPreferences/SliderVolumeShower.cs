@@ -29,5 +29,7 @@ public class SliderVolumeShower : MonoBehaviour
         _isShow = !_isShow;
         _animator.SetBool(IsShow, _isShow);
         _other.Hide();
+
+        SfxPlayer.Instance.PlayClickButton();
     }
 }

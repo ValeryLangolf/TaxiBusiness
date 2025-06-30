@@ -29,8 +29,16 @@ public class WindowShower : MonoBehaviour
     {
         _vehicleSelector.DeselectCurrentVehicle();
         _panel.SetActive(true);
+
+        SfxPlayer.Instance.PlayPopUpPanelShow();
     }
 
-    private void OnClickClose() =>
+    private void OnClickClose()
+    {
+        if (_panel.gameObject.activeInHierarchy == false)
+            return;
+
         _panel.SetActive(false);
+        SfxPlayer.Instance.PlayPopUpPanelHide();
+    }
 }

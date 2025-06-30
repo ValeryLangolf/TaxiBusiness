@@ -26,6 +26,12 @@ public class Toggler : MonoBehaviour
     {
         _isShow = !_isShow;
         UpdateSprite();
+
+        if (_isShow)
+            SfxPlayer.Instance.PlaySlidingPanelShow();
+        else
+            SfxPlayer.Instance.PlaySlidingPanelHide();
+
         Switched?.Invoke(_isShow);
     }
 

@@ -14,8 +14,8 @@
     public const float RatingMultiplier = 10f;
 
     public const float InitialBalance = 0f;
-    public const float InitialVolumeSound = 0.8f;
-    public const float InitialVolumeMusic = 0.2f;
+    public const float InitialVolumeSound = 0.9f;
+    public const float InitialVolumeMusic = 0.1f;
 
     public const float FullFuel = 1f;
     public const float OriginalPriceFuel = 20f;
